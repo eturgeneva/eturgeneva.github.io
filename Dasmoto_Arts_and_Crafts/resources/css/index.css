@@ -1,0 +1,57 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Helvetica, sans-serif;
+    margin: 40px 10px;
+}
+
+h1 {
+    background-image: url(../images/pattern.webp);
+    font-size: 100px;
+    font-weight: bold;
+    color: khaki;
+    text-align: center;
+}
+
+h2 {
+    
+    font-size: 32px;
+    font-weight: bold;
+    color: white;
+    text-align: left;
+    margin: 20px auto;
+}
+
+h3 {
+
+    font-size: 18px;
+    font-weight: bold;
+    color: black;
+    text-align: left;
+    margin: 20px auto;
+}
+
+span {
+    
+    font-weight: bold;
+    color: blue;
+}
+
+.brushes h2 {
+    background-color: mediumspringgreen;
+    
+}
+
+.frames h2 {
+    background-color: lightcoral;
+   
+}
+
+.paint h2 {
+    background-color: skyblue;
+
+}
