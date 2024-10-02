@@ -1,0 +1,49 @@
+* {	
+  box-sizing: border-box;	
+  margin: 0;
+  border: 0;
+}	
+
+h1 {
+  text-align: center;
+  background-color: #a5cdbd;
+}
+
+.color-section {
+  width: 800px;
+  height: 300px;
+  margin: 0 auto;
+  background-image: url('color-section-banner.png');
+}
+
+.color-sample {
+  position: relative;
+  top: 280px;
+  display: block; 
+  float: left; 
+  height: 150px;
+  width: 150px;
+  text-align: center;
+  padding: 50px 0;
+  border-radius: 100px;
+}
+
+.nude {
+  background-color: #d6b9a4;
+}
+
+.green {
+  background-color: #3a837d;
+}
+
+.coral {
+  background-color: #de5969;
+}
+
+.peach {
+  background-color: #dda280;
+}
+
+.mint {
+  background-color: #95c2bd;
+}
