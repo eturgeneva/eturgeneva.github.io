@@ -1,0 +1,46 @@
+* {
+    box-sizing: border-box;
+    
+  }
+
+body {
+    font-family: Helvetica, sans-serif;
+    font-size: 22px;
+    color: seashell;
+    background-color: black;
+    opacity: 0.9;
+    text-align: center;
+}
+
+header {
+    border-bottom: 1px solid seashell;
+    display: flex;
+    position: fixed;
+    height: 69px;
+    top: 0;
+    left: 0;
+    right: 0;
+    justify-content: space-between;
+}
+
+.navigation {
+    display: flex;
+    padding: 10px;
+}
+
+
+a {
+    text-decoration: underline;
+    color: seashell;
+    cursor: pointer;
+}
+
+.main-section {
+    position: relative;
+    top: 69px;
+}
+
+footer {
+    position: relative;
+    top: 69px;
+}
