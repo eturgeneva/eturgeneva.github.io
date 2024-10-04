@@ -8,8 +8,8 @@ body {
     font-size: 22px;
     color: seashell;
     background-color: black;
-    opacity: 0.9;
     text-align: center;
+
 }
 
 header {
@@ -21,11 +21,16 @@ header {
     left: 0;
     right: 0;
     justify-content: space-between;
+    padding: 0 10px;
+    background-color: black;
+    opacity: 0.9;
+    z-index: 1;
 }
 
 .navigation {
     display: flex;
-    padding: 10px;
+    min-width: 400px;
+    justify-content: space-between;
 }
 
 
@@ -35,12 +40,11 @@ a {
     cursor: pointer;
 }
 
-.main-section {
+.main-section, footer {
     position: relative;
     top: 69px;
 }
 
-footer {
-    position: relative;
-    top: 69px;
+#mission, #featured, #locations {
+    scroll-margin-top: 75px;
 }
