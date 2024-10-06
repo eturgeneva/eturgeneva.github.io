@@ -159,6 +159,6 @@ h4 {
 }
 
 .copyright {
-    float: left;
+    text-align: left;
     margin: 100px 20px 20px;
 }
