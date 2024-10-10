@@ -347,6 +347,8 @@ header .mobile {
 /* Filters Section */
 
 #filters-section {
+  display: flex;
+  flex-direction: column;
   padding: 4rem 0;
   background-color: #4a4a4a;
 }
@@ -372,6 +374,7 @@ header .mobile {
 #filters-section .images-container {
   max-width: 100%;
   padding: 0 1%;
+  display: inline-flex;
 }
 
 @media only screen and (max-width: 760px) {
@@ -408,23 +411,27 @@ header .mobile {
 
 #quotes-section {
   background-color: #f3f3f3;
+  padding: 5rem 0;
+  border: 1px red solid;
 }
 
 #quotes-section content {
-  padding: 5rem 0;
+  border: 1px greenyellow solid;
 }
 
-#quotes-section quote {
+#quotes-section .quote {
   padding-right: 1.875rem;
-  font-family: "Palatino", serif;
+  font-family: "Unna", serif;
   font-size: 1.875rem;
   line-height: 1.1;
   font-style: italic;
   color: #4a4a4a;
+  border: 1px red solid;
 }
 
 #quotes-section quote-citation {
   height: 1.875rem;
+  border: 1px red solid;
 }
 
 @media only screen and (max-width: 760px) {
@@ -432,7 +439,7 @@ header .mobile {
     padding: 1.875rem .625rem;
   }
 
-  #quotes-section quote {
+  #quotes-section .quote {
     font-size: 1.5rem;
     line-height: 1.4;
   }
@@ -448,20 +455,25 @@ header .mobile {
 
 footer {
   background-color: #9b9b9b;
-  padding: 1.5rem 2rem;
+  /* padding: 1.5rem 2rem; */
+  padding: 0 2rem;
+  border: 1px red solid;
 }
 
 footer .content {
   color: white;
   display: flex;
-  font-size: .75rem;
+  height: 3.875rem;
+  align-items: center;
+  font-size: 0.75rem;
+  font-family: 'Roboto';
 }
 
 footer .copyright {
   flex-grow: 1;
 }
 
-@media only screen and (min-width: 760px) {
+@media only screen and (max-width: 760px) {
   footer .content {
     font-size: .625rem;
   }
