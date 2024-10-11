@@ -147,7 +147,7 @@ header .mobile {
     display: block;
     border: 1px red solid;
   }
-
+  
   header .mobile li {
     padding: 0;
   }
@@ -192,30 +192,40 @@ header .mobile {
   }
 
   header .mobile {
-    /* display: flex; */
+    display: flex;
     /* justify-content: center; */
     /* display: block; */
+    height: 2.5rem;
   }
 
   header nav ul {
     /* justify-content: center; */
     /* width: 100%; */
     /* display: flex; */
-    gap: 4rem;
+    gap: 4.7rem;
+    /* height: 2.5rem; */
+    align-items: center;
   }
   
   header .mobile li {
-    /* margin: 0 auto; */
+    /* margin: 0; */
     /* width: 100%; */
-  
+    /* padding: 0; */
   }
 
   .mobile img {
     display: block;
+    height: 1.8rem;
   }
 
   header .mobile .button {
-   
+    margin: 0;
+    display: block;
+  }
+
+  .mobile li .button {
+    padding: 0.1875rem 0.5rem;
+    font-size: 1.2rem;
   }
 }
 
@@ -351,7 +361,7 @@ header .mobile {
   }
 
   #sign-up-cta .striking {
-    font-size: 1.8rem;
+    font-size: 2.3rem;
   }
 
   #sign-up-cta h1 {
@@ -361,6 +371,7 @@ header .mobile {
   #sign-up-cta h2 {
     /* font-size: 2rem; */
   }
+
 }
 
 /* Features Section */
