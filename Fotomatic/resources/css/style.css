@@ -694,7 +694,7 @@ header .mobile {
 
   #quotes-section .quote {
     display: block;
-    float: none;
+    /* float: none; */
     padding-left: 0;
     width: 80%;
     font-size: 1.7rem;
@@ -716,18 +716,22 @@ header .mobile {
 @media only screen and (max-width: 450px) {
 
     #quotes-section {
-      display: flex;
+      height: auto;
+    }
+
+    #quotes-section .content {
+      flex-direction: column;
+      align-items: center;
+      gap: 0.5rem;
     }
 
     #quotes-section .quote {
-      display: block;
-      float: none;
+      width: 100%;
+      font-size: 1.8rem;
+      line-height: 1.2;
+      text-align: center;
     }
 
-    #quotes-section img {
-      display: block;
-      float: none;
-    }
 }
 
 /* Footer */
@@ -756,5 +760,11 @@ footer .copyright {
   footer .content {
     font-size: .625rem;
     height: 2.5rem;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  footer .content {
+    font-size: .7rem;
   }
 }
