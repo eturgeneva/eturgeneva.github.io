@@ -563,6 +563,7 @@ header .mobile {
 
   #quotes-section img {
     float: right;
+    padding-top: 0.2rem;
     /* margin-top: 5rem; */
   }
 }
