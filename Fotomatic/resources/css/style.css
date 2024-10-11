@@ -520,36 +520,42 @@ header .mobile {
 @media only screen and (max-width: 760px) {
 
   #quotes-section {
-    /* display: flex; */
+    display: flex;
     /* flex-direction: row; */
     /* width: 100%; */
     height: 4rem;
     padding: 2rem 2rem;
+    align-items: center;
   }
 
   #quotes-section content {
     /* display: flex; */
-
+    /* align-items: center; */
+    /* align-content: center; */
   }
 
   #quotes-section .quote {
-    /* display: block; */
-    width: 65%;
-    font-size: 1.5rem;
-    line-height: 1.4;
+    display: block;
+    float: left;
+    padding-left: 0;
+    padding-right: 1rem;
+    width: 80%;
+    font-size: 1.7rem;
+    line-height: 1.2;
+    text-align: left;
   }
 
   #quotes-section span {
-    display: block;
-    float: left;
+    /* display: block; */
+    /* float: left; */
     /* width: 65%; */
-    text-align: left;
-    padding: 0;
+    /* text-align: left; */
+    /* padding: 0; */
   }
 
   #quotes-section .quote-citation {
     /* display: block; */
-    width: 20%;
+    /* width: 20%; */
     border: 1px red solid;
     /* padding-top: 1rem; */
     /* margin: auto; */
@@ -557,6 +563,7 @@ header .mobile {
 
   #quotes-section img {
     float: right;
+    /* margin-top: 5rem; */
   }
 }
 
