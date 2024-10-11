@@ -493,6 +493,7 @@ header .mobile {
   background-color: #f3f3f3;
   padding: 5rem 0;
   border: 1px red solid;
+  display: flex;
 }
 
 #quotes-section content {
@@ -500,7 +501,9 @@ header .mobile {
 }
 
 #quotes-section .quote {
+  float: left;
   padding-right: 1.875rem;
+  padding-left: 26rem;
   font-family: "Unna", serif;
   font-size: 1.875rem;
   line-height: 1.1;
