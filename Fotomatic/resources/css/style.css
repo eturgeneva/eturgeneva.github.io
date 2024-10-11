@@ -339,12 +339,12 @@ header .mobile {
   #sign-up-cta {
     margin: 0;
     padding: 0;
-    /* width: auto; */
   }
 
-  /* #sign-up-section .banner {
-    width: 450px;
-  } */
+  #sign-up-cta .content {
+    margin: 0;
+    padding: 0;
+  }
 
   #sign-up-cta .email {
     display: none;
