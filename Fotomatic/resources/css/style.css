@@ -123,7 +123,6 @@ header .mobile {
   }
 
   header .content {
-    /* display: flex; */
     justify-content: center;
     gap: 2rem;
     /* padding: .5rem 0; */
@@ -168,6 +167,13 @@ header .mobile {
     max-width: 450px;
   } */
 
+  header .content {
+    /* justify-content: center; */
+    /* gap: 0; */
+    padding: 0;
+    /* padding-right: 1rem; */
+  }
+
   header .logo {
     display: none;
   }
@@ -179,6 +185,7 @@ header .mobile {
   header {
     /* display: flex; */
     /* justify-content: center; */
+    align-content: center;
     width: 100%;
     height: 3rem;
     padding: 0;
