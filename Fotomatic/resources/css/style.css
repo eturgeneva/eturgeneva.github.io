@@ -46,6 +46,12 @@ body {
   }
 }
 
+@media only screen and (max-width: 450px) {
+  .main-content {
+    margin-top: 3rem;
+  }
+}
+
 /* Header */
 
 header {
@@ -109,7 +115,6 @@ header .mobile {
     width: 100%;
     padding: 0 2rem;
     margin: 0 auto;
-    /* justify-content: center; */
     border: 1px red solid;
   }
 
@@ -119,11 +124,6 @@ header .mobile {
     border: 1px red solid;
   }
   
-  /* .desktop li a {
-    display: inline-flex;
-    align-items: center;
-  } */
-
   .desktop .icon {
     border: 1px red solid;
     max-width: 100%;
@@ -140,19 +140,9 @@ header .mobile {
   header .content {
     display: flex;
     justify-content: center;
-    /* align-items: center; */
     gap: 2rem;
     padding: .5rem 0;
   }
-
-  /* header .mobile ul {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    width: 100%;
-    border: 1px red solid;
-  } */
-
 
   header .mobile li {
     padding: 0;
@@ -164,6 +154,56 @@ header .mobile {
     line-height: 1.6;
     color: white;
     border: 1px red solid;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+
+  /* .main-content {
+    max-width: 450px;
+  } */
+
+  header .logo {
+    display: none;
+  }
+
+  header .desktop {
+    display: none;
+  }
+
+  header {
+    /* display: flex; */
+    /* justify-content: center; */
+    width: 100%;
+    height: 3rem;
+    padding: 0;
+  }
+
+  header .mobile {
+    /* display: flex; */
+    /* justify-content: center; */
+    /* display: block; */
+  }
+
+  header nav ul {
+    /* justify-content: center; */
+    /* width: 100%; */
+    /* display: flex; */
+    gap: 4rem;
+  }
+  
+  header .mobile li {
+    /* margin: 0 auto; */
+    /* width: 100%; */
+  
+  }
+
+  .mobile img {
+    display: block;
+  }
+
+  header .mobile .button {
+   
   }
 }
 
@@ -279,18 +319,35 @@ header .mobile {
 @media only screen and (max-width: 450px) {
   #sign-up-section {
     height: 20rem;
+    justify-content: center;
+    /* width: 450px; */
+    /* overflow: hidden; */
   }
+
+  #sign-up-cta {
+    margin: 0;
+    padding: 0;
+    /* width: auto; */
+  }
+
+  /* #sign-up-section .banner {
+    width: 450px;
+  } */
 
   #sign-up-cta .email {
     display: none;
   }
 
+  #sign-up-cta .striking {
+    font-size: 1.8rem;
+  }
+
   #sign-up-cta h1 {
-    font-size: 2.25rem;
+    /* font-size: 1rem; */
   }
 
   #sign-up-cta h2 {
-    font-size: 2rem;
+    /* font-size: 2rem; */
   }
 }
 
