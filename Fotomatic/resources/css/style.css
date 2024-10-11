@@ -649,18 +649,21 @@ header .mobile {
   background-color: #f3f3f3;
   padding: 5rem 0;
   border: 1px red solid;
-  display: flex;
+  /* display: flex; */
 }
 
 #quotes-section .content {
-  width: 100%;
+  /* width: 100%; */
+  display: flex;
   border: 1px greenyellow solid;
+  justify-content: center;
+  gap: 1.875rem;
 }
 
 #quotes-section .quote {
-  float: left;
-  padding-right: 1.875rem;
-  padding-left: 26rem;
+  /* float: left; */
+  /* padding-right: 1.875rem; */
+  /* padding-left: 26rem; */
   font-family: "Unna", serif;
   font-size: 1.875rem;
   line-height: 1.1;
@@ -672,6 +675,7 @@ header .mobile {
 #quotes-section .quote-citation {
   height: 1.875rem;
   border: 1px red solid;
+  display: block;
 }
 
 @media only screen and (max-width: 760px) {
