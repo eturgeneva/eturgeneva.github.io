@@ -542,7 +542,6 @@ header .mobile {
     font-weight: 400;
     /* font-size: 0.875rem; */
     font-size: 1rem;
-    /* padding-bottom: 1.875rem; */
     line-height: 1.4;
   }
 
@@ -615,6 +614,32 @@ header .mobile {
 
   #filters-section .extra {
     /* display: none; */
+  }
+  
+}
+
+@media only screen and (max-width: 450px) {
+
+  #filters-section {
+    /* padding: 0.5rem 0 0; */
+  }
+
+  #filters-section .content h2 {
+    font-weight: 600;
+    font-size: 1.5rem;
+    /* padding-top: 0.5rem; */
+    line-height: 1.4;
+  }
+
+  #filters-section .content h3 {
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 1.7;
+    padding: 0.5rem 1.5rem 0;
+  }
+
+  #filters-section .extra {
+    display: none;
   }
 }
 
@@ -697,6 +722,10 @@ header .mobile {
     padding-top: 0.2rem;
     /* margin-top: 5rem; */
   }
+}
+
+@media only screen and (max-width: 450px) {
+
 }
 
 /* Footer */
