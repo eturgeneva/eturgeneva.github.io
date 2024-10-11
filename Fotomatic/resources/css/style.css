@@ -111,11 +111,23 @@ header .mobile {
 
 @media only screen and (max-width: 760px) {
   header {
-    display: flex;
+    /* display: flex; */
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
     width: 100%;
-    padding: 0 2rem;
+    /* padding: 0 2rem; */
     margin: 0 auto;
     border: 1px red solid;
+  }
+
+  header .content {
+    /* display: flex; */
+    justify-content: center;
+    gap: 2rem;
+    /* padding: .5rem 0; */
+    padding-right: 1rem;
   }
 
   header .desktop {
@@ -135,13 +147,6 @@ header .mobile {
   header .mobile {
     display: block;
     border: 1px red solid;
-  }
-
-  header .content {
-    display: flex;
-    justify-content: center;
-    gap: 2rem;
-    padding: .5rem 0;
   }
 
   header .mobile li {
