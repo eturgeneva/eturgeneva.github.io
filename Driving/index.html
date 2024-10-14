@@ -9,30 +9,30 @@
         <!-- Fixed Nav Panel create later-->
         <div class="main content">
             <!-- Formeln -->
-            <div class="formeln section">
-                <div class="formel 1">
+            <div class="formeln section" id="formeln">
+                <div class="formel">
                     <h2>Formeln</h2>
                     <h3>Bremsweg in Metern</h3>
                     <p>(Geschwindigkeit in km/h : 10) x (Geschwindigkeit in km/h : 10)</p>
                 </div>
                 
-                <div class="formel 2">
+                <div class="formel">
                     <h3>Gefahrenbremsung (Halbbremsweg)</h3>
                     <p>(Geschwindigkeit in km/h : 10) x (Geschwindigkeit in km/h : 10) / 2</p>
                 </div>
 
-                <div class="formel 3">
+                <div class="formel">
                     <h3>Reaktionsweg in Metern</h3>
                     <p>Der Reaktionsweg ist der Weg, der vom Erkennen einer Gefahr bis zur Betätigung der Bremse zurückgelegt wird</p>
                     <p>(Geschwindigkeit in km/h : 10) x 3</p>
                 </div>
 
-                <div class="formel 4">
+                <div class="formel">
                     <h3>Anhalteweg (Reaktionsweg und Bremsweg zusammenzählen)</h3>
                     <p>(Geschwindigkeit in km/h : 10) x 3 + (Geschwindigkeit in km/h : 10) x (Geschwindigkeit in km/h : 10)</p>
                 </div>
 
-                <div class="formel 5">
+                <div class="formel">
                     <h3>Fliehkraft</h3>
                     <p>Fliehkraft = (Masse x Geschwindigkeit2) / Kurvenradius</p>
                     <p>если скорость в курве увеличивается в 2 раза, то Fliehkraft увеличивается в 4 раза. Давление в шинах никак не влияет</p>
@@ -40,7 +40,7 @@
             </div>
             
             <!-- Abstand -->
-            <div class="abstand section">
+            <div class="abstand section" id="abstand">
                 <h2>Abstand</h2>
                 <ul>
                     <li>15 Meter (Drei Pkw-Längen) im Stadtverkehr </li>
@@ -67,7 +67,7 @@
             </div>
 
             <!-- Seitenabstand -->
-            <div class="seitenabstand section">
+            <div class="seitenabstand section" id="seitenabstand">
                 <h2>Seitenabstand</h2>
                 <ul>
                     <li>0,5 Meter - Straßenbahnen</li>
@@ -79,7 +79,7 @@
             </div>
 
             <!-- Ladung -->
-            <div class="ladung section">
+            <div class="ladung section" id="ladung">
                 <h2>Ladung</h2>
                 <ul>
                     <li>1,5 метра - обозначенный груз может выступать назад над машиной, если ехать дальше 100 км. Меньше 100 км - 3 метра.</li>
@@ -98,7 +98,7 @@
             </div>
 
             <!-- Speed Limits -->
-            <div class="speed-limits section">
+            <div class="speed-limits section" id="speed-limits">
                 <h2>Speed Limits</h2>
                 <ul>
                     <li>50 км/ч - снежные цепи лимит</li>
@@ -117,7 +117,7 @@
             </div>
 
             <!-- Überholen -->
-            <div class="ueberholen section">
+            <div class="ueberholen section" id="ueberholen">
                 <h2>Überholen</h2>
                 <ul>
                     <li>Bahnübergang через 240 метров (3 полоски) - обгонять уже нельзя</li>
@@ -136,7 +136,7 @@
             </div>
 
             <!-- Verkehrszeichen und Tafeln -->
-            <div class="verkehrszeichen tafeln section">
+            <div class="verkehrszeichen tafeln section" id="verkehrszeichen">
                 <h2>Verkehrszeichen und Tafeln</h2>
                 <ul>
                     <li>LPG - liquified petroleum gas (Autogas)</li>
@@ -159,7 +159,7 @@
             </div>
 
             <!-- Parken und Halten -->
-            <div class="parken halten section">
+            <div class="parken halten section" id="parken-halten">
                 <h2>Parken und Halten</h2>
                 <ul>
                     <li>машины допустимой массы до 2,8 тонн могут парковаться на спец обозначенных тротуарах</li>
@@ -182,7 +182,7 @@
             </div>
 
             <!-- Beleuchtung -->
-            <div class="beleuchtung section">
+            <div class="beleuchtung section" id="beleuchtung">
                 <h2>Beleuchtung</h2>
                 <ul>
                     <li>Abblendlicht днём, если обзор затруднён (туман, снегопад, дождь)</li>
@@ -198,7 +198,7 @@
             </div>
 
             <!-- Verkehrspolizist -->
-            <div class="verkehrspolizist section">
+            <div class="verkehrspolizist section" id="verkehrspolizist">
                 <h2>Verkehrspolizist</h2>
                     <ul>
                         <li>типа зелёный - стоит боком ко мне, при этом руки в стороны - мне можно ехать</li>
@@ -210,16 +210,48 @@
 
 
             <!-- Anhänger -->
-            <div class="anhaenger section">
+            <div class="anhaenger section" id="anhaenger">
                 <h2>Anhänger</h2>
                 <ul>
                     <li>18 метров - макс длина комбинации из машины и прицепа</li>
+                    <li>с Auflaufbremse - при долгом спуске с горы может перегреваться тормоз. В гору ничего не делает</li>
+                    <li>Auflaufbremse - перевод отцеплением прицепа ставить его на ручник</li>
 
                 </ul>
             </div>
 
+            <!-- Квадроциклы -->
+            <div class="quad section" id="quad">
+                <h2>Квадроциклы</h2>
+                <ul>
+                    <li>нужно носить мотоциклетную одежду</li>
+                    <li>рулить труднее, тк нет усилителя руля</li>
+                    <li>надо возить с собой треугольник</li>
+                    <li>на узкой курве могут опрокинуться</li>
+                </ul>
+            </div>
+
+            <!-- Manuelle Schaltung -->
+            <div class="manuelle schaltung section" id="manuelle-schaltung">
+                <h2>Manuelle Schaltung</h2>
+                <ul>
+                    <li>если едем в горку, включаем более низкую передачу, тк мало инерции</li>
+                    <li>с горки вниз - тоже более низкую, чтобы можно было тормозить, а не катиться</li>
+                    <li>если с горы вниз выжимать сцепление, изнашиваются тормоза, потому что приходится тормозить и невозможно использовать торможение двигателем</li>
+                    <li>на высоких передачах машина едет больше по инерции, типа разогналась (благоприятнее для окр среды)</li>
+                    <li>на низких - меньше по инерции, сильнее работает двигатель, больше число оборотов двигателя</li>
+                    <li>чтобы машина не скатилась с горы, включить первую или заднюю передачу. Поднять ручник</li>
+                    <li>движение с горы с прицепом - нажатие на педаль сцепления НЕ снимает нагрузку с тормозоа, а наоборот увеличивает (при нажатии педали сцепления сцепление пропадает, т.е. колеса начинают вращаться ещё легче)</li>
+                </ul>
+            </div>
+
+            <!-- Technical issues -->
+            <div class="technical issues section" id="tech-issues">
+
+            </div>
+
             <!-- Assistenten -->
-            <div class="assistenten section">
+            <div class="assistenten section" id="assistenten">
                 <h2>Assistenten</h2>
                 <p>активировать вручную - AGR и активный парк ассистент</p>
 
