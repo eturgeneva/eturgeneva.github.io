@@ -21,20 +21,33 @@ header {
     width: 100%;
     height: 5rem;
     background-color: white;
+    /* display: flex; */
+    /* justify-content: space-between; */
+    /* align-items: center; */
+  }
+
+.navigation-container {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
+    width: 100%;
+    justify-content: center;
+}
 
-.navigation {
-    /* display: block; */
-    /* border: 1px red solid; */
-  }
+.icons {
+    display: flex;
+    width: 50%;
+}
 
-.navigation li {
+.navigation ul li {
     display: block;
-    /* width: 10%; */
-    /* border: 1px red solid; */
+    width: 10rem;
+    border: 1px red solid;
+  }
+
+.navigation a, .navigation img {
+    display: block;
+    width: 3rem;
+    /* height: auto; */
+    border: 1px red solid;
   }
 
 .navigation .burger {
