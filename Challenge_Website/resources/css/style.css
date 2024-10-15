@@ -21,15 +21,19 @@ header {
     width: 100%;
     height: 5rem;
     background-color: white;
-    /* display: flex; */
-    /* justify-content: space-between; */
-    /* align-items: center; */
     border: 1px red solid;
   }
 
   nav {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
+    /* width: 100%; */
+    margin: 0;
+    padding: 0;
+  }
+
+  nav li {
+    list-style-type: none;
   }
 
 .logo {
@@ -41,30 +45,40 @@ header {
   font-weight: 800;
 }
 
-.navigation {
+.desktop {
   display: flex;
-  justify-content: center;
-  width: 30%;
+  justify-content: flex-end;
+  /* width: 30%; */
   height: 5rem;
   border: 1px red solid;
 }
 
+.icons {
+  display: flex;
+  justify-content: flex-end;
+  /* width: 30%; */
+  height: 5rem;
+  border: 1px red solid;
+  
+}
+
 .navigation ul {
   display: flex;
-  border: 1px red solid;
-  justify-content: center;
+}
+
+.navigation li {
+  width: 100px;
 }
 
 .navigation a {
-  display: block;
-  width: 100px;
-  height: 3rem;
+  /* display: block; */
+  /* width: 100px; */
+  /* height: 3rem; */
   border: 1px green solid;
 }
 
 .navigation img {
-    display: block;
-    /* width: 2rem; */
+    /* display: block; */
     height: 2rem;
     /* border: 1px red solid; */
   }
@@ -79,4 +93,16 @@ header {
         width: 10%;
         /* height: auto; */
     }
+}
+
+.promo img, .product img {
+  max-width: 100%;
+}
+
+.promo {
+  width: 80%;
+}
+
+.value img {
+  height: 3rem;
 }
