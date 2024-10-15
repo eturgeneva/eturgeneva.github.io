@@ -27,17 +27,12 @@ header {
   }
 
 .navigation {
-    display: block;
-    border: 1px red solid;
+    /* display: block; */
+    /* border: 1px red solid; */
   }
 
-.desktop {
-    display: flex;
-}
-
-
-.navigation li a, .navigation img {
-    /* display: block; */
+.navigation li {
+    display: block;
     /* width: 10%; */
     /* border: 1px red solid; */
   }
@@ -49,7 +44,7 @@ header {
 @media only screen and (max-width: 760px) {
     .navigation .burger {
         display: block;
-        /* width: 10%; */
+        width: 10%;
         /* height: auto; */
     }
 }
