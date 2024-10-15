@@ -31,23 +31,29 @@ header {
     width: 100%;
     justify-content: center;
 }
+.desktop {
+    display: flex;
+    width: 500px;
+    justify-content: center;
+}
 
 .icons {
     display: flex;
-    width: 50%;
+    /* width: 50%; */
 }
 
 .navigation ul li {
-    display: block;
-    width: 10rem;
+    /* display: block; */
+    /* width: 10rem; */
     border: 1px red solid;
+    /* height: 10px; */
   }
 
 .navigation a, .navigation img {
     display: block;
     width: 3rem;
     /* height: auto; */
-    border: 1px red solid;
+    /* border: 1px red solid; */
   }
 
 .navigation .burger {
