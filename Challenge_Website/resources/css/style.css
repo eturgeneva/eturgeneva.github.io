@@ -24,35 +24,35 @@ header {
     /* display: flex; */
     /* justify-content: space-between; */
     /* align-items: center; */
-  }
-
-.navigation-container {
-    display: flex;
-    width: 100%;
-    justify-content: center;
-}
-.desktop {
-    display: flex;
-    width: 500px;
-    justify-content: center;
-}
-
-.icons {
-    display: flex;
-    /* width: 50%; */
-}
-
-.navigation ul li {
-    /* display: block; */
-    /* width: 10rem; */
     border: 1px red solid;
-    /* height: 10px; */
   }
 
-.navigation a, .navigation img {
+  nav {
+    display: flex;
+    justify-content: center;
+  }
+
+.logo {
+  display: block;
+  width: 300px;
+}
+
+.logo h1 {
+  font-weight: 800;
+}
+
+.navigation {
+  display: flex;
+  justify-items: center;
+  width: 30%;
+  height: 5rem;
+  border: 1px red solid;
+}
+
+.navigation img {
     display: block;
-    width: 3rem;
-    /* height: auto; */
+    width: 2rem;
+    height: auto;
     /* border: 1px red solid; */
   }
 
