@@ -199,11 +199,11 @@ header .logo h1 {
 
 footer {
   display: flex;
-  background-color: rgb(167, 167, 167);
+  /* background-color: rgb(167, 167, 167); */
+  background-color: rgb(196, 182, 151);
   width: 100%;
   height: auto;
   justify-content: space-between;
-  /* border: 1px red solid; */
   padding: 1rem 3rem;
 }
 
