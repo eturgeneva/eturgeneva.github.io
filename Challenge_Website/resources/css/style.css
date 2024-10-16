@@ -140,7 +140,7 @@ header .logo h1 {
   font-family: 'Michroma';
   color: white;
   /* background-color: rgba(161, 138, 89, 0.4); */
-  background: linear-gradient(to left, rgba(161, 138, 89, 0), rgba(161, 138, 89, 0.4));
+  background: linear-gradient(to left, rgba(161, 138, 89, 0), rgba(161, 138, 89, 0.5));
   height: 10rem;
   padding: 1rem;
 }
@@ -159,9 +159,10 @@ header .logo h1 {
   /* display: block; */
   text-decoration: none;
   text-transform: uppercase;
-  font-size: 1rem;
+  font-size: 1.2rem;
   font-weight: 500;
   color: white;
+  /* background-color: rgba(161, 138, 89, 0.1); */
   border: 1px white solid;
   border-radius: 20px;
   padding: 0.5rem 1rem;
