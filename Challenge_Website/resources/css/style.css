@@ -203,12 +203,12 @@ footer {
   width: 100%;
   height: auto;
   justify-content: space-between;
-  border: 1px red solid;
-  padding: 0 3rem;
+  /* border: 1px red solid; */
+  padding: 1rem 3rem;
 }
 
 footer ul {
-  border: 1px red solid;
+  /* border: 1px red solid; */
   text-align: left;
 }
 
@@ -217,9 +217,29 @@ footer li {
   padding: 0.5rem;
 }
 
+footer .left {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: space-between; */
+  gap: 1rem;
+  align-items: center;
+  width: auto;
+}
+
 footer .logo h1 {
   color: white;
   font-size: 1.5rem;
   font-weight: 400;
-  border: 1px red solid;
+  /* border: 1px red solid; */
+}
+
+footer .social {
+  display: flex;
+  color: white;
+}
+
+.social i {
+  padding: 0.5rem;
+  font-size: 1.5rem;
+  color: white;
 }
