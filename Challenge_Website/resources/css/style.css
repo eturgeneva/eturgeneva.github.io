@@ -137,6 +137,7 @@ header .logo h1 {
   height: auto;
   /* border: 1px red solid; */
   margin: 0 auto;
+  padding: 1rem 0 3rem;
 }
 
 .container {
@@ -176,18 +177,18 @@ header .logo h1 {
 
 .values {
   display: flex;
-  width: 60%;
+  width: 100%;
+  background-color: rgb(243, 244, 244);
   justify-content: center;
-  margin: 0 auto;
-  padding: 4rem;
+  padding: 1rem;
 }
 
 .value {
-  padding: 1rem 2rem;
+  padding: 2rem 2rem;
 }
 
 .value h3 {
-  padding: 1rem;
+  padding-top: 1rem;
 }
 
 .value img {
