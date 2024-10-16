@@ -15,6 +15,10 @@ body {
     text-align: center;
   }
 
+a {
+  text-decoration: none;
+}
+
 h2 {
     text-transform: uppercase;
   }
@@ -86,7 +90,6 @@ header .logo h1 {
 .navigation a {
   /* border: 1px green solid; */
   margin: 2rem;
-  text-decoration: none;
   color: black;
 }
 
@@ -157,7 +160,6 @@ header .logo h1 {
 
 .promo a {
   /* display: block; */
-  text-decoration: none;
   text-transform: uppercase;
   font-size: 1.2rem;
   font-weight: 500;
@@ -188,6 +190,7 @@ header .logo h1 {
   flex-direction: column;
   justify-content: space-between;
   text-align: left;
+  overflow: hidden;
 }
 
 .product {
@@ -204,6 +207,11 @@ header .logo h1 {
   height: 60%;
 }
 
+/* .product .description:hover {
+  opacity: 0.5;
+  transition: 0.7s;
+} */
+
 .product .description p {
   padding-top: 0.5rem;
 }
@@ -216,6 +224,12 @@ header .logo h1 {
   max-width: 100%;
 }
 
+.product img:hover {
+  opacity: 0.5;
+  transition: 0.7s;
+  /* transform: scale(2); */
+}
+
 .product .button {
   background-color: rgb(167, 167, 167);
   width: 7rem;
@@ -224,9 +238,16 @@ header .logo h1 {
   padding: 0.3rem 0;
 }
 
+.product .button:hover {
+  background-color: rgb(127, 127, 127);
+}
+
 .product a {
+  color: black;
+}
+
+.product .button a {
   color: white;
-  text-decoration: none;
   font-size: 1rem;
 }
 
