@@ -15,8 +15,12 @@ body {
     text-align: center;
   }
 
-  h2 {
+h2 {
     text-transform: uppercase;
+  }
+
+li {
+    list-style-type: none;
   }
 
 /* Header */
@@ -32,27 +36,23 @@ header {
     /* border: 1px red solid; */
   }
 
-  nav {
+nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 0;
-    padding: 0;
-  }
-
-  nav li {
-    list-style-type: none;
+    /* margin: 0; */
+    /* padding: 0; */
   }
 
 .logo {
   display: block;
-  margin-left: 3rem;
+  font-family: 'Michroma', sans-serif;
 }
 
-.logo h1 {
+header .logo h1 {
   font-weight: 800;
-  font-family: 'Michroma', sans-serif;
   font-size: 2rem;
+  margin-left: 3rem;
 }
 
 .navbar {
@@ -179,7 +179,7 @@ header {
   width: 60%;
   justify-content: center;
   margin: 0 auto;
-  padding: 3rem;
+  padding: 4rem;
 }
 
 .value {
@@ -197,12 +197,28 @@ header {
 /* Footer */
 
 footer {
-  background-color: rgb(167, 167, 167);
-  height: auto;
   display: flex;
+  background-color: rgb(167, 167, 167);
+  width: 100%;
+  height: auto;
+  justify-content: space-between;
+  border: 1px red solid;
+  padding: 0 3rem;
+}
+
+footer ul {
+  border: 1px red solid;
+  text-align: left;
 }
 
 footer li {
   color: white;
   padding: 0.5rem;
+}
+
+footer .logo h1 {
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 400;
+  border: 1px red solid;
 }
