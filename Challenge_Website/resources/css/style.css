@@ -144,6 +144,7 @@ header .logo h1 {
   display: flex;
   width: 25%;
   flex-direction: column;
+  justify-content: space-between;
   text-align: left;
 }
 
@@ -153,6 +154,23 @@ header .logo h1 {
 
 .product h3 {
   padding: 0.5rem 0;
+}
+
+.product .description {
+  display: flex;
+  flex-direction: column;
+  height: 60%;
+  /* justify-content: space-between; */
+}
+
+.product .description p {
+  /* color: red; */
+  padding-top: 0.5rem;
+  /* height: auto; */
+}
+
+.description h3, .description p {
+  height: 50%;
 }
 
 .product img {
