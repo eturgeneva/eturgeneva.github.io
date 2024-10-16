@@ -19,6 +19,8 @@ body {
     text-transform: uppercase;
   }
 
+/* Header */
+
 header {
     position: fixed;
     top: 0;
@@ -45,7 +47,6 @@ header {
 .logo {
   display: block;
   margin-left: 3rem;
-  /* width: 300px; */
 }
 
 .logo h1 {
@@ -103,10 +104,10 @@ header {
     .navigation .burger {
         display: block;
         width: 10%;
-        /* height: auto; */
     }
 }
 
+/* Promo News */
 
 .promo img {
   max-width: 100%;
@@ -124,6 +125,8 @@ header {
 #promo, #products {
   scroll-margin-top: 5rem;
 }
+
+/* Products Bestsellers */
 
 .bestellers {
   display: flex;
@@ -169,6 +172,37 @@ header {
   font-size: 1rem;
 }
 
+/* Company Values */
+
+.values {
+  display: flex;
+  width: 60%;
+  justify-content: center;
+  margin: 0 auto;
+  padding: 3rem;
+}
+
+.value {
+  padding: 1rem 2rem;
+}
+
+.value h3 {
+  padding: 1rem;
+}
+
 .value img {
   height: 3rem;
+}
+
+/* Footer */
+
+footer {
+  background-color: rgb(167, 167, 167);
+  height: auto;
+  display: flex;
+}
+
+footer li {
+  color: white;
+  padding: 0.5rem;
 }
