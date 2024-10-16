@@ -207,11 +207,6 @@ header .logo h1 {
   height: 60%;
 }
 
-/* .product .description:hover {
-  opacity: 0.5;
-  transition: 0.7s;
-} */
-
 .product .description p {
   padding-top: 0.5rem;
 }
@@ -230,9 +225,16 @@ header .logo h1 {
   transition: 0.7s;
 }
 
-.serum a {
+.serum .photo a {
+  background-image: url('../images/mtm_labo_pdt_texture_1680x1296_20210422_custom-blended-moisture-building-essence.jpg');
+}
+
+.cleanser .photo a {
+  background-image: url('../images/mtm_labo_pdt_texture_1680x1296_20210422_custom-blended-milk-cleanser.jpg');
+}
+
+.cream .photo a {
   background-image: url('../images/mtm_labo_pdt_texture_1680x1296_20210422_custom-blended-conditioning-cream.jpg');
-  /* background-size: 100%; */
 }
 
 .product .button {
