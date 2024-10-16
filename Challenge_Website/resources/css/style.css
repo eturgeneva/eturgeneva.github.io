@@ -222,12 +222,17 @@ header .logo h1 {
 
 .product img {
   max-width: 100%;
+  transition: 0.7s;
 }
 
 .product img:hover {
-  opacity: 0.5;
+  opacity: 0;
   transition: 0.7s;
-  /* transform: scale(2); */
+}
+
+.serum a {
+  background-image: url('../images/mtm_labo_pdt_texture_1680x1296_20210422_custom-blended-conditioning-cream.jpg');
+  /* background-size: 100%; */
 }
 
 .product .button {
@@ -244,6 +249,11 @@ header .logo h1 {
 
 .product a {
   color: black;
+}
+
+.product .photo a {
+  display: flex;
+  background-size: 100%;
 }
 
 .product .button a {
