@@ -25,8 +25,7 @@ h2 {
   }
 
 li {
-    list-style-type: square;
-    margin-left: 1rem;
+    list-style-type: none;
   }
 
 /* Header Product Page */
@@ -133,7 +132,7 @@ header .logo h1 {
     "text text photo photo"
     "text text photo photo";
 
-  align-items: end;
+  align-items: center;
   width: 60%;
   margin: 0 auto 3rem;
   text-align: left;
@@ -142,6 +141,11 @@ header .logo h1 {
 .title {
   grid-area: title;
   margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.title p {
+  padding: 1rem 0;
 }
 
 .buttons {
@@ -211,8 +215,14 @@ header .logo h1 {
   padding-right: 5rem;
 }
 
+.product li {
+  list-style-type: square;
+  margin-left: 1rem;
+}
+
 .product h3 {
-  padding: 1rem 0;
+  margin-top: 1rem;
+  padding: 0.5rem 0;
   font-size: 1rem;
 }
 
