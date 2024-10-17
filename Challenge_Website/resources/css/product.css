@@ -137,17 +137,17 @@ header .logo h1 {
   text-align: left;
 }
 
-.title {
+.product .title {
   grid-area: title;
   margin-top: 2rem;
   margin-bottom: 2rem;
 }
 
-.title p {
+.product .title p {
   padding: 1rem 0;
 }
 
-.images {
+.product .images {
   grid-area: photo;
 }
 
