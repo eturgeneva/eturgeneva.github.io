@@ -133,17 +133,10 @@ header .logo h1 {
 .promo {
   display: grid;
   grid-template: repeat(3, 1fr) / 1fr 1fr 1fr;
-  /* grid-template-areas: "blank blank"
-                       "collection blank"
-                       "button blank"
-                       "blank blank"; */
-  /* flex-direction: column; */
   align-items: end;
   width: 70%;
   height: 650px;
   margin: 0 auto 4rem;
-  /* padding: 2rem; */
-  /* padding-bottom: 4rem; */
   background-image: url('../images/promo_1920x1080.jpg');
   background-size: cover;
   background-repeat: no-repeat;
@@ -151,14 +144,11 @@ header .logo h1 {
 }
 
 .promo h2 {
-  /* grid-area: collection; */
   grid-area: 1 / 1 / span 1 / span 1;
-  /* align-items: center; */
   align-content: center;
   font-size: 2.5rem;
   font-family: 'Michroma';
   color: white;
-  /* background-color: rgba(161, 138, 89, 0.4); */
   background: linear-gradient(to left, rgba(161, 138, 89, 0), rgba(161, 138, 89, 0.5));
   height: 10rem;
   padding: 1rem;
@@ -175,12 +165,10 @@ header .logo h1 {
 }
 
 .promo a {
-  /* display: block; */
   text-transform: uppercase;
   font-size: 1.2rem;
   font-weight: 500;
   color: white;
-  /* background-color: rgba(161, 138, 89, 0.1); */
   border: 1px white solid;
   border-radius: 20px;
   padding: 0.5rem 1rem;
@@ -190,12 +178,9 @@ header .logo h1 {
 
 .bestellers {
   display: flex;
-  /* flex-direction: column; */
-  /* align-items: center; */
   justify-content: space-around;
   width: 70%;
   height: auto;
-  /* border: 1px red solid; */
   margin: 0 auto;
   padding: 1rem 0 3rem;
 }
@@ -305,7 +290,6 @@ header .logo h1 {
 
 footer {
   display: flex;
-  /* background-color: rgb(167, 167, 167); */
   background-color: rgb(196, 182, 151);
   width: 100%;
   height: auto;
