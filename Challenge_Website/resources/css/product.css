@@ -25,7 +25,8 @@ h2 {
   }
 
 li {
-    list-style-type: none;
+    list-style-type: square;
+    margin-left: 1rem;
   }
 
 /* Header Product Page */
@@ -145,11 +146,6 @@ header .logo h1 {
 
 .buttons {
   grid-area: buttons;
-  /* text-align: center; */
-}
-
-.buttons a:hover {
-  background-color: grey;
 }
 
 .quantity {
@@ -159,9 +155,13 @@ header .logo h1 {
 .quantity a {
   display: block;
   color: white;
-  background-color: black;
+  background-color: rgb(160, 160, 160);
+  /* background-color: rgb(196, 182, 151); */
   font-size: 1rem;
   padding: 0.5rem 1rem;
+}
+.quantity a:hover {
+  background-color: rgb(193, 193, 193);
 }
 
 #quantity {
@@ -172,11 +172,15 @@ header .logo h1 {
 .button a {
   display: block;
   width: 12rem;
-  background-color: black;
+  /* background-color: black; */
   color: white;
   padding: 0.5rem;
   font-size: 1rem;
   margin: 0.5rem 0;
+}
+
+.shop a {
+  background-color: black;
 }
 
 .shop a:before {
@@ -184,9 +188,22 @@ header .logo h1 {
   margin: 1rem;
 }
 
+.shop a:hover {
+  background-color: rgb(101, 101, 101);
+}
+
+.wishlist a {
+  /* background-color: grey; */
+  background-color: rgb(165, 151, 121);
+}
+
 .wishlist a:before {
   content: "❤";
   margin: 1rem;
+}
+
+.wishlist a:hover {
+  background-color: rgb(140, 117, 70);
 }
 
 .product .text {
