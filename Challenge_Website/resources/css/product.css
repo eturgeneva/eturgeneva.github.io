@@ -123,12 +123,41 @@ header .logo h1 {
 
 .section {
   display: grid;
-  width: 70%;
+  grid-template-columns: repeat(4, 1fr);
+  /* grid-template-columns: 1fr 1fr 2fr 2fr; */
+  grid-template-rows: auto;
+  grid-template-areas:
+    "title title photo photo"
+    "buttons . photo photo"
+    "text text photo photo"
+    "text text photo photo";
+
+  align-items: start;
+  width: 60%;
   margin: 0 auto;
+  text-align: left;
+}
+
+.title {
+  grid-area: title;
+  margin-top: 2rem;
+}
+
+.buttons {
+  grid-area: buttons;
+}
+
+.text {
+  grid-area: text;
+}
+
+.images {
+  grid-area: photo;
 }
 
 .product img {
   max-width: 100%;
+  padding: 0.5rem;
 }
 
 /* Footer Product Page*/
