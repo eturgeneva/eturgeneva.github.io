@@ -102,19 +102,22 @@ header .logo h1 {
 }
 
 @media only screen and (max-width: 760px) {
+
+    .desktop {
+      display: none;
+    }
    
     .navigation .burger {
       display: flex;
     }
 
-    .navigation a {
-      margin: 0.5rem;
+    .navigation img {
+      height: 1.5rem;
     }
 
     .icons li {
       display: flex;
     }
-
     
 }
 
@@ -168,9 +171,27 @@ header .logo h1 {
   padding: 0.5rem 1rem;
 }
 
+@media only screen and (max-width: 760px) {
+
+  .promo {
+    width: 100%;
+    height: 450px;
+    margin-bottom: 0.5rem;
+  }
+
+  .promo a {
+    font-size: 1.5rem;
+  }
+
+  .button {
+    text-align: left;
+  }
+
+}
+
 /* Products Bestsellers */
 
-.bestellers {
+.bestsellers {
   display: flex;
   justify-content: space-around;
   width: 70%;
@@ -254,6 +275,24 @@ header .logo h1 {
   font-size: 1rem;
 }
 
+@media only screen and (max-width: 760px) {
+
+  .bestsellers {
+    width: 100%;
+    padding: 0;
+    margin: 0 0 0.5rem;
+  }
+
+  .container {
+    width: 30%;
+  }
+
+  .product {
+    padding: 0.3rem 0;
+  }
+
+}
+
 /* Company Values */
 
 .values {
@@ -274,6 +313,14 @@ header .logo h1 {
 
 .value img {
   height: 3rem;
+}
+
+@media only screen and (max-width: 760px) {
+
+  .value {
+    padding: 1rem;
+  }
+
 }
 
 /* Footer */
