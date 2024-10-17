@@ -133,7 +133,7 @@ header .logo h1 {
 
   align-items: center;
   width: 60%;
-  margin: 0 auto 3rem;
+  margin: 0 auto;
   text-align: left;
 }
 
@@ -240,6 +240,28 @@ header .logo h1 {
   font-size: 1rem;
 }
 
+/* Company Values */
+
+.values {
+  display: flex;
+  width: 100%;
+  background-color: rgb(243, 244, 244);
+  justify-content: center;
+  padding: 1rem;
+  margin-top: 3rem;
+}
+
+.value {
+  padding: 2rem 2rem;
+}
+
+.value h3 {
+  padding-top: 1rem;
+}
+
+.value img {
+  height: 3rem;
+}
 
 /* Footer Product Page*/
 
