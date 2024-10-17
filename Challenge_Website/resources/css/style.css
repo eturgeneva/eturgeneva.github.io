@@ -17,6 +17,7 @@ body {
 
 a {
   text-decoration: none;
+  color: black;
 }
 
 h2 {
@@ -90,7 +91,6 @@ header .logo h1 {
 .navigation a {
   /* border: 1px green solid; */
   margin: 2rem;
-  color: black;
 }
 
 .navigation img {
@@ -242,10 +242,6 @@ header .logo h1 {
 
 .product .button:hover {
   background-color: rgb(127, 127, 127);
-}
-
-.product a {
-  color: black;
 }
 
 .product .photo a {
