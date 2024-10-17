@@ -121,6 +121,27 @@ header .logo h1 {
     
 }
 
+@media only screen and (max-width: 450px) {
+
+  header {
+    height: 3.5rem;
+  }
+
+  header .logo h1 {
+    margin-left: 1rem;
+  }
+
+  .navigation a {
+    margin: 0.5rem;
+  }
+
+  .icons {
+    padding: 0.5rem;
+    height: 4rem;
+  }
+
+}
+
 /* Promo News */
 
 .promo img {
@@ -185,6 +206,32 @@ header .logo h1 {
 
   .button {
     text-align: left;
+  }
+
+}
+
+@media only screen and (max-width: 450px) {
+
+  #promo, #products {
+    scroll-margin-top: 3.5rem;
+  }
+
+  .promo {
+    height: 300px;
+  }
+
+  .promo h2 {
+    grid-area: 1 / 1 / span 1 / span 3;
+    background: linear-gradient(rgba(161, 138, 89, 0.5), rgba(161, 138, 89, 0));
+  }
+
+  .promo .button {
+    grid-area: 3 / 1 / span 1 / span 3;
+    text-align: center;
+  }
+
+  .promo a {
+    background-color: rgba(196, 182, 151, 1);
   }
 
 }
