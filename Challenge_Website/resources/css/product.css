@@ -146,7 +146,11 @@ header .logo h1 {
 
 .buttons {
   grid-area: buttons;
-  text-align: center;
+  /* text-align: center; */
+}
+
+.buttons a:hover {
+  background-color: grey;
 }
 
 .quantity {
@@ -154,6 +158,7 @@ header .logo h1 {
 }
 
 .quantity a {
+  display: block;
   color: white;
   background-color: black;
   font-size: 1rem;
@@ -167,11 +172,22 @@ header .logo h1 {
 
 .button a {
   display: block;
+  width: 12rem;
   background-color: black;
   color: white;
   padding: 0.5rem;
-  font-size: 1.2rem;
+  font-size: 1rem;
   margin: 0.5rem 0;
+}
+
+.shop a:before {
+  content: "🛒";
+  margin: 1rem;
+}
+
+.wishlist a:before {
+  content: "❤";
+  margin: 1rem;
 }
 
 .text {
