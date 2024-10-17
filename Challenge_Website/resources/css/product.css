@@ -249,6 +249,7 @@ header .logo h1 {
   justify-content: center;
   padding: 1rem;
   margin-top: 3rem;
+  text-align: center;
 }
 
 .value {
