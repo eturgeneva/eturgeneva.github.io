@@ -139,7 +139,7 @@ header .logo h1 {
 
 .product .title {
   grid-area: title;
-  margin-top: 2rem;
+  margin-top: 1rem;
   margin-bottom: 2rem;
 }
 
@@ -149,6 +149,7 @@ header .logo h1 {
 
 .product .images {
   grid-area: photo;
+  align-self: start;
 }
 
 .product img {
