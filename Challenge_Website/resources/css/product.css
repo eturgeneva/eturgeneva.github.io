@@ -132,9 +132,10 @@ header .logo h1 {
     "text text photo photo"
     "text text photo photo";
 
-  align-items: start;
+  align-items: end;
+  /* align-items: baseline; */
   width: 60%;
-  margin: 0 auto;
+  margin: 0 auto 3rem;
   text-align: left;
 }
 
@@ -145,10 +146,43 @@ header .logo h1 {
 
 .buttons {
   grid-area: buttons;
+  text-align: center;
+}
+
+.quantity a {
+  display: inline-block;
+  color: white;
+  background-color: black;
+  font-size: 1.2rem;
+  padding: 0.5rem;
+  width: 2.5rem;
+}
+
+#quantity {
+  background-color: rgb(235, 235, 235);
+  color: black;
+}
+
+.button a {
+  display: block;
+  background-color: black;
+  color: white;
+  padding: 0.5rem;
+  font-size: 1.2rem;
+  margin: 0.5rem;
 }
 
 .text {
   grid-area: text;
+  padding-right: 3rem;
+}
+
+.text h3, .text p {
+  padding: 0.5rem 0;
+}
+
+.text p, .text li {
+  line-height: 1.5;
 }
 
 .images {
