@@ -102,10 +102,26 @@ header .logo h1 {
 }
 
 @media only screen and (max-width: 760px) {
-    .navigation .burger {
+    /* .navigation .burger {
         display: block;
-        width: 10%;
+    } */
+
+    .navbar {
+      width: 30%;
     }
+
+    .navigation ul {
+      display: flex;
+    }
+
+    .navigation a {
+      margin: 0;
+    }
+
+    .icons {
+      display: flex;
+    }
+    
 }
 
 /* Promo News */
