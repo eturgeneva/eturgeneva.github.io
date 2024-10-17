@@ -28,6 +28,14 @@ li {
     list-style-type: none;
   }
 
+@media only screen and (max-width: 450px) {
+
+  body {
+    margin-top: 3.5rem;
+  }
+
+}
+
 /* Header */
 
 header {
@@ -343,6 +351,34 @@ header .logo h1 {
 
   .product {
     padding: 0.3rem 0;
+  }
+
+}
+
+@media only screen and (max-width: 450px) {
+
+  .bestsellers {
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+  }
+
+  .container {
+    width: 90%;
+    align-items: center;
+    text-align: center;
+  }
+
+  .product .description p {
+    padding: 0;
+  }
+
+  .product .button {
+    margin-top: 0.5rem;
+  }
+
+  .product .photo {
+    width: 90%;
   }
 
 }
