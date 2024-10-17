@@ -133,7 +133,6 @@ header .logo h1 {
     "text text photo photo";
 
   align-items: end;
-  /* align-items: baseline; */
   width: 60%;
   margin: 0 auto 3rem;
   text-align: left;
@@ -190,17 +189,20 @@ header .logo h1 {
   margin: 1rem;
 }
 
-.text {
+.product .text {
   grid-area: text;
-  padding-right: 3rem;
+  padding-right: 5rem;
 }
 
-.text h3, .text p {
-  padding: 0.5rem 0;
+.product h3 {
+  padding: 1rem 0;
+  font-size: 1rem;
 }
 
-.text p, .text li {
+.product p, .product li {
   line-height: 1.5;
+  color: grey;
+  font-size: 1rem;
 }
 
 .images {
