@@ -138,15 +138,19 @@ header .logo h1 {
   header .logo h1 {
     margin-left: 1rem;
     margin-bottom: 0.5rem;
+    font-size: 1.5rem;
   }
 
   .navigation a {
-    margin: 0.5rem;
+    margin: 1.2rem;
   }
 
   .icons {
-    padding: 0.5rem;
     height: 4rem;
+  }
+
+  .navigation img {
+    height: 1.2rem;
   }
 
 }
@@ -232,6 +236,8 @@ header .logo h1 {
   .promo h2 {
     grid-area: 1 / 1 / span 1 / span 3;
     background: linear-gradient(rgba(161, 138, 89, 0.7), rgba(161, 138, 89, 0));
+    font-size: 1.8rem;
+    height: 5rem;
   }
 
   .promo .button {
