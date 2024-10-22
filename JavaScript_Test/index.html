@@ -126,4 +126,94 @@
 console.log(raceNumber);
     </script>
 
+    <script>
+    // Function Expression
+    // const plantNeedsWater = function(day) {
+    //     if (day === 'Wednesday') {
+    //         return true;
+    //     } else {
+    //         return false;
+    //     }
+    // }
+
+    // console.log(plantNeedsWater('Tuesday'));
+
+    //Or:
+    const plantNeedsWater = (day) => {
+        if (day === 'Wednesday') {
+            return true;
+        } else {
+            return false;
+        }
+    };
+    console.log(plantNeedsWater('Tuesday'));
+
+    </script>
+
+    <script>
+        console.log('hi');
+        // The user should be able to choose ‘rock’, ‘paper’, or ‘scissors’ when the game starts
+        // When getting the user’s choice, you should also check to make sure that the user typed a valid choice: ‘rock’, ‘paper’, or ‘scissors’
+
+        const getUserChoice = userInput => {
+        userInput = userInput.toLowerCase();
+        if (userInput === 'rock' || 'paper' || 'scissors' || 'bomb') {
+            return userInput;
+        } else {
+            console.log('Invalid input');
+        };
+        };
+        // console.log(getUserChoice('bomb'));
+
+        function getComputerChoice() {
+        getComputerChoice = Math.floor(Math.random() * 3);
+        console.log(getComputerChoice);
+        if (getComputerChoice === 0) {
+            return 'rock';
+        } else if (getComputerChoice === 1) {
+            return 'paper';
+        } else if (getComputerChoice === 2) {
+            return 'scissors';
+        } else {
+            console.log('Invalid Result');
+        }
+        };
+
+        // console.log(getComputerChoice());
+
+        // Determine a winner
+        function determineWinner(userChoice, computerChoice) {
+        if (userChoice === computerChoice) {
+            return 'a tie';
+        } else if (userChoice === 'rock' && computerChoice === 'paper') {
+            return 'the computer won';
+        } else if (userChoice === 'rock' && computerChoice !== 'paper') {
+            return 'you won';
+        } else if (userChoice === 'paper' && computerChoice === 'scissors') {
+            return 'the computer won';
+        } else if (userChoice === 'paper' && computerChoice !== 'scissors') {
+            return 'you won';
+        } else if (userChoice === 'scissors' && computerChoice === 'rock') {
+            return 'the computer won';
+        } else if (userChoice === 'scissors' && computerChoice !== 'rock') {
+            return 'you won';
+        } else if (userChoice === 'bomb') {
+            return 'you won';
+        } else {
+            return 'something went wrong';
+        }
+        };
+        // Function test
+        // console.log(determineWinner('scissors', 'paper'));
+
+        function playGame() {
+        let userChoice = getUserChoice('scissors');
+        let computerChoice = getComputerChoice();
+        console.log(userChoice, computerChoice);
+        console.log(determineWinner(userChoice, computerChoice));
+        };
+
+        playGame();
+    </script>
+
 </html>
