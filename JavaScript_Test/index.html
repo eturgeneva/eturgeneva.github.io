@@ -253,7 +253,7 @@ console.log(raceNumber);
 
     // console.log(getSleepHours('Monday'));
 
-    const getActualSleepHours = () => getSleepHours('monday') + getSleepHours('tuesday') + getSleepHours('wednesday') + getSleepHours('thursday') + getSleepHours('friday') + getSleepHours('saturday') + getSleepHours('sunday');
+    getActualSleepHours = () => getSleepHours('monday') + getSleepHours('tuesday') + getSleepHours('wednesday') + getSleepHours('thursday') + getSleepHours('friday') + getSleepHours('saturday') + getSleepHours('sunday');
 
     console.log(getActualSleepHours());
 
@@ -280,6 +280,67 @@ console.log(raceNumber);
 
     calculateSleepDebt();
 
+    </script>
+
+    <!-- Sleep Calculator Input Version-->
+    <script>
+        function getSleepHours(day) {
+        switch (day.toLowerCase()) {
+            case 'monday':
+            return 8;
+            case 'tuesday':
+            return 7;
+            case 'wednesday':
+            return 6;
+            case 'thursday':
+            return 9;
+            case 'friday':
+            return 8;
+            case 'saturday':
+            return 10;
+            case 'sunday':
+            return 12;
+            default:
+            return 'Invalid input';
+        }
+        }
+        // if you got 8 hours of sleep on Monday night, calling getSleepHours('monday') should return 8
+        // 
+        // console.log(getSleepHours('Sunday'));
+
+        const getActualSleepHours = () => getSleepHours('monday') + getSleepHours('tuesday') + getSleepHours('wednesday') + getSleepHours('thursday') + getSleepHours('friday') + getSleepHours('saturday') + getSleepHours('sunday');
+
+        console.log(getActualSleepHours());
+
+        // ideal sleep hours that you prefer (variable with a value set to ideal hours amount per night, then multiplied by 7 to get the ideal weekly amount)
+
+        // function getIdealSleepHours () {
+        //   const idealHours = 8;
+        //   return idealHours * 7;
+        // }
+        // console.log(getIdealSleepHours());
+
+        // Alternative - so that ideal amount of hours could be passed as an argument - for example, getIdealSleepHours(8):
+        function getIdealSleepHours(idealAmount) {
+        return idealAmount * 7;
+        }
+        console.log(getIdealSleepHours(8));
+
+        function calculateSleepDebt () {
+        actualSleepHours = getActualSleepHours();
+        idealSleepHours = getIdealSleepHours(8);
+        if (actualSleepHours === idealSleepHours) {
+            console.log('You\'ve got the perfect amount of sleep');
+        } else if (actualSleepHours > idealSleepHours) {
+            console.log('You sleep too much. You\'ve got ' + (actualSleepHours - idealSleepHours) + ' hours more sleep than needed');
+        } else if (actualSleepHours < idealSleepHours) {
+            console.log('You should get some rest. You\'ve got ' + (idealSleepHours - actualSleepHours) + ' hours less sleep than needed');
+        } else {
+            console.log('Invalid input');
+        }
+        }
+
+        calculateSleepDebt();
     </script>
 
 </html>
