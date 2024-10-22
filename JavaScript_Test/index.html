@@ -160,7 +160,7 @@ console.log(raceNumber);
 
         const getUserChoice = userInput => {
         userInput = userInput.toLowerCase();
-        if (userInput === 'rock' || 'paper' || 'scissors' || 'bomb') {
+        if (userInput === 'rock' || userInput === 'paper' || userInput === 'scissors' || userInput === 'bomb') {
             return userInput;
         } else {
             console.log('Invalid input');
@@ -265,8 +265,8 @@ console.log(raceNumber);
     console.log(getIdealSleepHours());
 
     function calculateSleepDebt () {
-    actualSleepHours = getActualSleepHours();
-    idealSleepHours = getIdealSleepHours();
+    const actualSleepHours = getActualSleepHours();
+    const idealSleepHours = getIdealSleepHours();
     if (actualSleepHours === idealSleepHours) {
         console.log('You\'ve got the perfect amount of sleep');
     } else if (actualSleepHours > idealSleepHours) {
@@ -327,8 +327,8 @@ console.log(raceNumber);
         console.log(getIdealSleepHours(8));
 
         function calculateSleepDebt () {
-        actualSleepHours = getActualSleepHours();
-        idealSleepHours = getIdealSleepHours(8);
+        const actualSleepHours = getActualSleepHours();
+        const idealSleepHours = getIdealSleepHours(8);
         if (actualSleepHours === idealSleepHours) {
             console.log('You\'ve got the perfect amount of sleep');
         } else if (actualSleepHours > idealSleepHours) {
@@ -399,6 +399,61 @@ console.log(raceNumber);
 
         logEvent(name2, event2);
         logTime(name2, days2);
+    </script>
+
+    <!-- Small Tasks -->
+    <script>
+        // function canIVote(age) {
+        // if (age >= 18) {
+        //     return true;
+        // } else {
+        //     return false;
+        // }
+        // };
+
+        const canIVote = age => age >= 18;
+
+        // Uncomment the line below when you're ready to try out your function
+        console.log(canIVote(19)) // Should print true
+
+        // Write a function, agreeOrDisagree(), that takes in two strings, and returns 'You agree!' if the two strings are the same and 'You disagree!' if the two strings are different.
+        // function agreeOrDisagree (string1, string2) {
+        //     if (string1 === string2) {
+        //         return 'You agree!';
+        //     } else {
+        //         return 'You disagree!'
+        //     };
+        // }
+
+        function agreeOrDisagree (string1, string2) {
+            return string1 === string2 ? 'You agree!' : 'You disagree!';       
+        }
+
+
+        // Uncomment the line below when you're ready to try out your function
+        console.log(agreeOrDisagree("yep", "yep")) 
+        // Should print 'You agree!'
+
+        function lifePhase(age) {
+        if (age > 0 && age <= 3) {
+            return 'baby';
+        } else if (age >= 4 && age <= 12) {
+            return 'child';
+        } else if (age >= 13 && age <= 19) {
+            return 'teen';
+        } else if (age >= 20 && age <= 64) {
+            return 'adult';
+        } else if (age >= 65 && age <= 140) {
+            return 'senior citizen';
+        } else {
+            return 'This is not a valid age';
+        }
+        }
+
+
+        // Uncomment the line below when you're ready to try out your function
+        console.log(lifePhase(5)) //should print 'child'
+
     </script>
 
 </html>
