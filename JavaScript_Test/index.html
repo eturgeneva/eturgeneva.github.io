@@ -456,4 +456,228 @@ console.log(raceNumber);
 
     </script>
 
+    <script>
+        function finalGrade (n1, n2, n3) {
+        const invalidGrade = function (number) {
+            return number < 0 || number > 100; // returns true if invalid number (<0 or >100)
+        }
+            if (invalidGrade(n1) || invalidGrade(n2) || invalidGrade(n3)) {
+            return 'You have entered an invalid grade.';
+            }
+
+            // if (n1 < 0 || n1 > 100) {
+            //   return 'You have entered an invalid grade.';
+            // }
+            // if (n2 < 0 || n2 > 100) {
+            //   return 'You have entered an invalid grade.';
+            // }
+            // if (n3 < 0 || n3 > 100) {
+            //   return 'You have entered an invalid grade.';
+            // }
+
+        const averageGrade = (n1 + n2 + n3) / 3;
+        return averageGrade < 60 ? 'F' :
+                averageGrade < 70 ? 'D' :
+                averageGrade < 80 ? 'C' :
+                averageGrade < 90 ? 'B' : 'A';
+        }
+
+        console.log(finalGrade(40, 100, 100));
+
+        // Uncomment the line below when you're ready to try out your function
+        // console.log(finalGrade(99, 92, 95)) // Should print 'A'
+    </script>
+    <script>
+        const rollTheDice = () => {
+        // Math.random() gives us a random number from 0 up to, but not including, 1
+        // We multiplied that by 6 to get a number between 0 and up to, but not including, 6
+        // But since we actually wanted numbers from 1 to 6, inclusive, we added 1
+            let die1 = Math.floor(Math.random() * 6) + 1
+            let die2 = Math.floor(Math.random() * 6) + 1
+            return die1 + die2
+        }
+        console.log(rollTheDice());
+
+
+        function calculateWeight(earthWeight, planet) {
+        switch (planet) {
+            case 'Mercury':
+            return earthWeight * 0.378;
+            case 'Venus':
+            return earthWeight * 0.907;
+            case 'Mars':
+            return earthWeight * 0.377;
+            case 'Jupiter':
+            return earthWeight * 2.36;
+            case 'Saturn':
+            return earthWeight * 0.916;
+            default:
+            return 'Invalid Planet Entry. Try: Mercury, Venus, Mars, Jupiter, or Saturn.';
+        }
+        }
+
+        console.log(calculateWeight(100, 'Jupiter')) // Should print 236
+
+        // Function that takes in any value and returns true if that value is truthy and false if that value is falsy:
+
+        // function truthyOrFalsy(value) {
+        // if (value) {
+        //     return true;
+        // } else {
+        //     return false;
+        // }
+        // }
+
+        const truthyOrFalsy = value => value ? true : false;
+
+        // const truthyOrFalsy = value => !!value; //best not to use !!
+
+        console.log(truthyOrFalsy(' '));
+
+        console.log(truthyOrFalsy(0)) // Should print false
+
+        function numImaginaryFriends(number) {
+            return Math.ceil(number / 4);
+        }
+
+        console.log(numImaginaryFriends(20)) // Should print 5
+        console.log(numImaginaryFriends(10)) // Should print 3 (2.5 rounded up!)
+
+        function sillySentence(adjective, verb, noun) {
+            return `I am so ${adjective} because I ${verb} coding! Time to write some more awesome ${noun}!`;
+        }
+        console.log(sillySentence('excited', 'love', 'functions')) 
+
+    </script>
+
+    <!-- Age Calculator -->
+    <script>
+        // 1st way:
+        // const currentYear = 2024;
+
+        // function howOld (age, year) {
+        // const birthYear = function () {
+        //     return currentYear - age;
+        // }
+        // console.log(birthYear());
+
+        // if (year > currentYear) {
+        //     const calculateFutureAge = function() {
+        //     return year - currentYear + age;
+        //     }
+        //     return `You will be ${calculateFutureAge()} in the year ${year}`;
+        // }
+        // if (year < birthYear()) {
+        //     return `The year ${year} was ${birthYear() - year} years before you were born`;
+        // }
+
+        // if (year > birthYear() && year < currentYear) {
+        //     return `You were ${year - birthYear()} in the year ${year}`;
+        // }
+
+        // }
+
+        // console.log(howOld(35, 2030));
+        // console.log(howOld(35, 1980));
+        // console.log(howOld(35, 2000));
+
+        // 2nd way:
+        const currentYear = 2024; // can be written in capslock
+
+        function howOld (age, year) {
+        const birthYear = currentYear - age;
+        // console.log(birthYear);
+        const futureAge = year - currentYear + age;
+
+        if (year > currentYear) {
+            return `You will be ${futureAge} in the year ${year}`;
+        }
+        if (year < birthYear) {
+            return `The year ${year} was ${birthYear - year} years before you were born`;
+        }
+
+        if (year > birthYear && year < currentYear) {
+            return `You were ${year - birthYear} in the year ${year}`;
+        }
+
+        }
+
+        console.log(howOld(35, 2030));
+        console.log(howOld(35, 1980));
+        console.log(howOld(35, 2000));
+
+        function tipCalculator(quality, totalCost) {
+        switch (quality) {
+            case 'bad':
+            return totalCost / 100 * 5;
+            case 'ok':
+            return totalCost / 100 * 15;
+            case 'good':
+            return totalCost / 100 * 20;
+            case 'excellent':
+            return totalCost / 100 * 30;
+            default:
+            return totalCost / 100 * 18;
+        }
+        }
+
+        function tipCalculator(quality, totalCost) {
+        switch (quality) {
+            case 'bad':
+            return totalCost * 0.5;
+            case 'ok':
+            return totalCost * 0.15;
+            case 'good':
+            return totalCost * 0.20;
+            case 'excellent':
+            return totalCost * 0.30;
+            default:
+            return totalCost * 0.18;
+        }
+        }
+
+        console.log(tipCalculator('good', 100)) //should return 20
+
+        function toEmoticon (emotion) {
+        switch (emotion) {
+            case 'shrug':
+            return '|_{"}_|';
+            case 'smiley face':
+            return ':)';
+            case 'frowny face':
+            return ':(';
+            case 'winky face':
+            return ';)';
+            case 'heart':
+            return '<3';
+            default:
+            return '|_(* ~ *)_|';
+        }
+        }
+        // Uncomment the line below when you're ready to try out your function
+        console.log(toEmoticon("whatever")) 
+        // Should print  '|_(* ~ *)_|'
+    </script>
+
+    <script>
+        function numberDigits (x) {
+        if (x > 0 && x < 10) {
+            return `One digit: ${x}`;
+        }
+        if (x > 9 && x < 100) {
+            return `Two digits: ${x}`;
+        }
+        if (x < 0 || x > 99) {
+            return `The number is: ${x}`;
+        }
+        }
+
+        console.log(numberDigits(9));
+        console.log(numberDigits(10));
+        console.log(numberDigits(100));
+        console.log(numberDigits(-5));
+
+    </script>
+
+
 </html>
