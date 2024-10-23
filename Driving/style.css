@@ -55,4 +55,33 @@
     margin-top: 1rem;
     margin-left: 12%;
   }
-  
+
+  /* Formeln */
+  .formel {
+    display: flex;
+    flex-direction: column;
+    margin: 2rem;
+  }
+
+  .formel {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 500px;
+    padding: 1rem;
+    background-color: rgb(163, 163, 217);
+    border-radius: 10px;
+  }
+
+  .card p {
+    padding: 0.5rem;
+    font-weight: 500;
+  }
+
+  .card p:first-child {
+    border-bottom: 1px black solid;
+  }
+
+
