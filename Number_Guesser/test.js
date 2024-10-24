@@ -24,6 +24,9 @@ const generateTarget = function() {
 function compareGuesses (humanGuess, computerGuess, generateTarget) {
     const humanDifference = Math.abs(generateTarget - humanGuess);
     const computerDifference = Math.abs(generateTarget - computerGuess);
+    if (humanGuess < 0 || humanGuess > 9) {
+        alert('The number is out of range');
+    }
     return humanDifference <= computerDifference;  
 }
 
