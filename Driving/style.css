@@ -57,12 +57,7 @@
   }
 
   /* Formeln */
-  .formel {
-    display: flex;
-    flex-direction: column;
-    margin: 2rem;
-  }
-
+ 
   .formel {
     display: flex;
     flex-direction: row;
@@ -71,6 +66,7 @@
     text-align: center;
     width: 500px;
     padding: 1rem;
+    margin: 2rem;
     background-color: rgb(163, 163, 217);
     border-radius: 10px;
   }
