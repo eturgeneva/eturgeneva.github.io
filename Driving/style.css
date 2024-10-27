@@ -64,11 +64,16 @@
     align-items: center;
     justify-content: center;
     text-align: center;
-    width: 60%;
+    width: 30%;
     padding: 1rem;
     margin: 2rem;
     background-color: rgb(163, 163, 217);
     border-radius: 10px;
+  }
+
+  .formel-header {
+    /* background-color: bisque; */
+    padding-bottom: 1rem;
   }
 
   .formel-content {
