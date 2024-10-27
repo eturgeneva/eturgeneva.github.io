@@ -10,6 +10,7 @@
 
   body {
     font-family: Helvetica;
+    /* background-color: rgb(53, 53, 53); */
   }
 
   /* header {
@@ -30,8 +31,8 @@
     /* right: 0; */
     bottom: 0;
     width: 10%;
-    background-color: mediumaquamarine;
-    border: 1px red solid;
+    /* background-color: mediumaquamarine; */
+    /* border: 1px red solid; */
   }
 
   nav ul {
@@ -45,15 +46,25 @@
     display: block;
     width: auto;
     height: auto;
-    padding: 0.5rem 0;
+    padding: 0.5rem;
+    margin-bottom: 0.2rem;
+    font-size: 1.2rem;
     text-decoration: none;
     cursor: pointer;
-    border: 1px red solid;
+    background-color: rgb(134, 134, 170);
+    color: white;
+    border-radius: 0 5px 5px 0;
+    /* border: 1px red solid; */
+  }
+
+  nav li a:hover {
+    /* background-color: rgb(82, 82, 211); */
+    background-color: rgb(98, 98, 142);
   }
 
   .main {
     margin-top: 1rem;
-    margin-left: 12%;
+    margin-left: 14%;
   }
 
   /* Formeln */
@@ -65,20 +76,27 @@
     justify-content: center;
     text-align: center;
     width: 30%;
-    padding: 1rem;
+    /* padding: 1rem; */
     margin: 2rem;
-    background-color: rgb(163, 163, 217);
-    border-radius: 10px;
+    /* background-color: rgb(157, 154, 245); */
+    /* border-radius: 10px; */
   }
 
   .formel-header {
-    /* background-color: bisque; */
-    padding-bottom: 1rem;
+    width: 100%;
+    padding: 0.5rem 1rem;
+    background-color: rgb(190, 169, 240);
+    border-radius: 10px 10px 0 0;
   }
 
   .formel-content {
     display: flex;
+    justify-content: center;
     align-items: center;
+    width: 100%;
+    padding: 1rem;
+    background-color: rgb(157, 154, 245);
+    border-radius: 0 0 10px 10px;
   }
 
   .formel-content p {
