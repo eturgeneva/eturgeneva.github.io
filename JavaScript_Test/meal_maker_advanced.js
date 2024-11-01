@@ -1,7 +1,7 @@
 // An array of meals and prices to randomly set and get Today’s Special
 
-const arrayOfMeals = ['Fried Chicken', 'Fish Burger', 'Ceasar Salad', 'Apple Pie'];
-const arrayOfPrices = [4, 6, 7, 8];
+const arrayOfMeals = ['Fried Chicken', 'Fish Burger', 'Ceasar Salad', 'Apple Pie', ''];
+const arrayOfPrices = [4, 6, 7, 8, 'ten'];
 const selectedMeal = arrayOfMeals[Math.floor(Math.random() * arrayOfMeals.length)];
 const selectedPrice = arrayOfPrices[Math.floor(Math.random() * arrayOfPrices.length)];
 
