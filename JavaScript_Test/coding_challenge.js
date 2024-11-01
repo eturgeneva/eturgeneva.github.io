@@ -10,12 +10,12 @@ const army = {
                 console.log(this.units);
                 
             }
-            // let sumOfUnits;
-            // for (let j = 0; j < this.units.length; j++) {
-            //     sumOfUnits += this.units[j]._amount;
+            let sumOfUnits = 0;
+            for (let j = 0; j < this.units.length; j++) {
+                sumOfUnits += this.units[j]._amount;
             
-            // }
-            // console.log(sumOfUnits);
+            }
+            console.log(sumOfUnits);
             return `Your army consists of ${totalNumberOfUnits}`;
         } else {
             return 'Invalid input';
