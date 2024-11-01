@@ -8,8 +8,14 @@ const army = {
             for (let i = 0; i < this.units.length; i++) {
                 this.units[i]._amount = Math.random();
                 console.log(this.units);
+                
             }
-
+            // let sumOfUnits;
+            // for (let j = 0; j < this.units.length; j++) {
+            //     sumOfUnits += this.units[j]._amount;
+            
+            // }
+            // console.log(sumOfUnits);
             return `Your army consists of ${totalNumberOfUnits}`;
         } else {
             return 'Invalid input';
