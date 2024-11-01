@@ -5,7 +5,11 @@ const army = {
 
     buildAnArmy(totalNumberOfUnits) {
         if (typeof totalNumberOfUnits === 'number' && totalNumberOfUnits > 0) {
-            
+            for (let i = 0; i < this.units.length; i++) {
+                this.units[i]._amount = Math.random();
+                console.log(this.units);
+            }
+
             return `Your army consists of ${totalNumberOfUnits}`;
         } else {
             return 'Invalid input';
