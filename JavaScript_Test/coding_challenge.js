@@ -1,7 +1,7 @@
 const army = {
-    units: [{type: 'Spearmen'}, 
-            {type: 'Swordsmen'}, 
-            {type: 'Archer'}],
+    units: [{type: 'Spearmen', _amount: 0}, 
+            {type: 'Swordsmen', _amount: 0}, 
+            {type: 'Archer', _amount: 0}],
 
     buildAnArmy(totalNumberOfUnits) {
         if (typeof totalNumberOfUnits === 'number' && totalNumberOfUnits > 0) {
@@ -12,7 +12,7 @@ const army = {
     },
 
     armySetup() {
-
+        return this.units.length;
     },
 
     get troopsTest() {
@@ -29,4 +29,5 @@ const army = {
 // }
 
 console.log(army.troopsTest);
-console.log(army.buildAnArmy(6));
+console.log(army.buildAnArmy(90));
+console.log(army.armySetup());
