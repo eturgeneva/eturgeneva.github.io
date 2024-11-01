@@ -5,6 +5,7 @@ const army = {
 
     buildAnArmy(totalNumberOfUnits) {
         if (typeof totalNumberOfUnits === 'number' && totalNumberOfUnits > 0) {
+            
             return `Your army consists of ${totalNumberOfUnits}`;
         } else {
             return 'Invalid input';
