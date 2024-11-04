@@ -37,4 +37,6 @@ for (let i = 0; i < textArray.length; i++) {
 }
 console.log(sumOfDigits); 
 
+fs.writeFileSync('sum_of_digits.txt', `${sumOfDigits}`);
+
 
