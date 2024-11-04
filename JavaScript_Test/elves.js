@@ -6,12 +6,13 @@ for (let i = 0; i < textArray.length; i++) {
     console.log(textString);
 
     for (let j = 0; j < textString.length; j++) {
-        console.log(textString[j]);
+
+        // console.log(textString[j]);
+        // console.log(typeof textString[j]);
         
-        if (typeof textString[j] === 'number') {
+        if (!isNaN(textString[j])) {
             console.log(textString[j]);
-            // break;
+            break;
         }
     }
-
 }
