@@ -57,7 +57,7 @@
     padding: 2rem;
   }
 
-  .section:nth-child(even) {
+  .section:nth-child(odd) {
     background-color: rgb(58, 58, 58);
   }
 
@@ -95,6 +95,13 @@
   }
 
   /* Formeln */
+
+  .formeln {
+    /* display: flex;
+    flex-wrap: wrap; */
+    /* justify-content: center; */
+    margin: 0 auto;
+  }
  
   .formel {
     display: flex;
@@ -108,6 +115,8 @@
   }
 
   .formel-header {
+    /* display: flex;
+    flex-direction: column; */
     width: 100%;
     padding: 0.5rem 1rem;
     background-color: rgb(81, 81, 81);
