@@ -14,33 +14,18 @@
     background-color: rgb(17, 17, 17);
   }
 
-  /* header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    width: 100%;
-    background-color: mediumaquamarine;
-    height: 3rem;
-    border: 1px red solid;
-  } */
-
   header {
     position: fixed;
     top: 0;
     left: 0;
-    /* right: 0; */
     bottom: 0;
     width: 10%;
-    /* background-color: mediumaquamarine; */
-    /* border: 1px red solid; */
   }
 
   nav ul {
     display: flex;
     flex-direction: column; /* for vertical nav bar*/
     list-style-type: none;
-    /* align-items: center; */
   }
 
   nav li a {
@@ -59,13 +44,22 @@
   }
 
   nav li a:hover {
-    /* background-color: rgb(82, 82, 211); */
     background-color: rgb(98, 98, 142);
   }
 
   .main {
     margin-top: 1rem;
     margin-left: 14%;
+  }
+
+  h2 {
+    font-weight: 600;
+    color: white;
+  }
+
+  h3 {
+    font-weight: 600;
+    color: rgb(199, 199, 199);
   }
 
   /* Formeln */
@@ -78,10 +72,7 @@
     color: white;
     text-align: center;
     width: 30%;
-    /* padding: 1rem; */
     margin: 2rem;
-    /* background-color: rgb(157, 154, 245); */
-    /* border-radius: 10px; */
   }
 
   .formel-header {
