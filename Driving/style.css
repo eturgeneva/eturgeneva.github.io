@@ -101,4 +101,29 @@
     border-bottom: 1px white solid;
   }
 
+/* Assistenten */
 
+.assistenten {
+  display: flex;
+  flex-wrap: wrap;
+  width: 90%;
+}
+
+.assistent-card {
+  padding: 1rem 2rem;
+  width: 40%;
+  border: 1px grey solid;
+}
+
+.assistent-card:nth-child(-n+2) {
+  background-color: blue;
+}
+
+.assistenten h3 {
+  border-bottom: 1px white solid;
+  margin-bottom: 0.5rem;
+}
+
+.assistenten li {
+  
+}
