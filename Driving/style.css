@@ -103,7 +103,7 @@
     justify-content: center;
     color: white;
     text-align: center;
-    width: 50%;
+    width: 65%;
     margin: 2rem;
   }
 
@@ -112,6 +112,12 @@
     padding: 0.5rem 1rem;
     background-color: rgb(81, 81, 81);
     border-radius: 1px 1px 0 0;
+  }
+
+  .formel-header p {
+    font-size: 0.9rem;
+    padding-top: 0.5rem;
+    color: rgb(180, 179, 179)
   }
 
   .formel-content {
