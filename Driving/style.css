@@ -118,7 +118,8 @@
 
 .assistenten {
   display: flex;
-  flex-direction: column;
+  /* flex-direction: column; */
+  flex-wrap: wrap;
 }
 
 #assistenten {
@@ -127,11 +128,15 @@
 
 .assistent-card {
   padding: 1rem 2rem;
-  width: 40%;
+  width: 50%;
   border: 1px grey solid;
 }
 
-.assistent-card:nth-child(even) {
+.assistent-card:nth-child(4n+1) {
+  background-color: rgb(49, 49, 49);
+}
+
+.assistent-card:nth-child(4n+2) {
   background-color: rgb(49, 49, 49);
 }
 
