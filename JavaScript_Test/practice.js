@@ -247,3 +247,33 @@ console.log(subLength('Saturday', 'a')); // returns 6
 subLength('summer', 'm'); // returns 2
 console.log(subLength('digitize', 'i')); // returns 0
 subLength('cheesecake', 'k'); // returns 0
+
+//
+
+// Write function below
+
+function groceries (array) {
+  let arrayItems = [];
+  // for (let i = 0; i < array.length; i++) {
+  //   arrayItems.push(array[i].item)
+  // }
+  arrayItems = array.map(element => element.item);
+  console.log(arrayItems);
+  let commaArray = [];
+  for (let j = 0; j < arrayItems.length - 1; j++) {
+    commaArray.push(arrayItems[j])
+  }
+  console.log(commaArray);
+  if (arrayItems.length < 2) {
+    return arrayItems[0];
+  }
+  return `${commaArray.join(', ')} and ${arrayItems[arrayItems.length - 1]}`;
+}
+
+console.log(groceries( [{item: 'Carrots'}, {item: 'Hummus'}, {item: 'Pesto'}, {item: 'Rigatoni'}] ));
+// returns 'Carrots, Hummus, Pesto and Rigatoni'
+console.log(groceries( [{item: 'Bread'}, {item: 'Butter'}] ));
+// returns 'Bread and Butter'
+
+console.log(groceries( [{item: 'Cheese Balls'}] ));
+// returns 'Cheese Balls'
