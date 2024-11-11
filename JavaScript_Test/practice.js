@@ -86,3 +86,27 @@ function acceptEverything(veggies) {
 }
 
 acceptEverything(veggies);
+
+// 
+const numbers = [2, 7, 9, 171, 52, 33, 14]
+
+const toSquare = num => num * num
+
+// Write your code here:
+function squareNums(array) {
+  return array.map(toSquare);
+}
+
+// Write a function shoutGreetings() that takes in an array of strings and returns a new array
+// This new array should contain all the strings from the argument array but with capitalized letters and an exclamation point appended to the end: 'heya' will become 'HEYA!'
+
+function shoutGreetings (array) {
+  return array.map(element => element.toUpperCase() + '!')
+}
+
+// Feel free to uncomment out the code below to test your function!
+
+const greetings = ['hello', 'hi', 'heya', 'oi', 'hey', 'yo'];
+
+console.log(shoutGreetings(greetings))
+// Should print [ 'HELLO!', 'HI!', 'HEYA!', 'OI!', 'HEY!', 'YO!' ]
