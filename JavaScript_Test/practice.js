@@ -153,3 +153,76 @@ const myStuff = [ 'rules', 'fruit-by-the-foot', 'wedgies', 'sweaters', 'skateboa
 
 console.log(justCoolStuff(myStuff, coolStuff))
 // Should print [ 'fruit-by-the-foot', 'skateboards', 'my room' ]
+
+// function justCoolStuff (arr1, arr2) {
+//   let resultsArray = [];
+//   for (let i = 0; i < arr1.length; i++) {
+//     if (arr2.includes(arr1[i])) {
+//       resultsArray.push(arr1[i]);
+//     }
+//   }
+//   return resultsArray;
+// }
+
+function justCoolStuff (arr1, arr2) {
+  return arr1.filter(element => arr2.includes(element));
+}
+// Feel free to uncomment the code below to test your function
+
+// const coolStuff = ['gameboys', 'skateboards', 'backwards hats', 'fruit-by-the-foot', 'pogs', 'my room', 'temporary tattoos'];
+
+// const myStuff = [ 'rules', 'fruit-by-the-foot', 'wedgies', 'sweaters', 'skateboards', 'family-night', 'my room', 'braces', 'the information superhighway']; 
+
+console.log(justCoolStuff(myStuff, coolStuff))
+// Should print [ 'fruit-by-the-foot', 'skateboards', 'my room' ]
+
+function isTheDinnerVegan (array) {
+  return array.every(element => element.source === 'plant');
+}
+
+// Feel free to comment out the code below to test your function
+
+const dinner = [{name: 'hamburger', source: 'meat'}, {name: 'cheese', source: 'dairy'}, {name: 'ketchup', source:'plant'}, {name: 'bun', source: 'plant'}, {name: 'dessert twinkies', source:'unknown'}];
+
+console.log(isTheDinnerVegan(dinner))
+// Should print false
+
+const speciesArray = [ {speciesName:'shark', numTeeth:50}, {speciesName:'dog', numTeeth:42}, {speciesName:'alligator', numTeeth:80}, {speciesName:'human', numTeeth:32}];
+
+// Write your code here:
+
+function sortSpeciesByTeeth(array) {
+  return array.sort((num1, num2) => num1.numTeeth - num2.numTeeth);
+}
+// Feel free to comment out the code below when you're ready to test your function!
+
+console.log(sortSpeciesByTeeth(speciesArray))
+
+// Should print:
+// [ { speciesName: 'human', numTeeth: 32 },
+//   { speciesName: 'dog', numTeeth: 42 },
+//   { speciesName: 'shark', numTeeth: 50 },
+//   { speciesName: 'alligator', numTeeth: 80 } ]
+
+function findMyKeys (array) {
+  return array.findIndex(element => element === 'keys');
+}
+
+// Feel free to comment out the code below to test your function
+
+const randomStuff = ['credit card', 'screwdriver', 'receipt', 'gum', 'keys', 'used gum', 'plastic spoon'];
+
+console.log(findMyKeys(randomStuff))
+// Should print 4
+
+// Write a function factorial() that takes a number as an argument and returns the factorial of the number
+
+function factorial(num) {
+  let result = num;
+  for (let i = num - 1; i > 1; i--) {
+    result = result * i;
+  }
+  return result;
+}
+
+console.log(factorial(6));
