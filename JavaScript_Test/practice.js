@@ -88,14 +88,13 @@ function acceptEverything(veggies) {
 acceptEverything(veggies);
 
 // 
-const numbers = [2, 7, 9, 171, 52, 33, 14]
+// const numbers = [2, 7, 9, 171, 52, 33, 14]
 
-const toSquare = num => num * num
+// const toSquare = num => num * num
 
-// Write your code here:
-function squareNums(array) {
-  return array.map(toSquare);
-}
+// function squareNums(array) {
+//   return array.map(toSquare);
+// }
 
 // Write a function shoutGreetings() that takes in an array of strings and returns a new array
 // This new array should contain all the strings from the argument array but with capitalized letters and an exclamation point appended to the end: 'heya' will become 'HEYA!'
@@ -110,3 +109,47 @@ const greetings = ['hello', 'hi', 'heya', 'oi', 'hey', 'yo'];
 
 console.log(shoutGreetings(greetings))
 // Should print [ 'HELLO!', 'HI!', 'HEYA!', 'OI!', 'HEY!', 'YO!' ]
+
+
+// Sorting numbers:
+function sortYears (array) {
+  // const sortedArray = array.sort();
+  // return sortedArray.reverse();
+  return array.sort((num1, num2) => num1 - num2);
+  // return array.sort();
+}
+
+// Feel free to uncomment the below code to test your function:
+// const years = [1970, 1999, 1951, 1982, 1963, 2011, 2018, 1922]
+
+// my test:
+const years = [77, 1999, 88, 2500, 0, 150]
+
+console.log(sortYears(years))
+// Should print [ 2018, 2011, 1999, 1982, 1970, 1963, 1951, 1922 ]
+
+let s = "It was a dark and stormy night.";
+let words = s.split(/\W+/).filter(word => word.length > 2);
+words.sort((a, b) => a.length - b.length);
+console.log(words);
+
+function justCoolStuff (arr1, arr2) {
+  let resultsArray = [];
+  for (let i = 0; i < arr1.length; i++) {
+    for (let j = 0; j < arr2.length; j++) {
+      if (arr1[i] === arr2[j]) {
+        resultsArray.push(arr1[i]);
+      }
+    }
+  }
+  return resultsArray;
+}
+
+// Feel free to uncomment the code below to test your function
+
+const coolStuff = ['gameboys', 'skateboards', 'backwards hats', 'fruit-by-the-foot', 'pogs', 'my room', 'temporary tattoos'];
+
+const myStuff = [ 'rules', 'fruit-by-the-foot', 'wedgies', 'sweaters', 'skateboards', 'family-night', 'my room', 'braces', 'the information superhighway']; 
+
+console.log(justCoolStuff(myStuff, coolStuff))
+// Should print [ 'fruit-by-the-foot', 'skateboards', 'my room' ]
