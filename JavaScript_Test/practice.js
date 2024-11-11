@@ -226,3 +226,24 @@ function factorial(num) {
 }
 
 console.log(factorial(6));
+
+// Write function below
+function subLength (string, char) {
+  let repeatingChars = [];
+  for (let i = 0; i < string.length; i++) {
+    if (string[i] === char) {
+    repeatingChars.push(i);
+    }
+  }
+  console.log(repeatingChars);
+  if (repeatingChars.length === 2) {
+    return repeatingChars[1] - repeatingChars[0] + 1;
+  } else {
+    return 0;
+  }
+}
+
+console.log(subLength('Saturday', 'a')); // returns 6
+subLength('summer', 'm'); // returns 2
+console.log(subLength('digitize', 'i')); // returns 0
+subLength('cheesecake', 'k'); // returns 0
