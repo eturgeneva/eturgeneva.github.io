@@ -52,8 +52,17 @@ console.log(valid1);
 console.log(validateCred(valid1));
 console.log(validateCred(invalid4));
 
+// The role of findInvalidCards() is to check through the nested array for which numbers are invalid, and return another nested array of invalid cards.
+console.log(batch[2])
+function findInvalidCards (param) {
+  let invalidCards = param.filter(element => !validateCred(element))
+    return invalidCards;
+}
+console.log(findInvalidCards(batch))
 
+// Create a function, idInvalidCardCompanies() that has one parameter for a nested array of invalid numbers and returns an array of companies.
+function idInvalidCardCompanies (array) {
 
-
+}
 
 
