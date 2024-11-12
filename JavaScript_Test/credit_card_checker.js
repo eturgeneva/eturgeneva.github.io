@@ -54,12 +54,10 @@ console.log(validateCred(invalid4));
 
 // The role of findInvalidCards() is to check through the nested array for which numbers are invalid, and return another nested array of invalid cards.
 // console.log(batch[2])
-let invalidCards = [];
 function findInvalidCards (param) {
-  invalidCards = param.filter(element => !validateCred(element))
-    return invalidCards;
+  return param.filter(element => !validateCred(element));
 }
-findInvalidCards(batch);
+const invalidCards = findInvalidCards(batch);
 console.log(invalidCards);
 
 // Create a function, idInvalidCardCompanies() that has one parameter for a nested array of invalid numbers and returns an array of companies.
@@ -68,16 +66,24 @@ function idInvalidCardCompanies (nestedArray) {
   for (let i = 0; i < nestedArray.length; i++) {
     switch (nestedArray[i][0]) {
       case 3:
-        invalidCardCompanies.push('Amex');
+        if (!invalidCardCompanies.includes('Amex')) {
+          invalidCardCompanies.push('Amex');
+        }
         break;
       case 4:
-        invalidCardCompanies.push('Visa');
+        if (!invalidCardCompanies.includes('Visa')) {
+          invalidCardCompanies.push('Visa');
+        }
         break;
       case 5:
-        invalidCardCompanies.push('MasterCard');
+        if (!invalidCardCompanies.includes('MasterCard')) {
+          invalidCardCompanies.push('MasterCard');
+        }
         break;
       case 6:
-        invalidCardCompanies.push('Discover');
+        if (!invalidCardCompanies.includes('Discover')) {
+          invalidCardCompanies.push('Discover');
+        }
         break;
       default:
         console.log('Company not found');
@@ -86,8 +92,15 @@ function idInvalidCardCompanies (nestedArray) {
   }
   console.log(invalidCardCompanies)
 }
-
 idInvalidCardCompanies(invalidCards);
+
+function convertCardNumber (string) {
+  let cardNumberArray = string.split('');
+  console.log(cardNumberArray);
+}
+convertCardNumber('4556857650988358');
+
+
 
 
 
