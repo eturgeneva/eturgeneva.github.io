@@ -95,10 +95,14 @@ function idInvalidCardCompanies (nestedArray) {
 idInvalidCardCompanies(invalidCards);
 
 function convertCardNumber (string) {
-  let cardNumberArray = string.split('');
-  console.log(cardNumberArray);
+  let newCardNumber = string.split('');
+  let map = newCardNumber.map(element => parseInt(element));
+  return map;
 }
-convertCardNumber('4556857650988358');
+const cardNumberArray = convertCardNumber('4024007124204115');
+console.log(cardNumberArray);
+
+console.log(validateCred(cardNumberArray));
 
 
 
