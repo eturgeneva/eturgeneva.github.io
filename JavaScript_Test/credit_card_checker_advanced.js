@@ -99,10 +99,31 @@ function convertCardNumber (string) {
   let map = newCardNumber.map(element => parseInt(element));
   return map;
 }
-const cardNumberArray = convertCardNumber('4024007124204115');
+const cardNumberArray = convertCardNumber('4269559271634674948');
 console.log(cardNumberArray);
 
 console.log(validateCred(cardNumberArray));
+
+function convertInvalidToValid (array) {
+  // const reversedNumber = array.reverse()
+  // console.log(reversedNumber)
+  const alternateNumbers = [ 1, 2, 3, 4, 5, 6, 7, 8, 9 ]
+  // console.log(array[array.length - 1])
+  for (let i = 0; i < alternateNumbers.length; i++) {
+    array.pop();
+    array.push(alternateNumbers[i]);
+    if (validateCred(array)) {
+      array[array.length - 1] = i;
+    }
+  }
+  
+}
+
+convertInvalidToValid (invalid1);
+
+
+
+
 
 
 
