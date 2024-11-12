@@ -31,7 +31,7 @@ function validateCred (array) {
   for (let i = array.length - 1; i >=0; i-- ) {
     reversedNumbers.push(array[i]);
   }
-    console.log(reversedNumbers);
+    // console.log(reversedNumbers);
   for (let j = 0; j < reversedNumbers.length; j++) {
       if (j % 2 !== 0) {
         doubledNumbers.push(reversedNumbers[j]);
@@ -39,30 +39,62 @@ function validateCred (array) {
         singleNumbers.push(reversedNumbers[j]);
       }
     } 
-    console.log(singleNumbers);
-    console.log(doubledNumbers);
+    // console.log(singleNumbers);
+    // console.log(doubledNumbers);
     doubledNumbers.forEach(element => element * 2 > 9 ? doubledResults.push(element * 2 - 9) : doubledResults.push(element * 2))
-    console.log(doubledResults);
+    // console.log(doubledResults);
 
     const sumOfNumbers = singleNumbers.reduce((acc, currVal) => acc + currVal) + doubledResults.reduce((acc, currVal) => acc + currVal);
-    console.log(sumOfNumbers);
+    // console.log(sumOfNumbers);
     return sumOfNumbers % 10 === 0
 }
-console.log(valid1);
+// console.log(valid1);
 console.log(validateCred(valid1));
 console.log(validateCred(invalid4));
 
 // The role of findInvalidCards() is to check through the nested array for which numbers are invalid, and return another nested array of invalid cards.
-console.log(batch[2])
+// console.log(batch[2])
+let invalidCards = [];
 function findInvalidCards (param) {
-  let invalidCards = param.filter(element => !validateCred(element))
+  invalidCards = param.filter(element => !validateCred(element))
     return invalidCards;
 }
-console.log(findInvalidCards(batch))
+findInvalidCards(batch);
+console.log(invalidCards);
 
 // Create a function, idInvalidCardCompanies() that has one parameter for a nested array of invalid numbers and returns an array of companies.
-function idInvalidCardCompanies (array) {
-
+function idInvalidCardCompanies (nestedArray) {
+  let invalidCardCompanies = [];
+  for (let i = 0; i < nestedArray.length; i++) {
+    switch (nestedArray[i][0]) {
+      case 3:
+        invalidCardCompanies.push('Amex');
+        break;
+      case 4:
+        invalidCardCompanies.push('Visa');
+        break;
+      case 5:
+        invalidCardCompanies.push('MasterCard');
+        break;
+      case 6:
+        invalidCardCompanies.push('Discover');
+        break;
+      default:
+        console.log('Company not found');
+    }
+    console.log(nestedArray[i][0])
+  }
+  console.log(invalidCardCompanies)
 }
+
+idInvalidCardCompanies(invalidCards);
+
+
+
+
+
+
+
+
 
 
