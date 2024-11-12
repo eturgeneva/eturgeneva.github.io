@@ -107,19 +107,24 @@ console.log(validateCred(cardNumberArray));
 function convertInvalidToValid (array) {
   // const reversedNumber = array.reverse()
   // console.log(reversedNumber)
-  const alternateNumbers = [ 1, 2, 3, 4, 5, 6, 7, 8, 9 ]
+  const alternateNumbers = [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 ]
   // console.log(array[array.length - 1])
   for (let i = 0; i < alternateNumbers.length; i++) {
     array.pop();
     array.push(alternateNumbers[i]);
+    
     if (validateCred(array)) {
-      array[array.length - 1] = i;
+     return array;
     }
   }
-  
+  console.log('not found')
 }
 
-convertInvalidToValid (invalid1);
+console.log(invalid2);
+console.log(validateCred(invalid2));
+convertInvalidToValid (invalid2);
+console.log(invalid2);
+console.log(validateCred(invalid2));
 
 
 
