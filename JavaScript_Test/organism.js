@@ -30,7 +30,15 @@ const returnRandBase = () => {
             return this.dna;
         },
       compareDNA(pAequor) {
-  
+          let commonDna = [];
+          for (let i = 0; i < this.dna.length; i++) {
+            for (let j = 0; j < pAequor.dna.length; j++) {
+              if (this.dna[i].includes(pAequor.dna[j])) {
+                commonDna.push(pAequor.dna[j]);
+              }
+            }
+          }
+          console.log(commonDna);
       }
     }
   }
@@ -46,6 +54,8 @@ const returnRandBase = () => {
   const dna2 = mockUpStrand();
   const pAequor2 = pAequorFactory(5, dna2);
   console.log('   pAequor 2', pAequor2.dna);
+  
+  pAequor1.compareDNA(pAequor2);
   
   
   
