@@ -18,17 +18,25 @@ const returnRandBase = () => {
       specimenNum: number,
       dna: dnaArray,
       mutate() {
-        returnRandBase();
-        if (this.dna === 'A') {
+          let dnaElementToReplace = this.dna[Math.floor(Math.random() * this.dna.length)];
+          console.log(dnaElementToReplace);
+          // console.log(this.dna.indexOf(dnaElementToReplace));
+          const indexOfReplace = this.dna.indexOf(dnaElementToReplace);
+          console.log(indexOfReplace);
+          console.log(this.dna[indexOfReplace]);
+        
   
         }
-        return this.dna;
-      }
     }
   }
-  console.log(returnRandBase());
-  console.log(mockUpStrand());
-  console.log(pAequorFactory(3, returnRandBase()))
+  // console.log(returnRandBase());
+  // console.log(mockUpStrand());
+  const dna = mockUpStrand();
+  const pAequor = pAequorFactory(3, dna);
+  console.log(dna);
+  console.log(pAequor);
+  console.log(pAequor.mutate());
+  
   
   
   
