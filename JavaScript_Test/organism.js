@@ -33,12 +33,14 @@ const returnRandBase = () => {
           let commonDna = [];
           for (let i = 0; i < this.dna.length; i++) {
             for (let j = 0; j < pAequor.dna.length; j++) {
-              if (this.dna[i].includes(pAequor.dna[j])) {
-                commonDna.push(pAequor.dna[j]);
+              if (this.dna[i] === pAequor.dna[j]) {
+                // console.log(this.dna[i]);
+                // console.log(pAequor.dna[j]);
+                commonDna.push(this.dna[i]);
               }
             }
           }
-          console.log(commonDna);
+                console.log(commonDna.join(' '));
       }
     }
   }
