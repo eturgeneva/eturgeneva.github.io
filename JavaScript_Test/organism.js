@@ -39,6 +39,13 @@ function pAequorFactory (number, dnaArray) {
     willLikelySurvive() {
         let survivalBase = this.dna.filter(element => element === 'C' || element === 'G')
         console.log(survivalBase);
+        console.log(survivalBase.length / this.dna.length * 100);
+        if ((survivalBase.length / this.dna.length * 100) >= 60) {
+          // return true;
+          console.log('will likely survive')
+        } else {
+          console.log('will likely not survive')
+        }
     }
   }
 }
@@ -58,6 +65,7 @@ console.log('   pAequor 2', pAequor2.dna);
 pAequor1.compareDNA(pAequor2);
 
 pAequor1.willLikelySurvive()
+// pAequor2.willLikelySurvive()
 
 
 
