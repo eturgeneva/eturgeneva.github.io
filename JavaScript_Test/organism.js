@@ -70,8 +70,9 @@ console.log(pAequor2.willLikelySurvive());
 
 const pAequorThatCanSurvive = [];
 function create30species () {
+  let num = 1;
   while (pAequorThatCanSurvive.length < 5) {
-    pAequorThatCanSurvive.push(pAequorFactory(3, mockUpStrand()));
+    pAequorThatCanSurvive.push(pAequorFactory(num++, mockUpStrand()));
   }
 }
 create30species();
