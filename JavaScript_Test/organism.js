@@ -69,14 +69,16 @@ console.log(pAequor1.willLikelySurvive());
 console.log(pAequor2.willLikelySurvive());
 
 const pAequorThatCanSurvive = [];
-function create30species () {
+function createSpecies () {
   let num = 1;
   while (pAequorThatCanSurvive.length < 5) {
     pAequorThatCanSurvive.push(pAequorFactory(num++, mockUpStrand()));
+    // console.log(pAequorThatCanSurvive.forEach(this.willLikelySurvive));
   }
 }
-create30species();
+createSpecies();
 console.log(pAequorThatCanSurvive);
+console.log(pAequorThatCanSurvive[4].willLikelySurvive())
 
 
 
