@@ -33,7 +33,11 @@ function pAequorFactory (number, dnaArray) {
             }
           }
         console.log(commonDna);
-        console.log(commonDna.length / this.dna.length * 100);
+        let percentage = commonDna.length / this.dna.length * 100;
+        console.log(percentage);
+        let percentageRounded = (commonDna.length / this.dna.length * 100).toFixed();
+        console.log(percentageRounded);
+        console.log(`specimen #1 and specimen #2 have ${percentageRounded}% DNA in common`)
     }
   }
 }
