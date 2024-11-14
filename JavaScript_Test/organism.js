@@ -126,7 +126,10 @@ function twoRelatedSpecies (speciesArray) {
   console.log(dnaChains);
   console.log(speciesArray[0])
   relatedSpecie1 = dnaChains[0].specie; // this is an index of a specie from the batch
+  relatedSpecie2 = dnaChains[0].comparedSpecie;
   console.log(relatedSpecie1);
+  console.log(relatedSpecie2);
+  console.log(`${speciesArray[relatedSpecie1].specimenNum} and ${speciesArray[relatedSpecie2].specimenNum} are the closest relatives`)
 
 }
 twoRelatedSpecies(pAequorThatCanSurvive);
