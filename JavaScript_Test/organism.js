@@ -117,10 +117,11 @@ function twoRelatedSpecies (speciesArray) {
         let percentage = speciesArray[i].compareDNA(speciesArray[j]);
         dnaChains.push({specie: i, comparedSpecie: j, percentage: percentage});
       }
-
     }
   }
-  console.log(dnaChains);
+  // console.log(dnaChains);
+  console.log(dnaChains.sort((num1, num2) => num2.percentage - num1.percentage));
+  console.log(speciesArray[0])
 }
 twoRelatedSpecies(pAequorThatCanSurvive);
 
