@@ -59,6 +59,7 @@ function pAequorFactory (number, dnaArray) {
             complementStrand.push('C');
           }
         }
+        return complementStrand;
     }
   }
 }
@@ -70,10 +71,12 @@ const pAequor1 = pAequorFactory(3, dna1);
 // console.log(dna1);
 pAequor1.mutate();
 console.log('after mutate', pAequor1.dna);
+console.log(pAequor1.complementStrand());
 
 const dna2 = mockUpStrand();
 const pAequor2 = pAequorFactory(5, dna2);
 console.log('   pAequor 2', pAequor2.dna);
+console.log(pAequor2.complementStrand());
 
 pAequor1.compareDNA(pAequor2);
 
