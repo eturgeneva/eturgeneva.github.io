@@ -33,11 +33,12 @@ function pAequorFactory (number, dnaArray) {
             }
           }
         console.log(commonDna);
-        let percentage = commonDna.length / this.dna.length * 100;
-        console.log(percentage);
         let percentageRounded = (commonDna.length / this.dna.length * 100).toFixed();
-        console.log(percentageRounded);
         console.log(`specimen #1 and specimen #2 have ${percentageRounded}% DNA in common`)
+    },
+    willLikelySurvive() {
+        let survivalBase = this.dna.filter(element => element === 'C' || element === 'G')
+        console.log(survivalBase);
     }
   }
 }
@@ -55,6 +56,13 @@ const pAequor2 = pAequorFactory(5, dna2);
 console.log('   pAequor 2', pAequor2.dna);
 
 pAequor1.compareDNA(pAequor2);
+
+pAequor1.willLikelySurvive()
+
+
+
+
+
 
 
 
