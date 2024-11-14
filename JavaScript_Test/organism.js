@@ -102,8 +102,22 @@ const pAequorThatCanSurvive = createSpecies(5);
 console.log(pAequorThatCanSurvive);
 // console.log(pAequorThatCanSurvive[4].willLikelySurvive())
 // console.log(pAequorThatCanSurvive.filter(element => element.willLikelySurvive() === true))
-const pAequorThatCanSurvive2 = createSpecies(3);
-console.log(pAequorThatCanSurvive2);
+// const pAequorThatCanSurvive2 = createSpecies(3);
+// console.log(pAequorThatCanSurvive2);
+
+pAequorThatCanSurvive[3].compareDNA(pAequorThatCanSurvive[4]);
+
+function twoRelatedSpecies (speciesArray) {
+  for (let i = 0; i < speciesArray.length; i++) {
+    for (let j = 0; j < speciesArray.length; j++) {
+      speciesArray[i].compareDNA(speciesArray[j]);
+    }
+  }
+}
+
+twoRelatedSpecies(pAequorThatCanSurvive);
+
+
 
 
 
