@@ -34,7 +34,9 @@ function pAequorFactory (number, dnaArray) {
           }
         console.log(commonDna);
         let percentageRounded = (commonDna.length / this.dna.length * 100).toFixed();
-        console.log(`specimen #${this.specimenNum} and specimen #${pAequor.specimenNum} have ${percentageRounded}% DNA in common`)
+        // return percentageRounded;
+        return commonDna;
+        // console.log(`specimen #${this.specimenNum} and specimen #${pAequor.specimenNum} have ${percentageRounded}% DNA in common`)
     },
     willLikelySurvive() {
         let survivalBase = this.dna.filter(element => element === 'C' || element === 'G')
@@ -112,10 +114,10 @@ function twoRelatedSpecies (speciesArray) {
     for (let j = 0; j < speciesArray.length; j++) {
       speciesArray[i].compareDNA(speciesArray[j]);
     }
+  return true;
   }
 }
-
-twoRelatedSpecies(pAequorThatCanSurvive);
+console.log(twoRelatedSpecies(pAequorThatCanSurvive));
 
 
 
