@@ -67,10 +67,10 @@ console.log(pAequor1.willLikelySurvive());
 console.log(pAequor2.willLikelySurvive());
 
 // create 30 instances of pAequor that can survive in their natural environment:
-function createSpecies () {
+function createSpecies (batchSize) {
   const pAequorThatCanSurvive = [];
   let num = 1;
-  while (pAequorThatCanSurvive.length < 5) {
+  while (pAequorThatCanSurvive.length < batchSize) {
     
     let element = pAequorFactory(num++, mockUpStrand());
     if (element.willLikelySurvive() === true) {
@@ -81,11 +81,11 @@ function createSpecies () {
   }
   return pAequorThatCanSurvive;
 }
-const pAequorThatCanSurvive = createSpecies();
+const pAequorThatCanSurvive = createSpecies(5);
 console.log(pAequorThatCanSurvive);
 console.log(pAequorThatCanSurvive[4].willLikelySurvive())
 // console.log(pAequorThatCanSurvive.filter(element => element.willLikelySurvive() === true))
-const pAequorThatCanSurvive2 = createSpecies();
+const pAequorThatCanSurvive2 = createSpecies(3);
 console.log(pAequorThatCanSurvive2);
 
 
