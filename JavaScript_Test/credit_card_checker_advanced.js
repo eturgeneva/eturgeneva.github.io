@@ -19,11 +19,7 @@ function pAequorFactory (number, dnaArray) {
     dna: dnaArray,
     mutate() {
         let dnaElementToReplace = this.dna[Math.floor(Math.random() * this.dna.length)];
-        // console.log(dnaElementToReplace);
-        // console.log(this.dna.indexOf(dnaElementToReplace));
         const indexOfReplace = this.dna.indexOf(dnaElementToReplace);
-        // console.log(indexOfReplace);
-        // console.log(this.dna[indexOfReplace]);
         while (this.dna[indexOfReplace] === dnaElementToReplace) {
           this.dna[indexOfReplace] = returnRandBase();
         }
@@ -36,8 +32,8 @@ function pAequorFactory (number, dnaArray) {
               commonDna.push(pAequor.dna[j]);
             }
           }
-  
         console.log(commonDna);
+        console.log(commonDna.length / this.dna.length * 100);
     }
   }
 }
