@@ -38,13 +38,11 @@ function pAequorFactory (number, dnaArray) {
     },
     willLikelySurvive() {
         let survivalBase = this.dna.filter(element => element === 'C' || element === 'G')
-        console.log(survivalBase);
-        console.log(survivalBase.length / this.dna.length * 100);
+        // console.log(survivalBase);
+        // console.log(survivalBase.length / this.dna.length * 100);
         if ((survivalBase.length / this.dna.length * 100) >= 60) {
           return true;
-          // console.log('will likely survive')
         } else {
-          // console.log('will likely not survive')
           return false;
         }
     }
@@ -72,11 +70,16 @@ console.log(pAequor2.willLikelySurvive());
 const pAequorThatCanSurvive = [];
 function createSpecies () {
   let num = 1;
-  let j = 0;
-  // while (pAequorThatCanSurvive.length < 5) {
+  // let j = 0;
   while (pAequorThatCanSurvive.length < 5) {
-    // pAequorThatCanSurvive[j++].willLikelySurvive();
-    pAequorThatCanSurvive.push(pAequorFactory(num++, mockUpStrand()));
+    
+    let element = pAequorFactory(num++, mockUpStrand());
+    if (element.willLikelySurvive() === true) {
+      pAequorThatCanSurvive.push(element);
+    }
+    // works (but pushes both true and false):
+    // pAequorThatCanSurvive.push(pAequorFactory(num++, mockUpStrand()));
+
     // console.log(pAequorThatCanSurvive[j++].willLikelySurvive());
 
   }
@@ -84,7 +87,7 @@ function createSpecies () {
 createSpecies();
 console.log(pAequorThatCanSurvive);
 console.log(pAequorThatCanSurvive[4].willLikelySurvive())
-console.log(pAequorThatCanSurvive.filter(element => element.willLikelySurvive()))
+// console.log(pAequorThatCanSurvive.filter(element => element.willLikelySurvive() === true))
 
 
 
