@@ -68,18 +68,23 @@ pAequor1.compareDNA(pAequor2);
 console.log(pAequor1.willLikelySurvive());
 console.log(pAequor2.willLikelySurvive());
 
+// create 30 instances of pAequor that can survive in their natural environment:
 const pAequorThatCanSurvive = [];
 function createSpecies () {
   let num = 1;
   let j = 0;
+  // while (pAequorThatCanSurvive.length < 5) {
   while (pAequorThatCanSurvive.length < 5) {
+    // pAequorThatCanSurvive[j++].willLikelySurvive();
     pAequorThatCanSurvive.push(pAequorFactory(num++, mockUpStrand()));
     // console.log(pAequorThatCanSurvive[j++].willLikelySurvive());
+
   }
 }
 createSpecies();
 console.log(pAequorThatCanSurvive);
 console.log(pAequorThatCanSurvive[4].willLikelySurvive())
+console.log(pAequorThatCanSurvive.filter(element => element.willLikelySurvive()))
 
 
 
