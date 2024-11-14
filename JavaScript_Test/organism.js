@@ -45,6 +45,20 @@ function pAequorFactory (number, dnaArray) {
         } else {
           return false;
         }
+    },
+    complementStrand() {
+        let complementStrand = [];
+        for (let i = 0; i < this.dna.length; i++) {
+          if (this.dna[i] === 'A') {
+            complementStrand.push('T');
+          } else if (this.dna[i] === 'T') {
+            complementStrand.push('A');
+          } else if (this.dna[i] === 'C') {
+            complementStrand.push('G');
+          } else if (this.dna[i] === 'G') {
+            complementStrand.push('C');
+          }
+        }
     }
   }
 }
@@ -83,7 +97,7 @@ function createSpecies (batchSize) {
 }
 const pAequorThatCanSurvive = createSpecies(5);
 console.log(pAequorThatCanSurvive);
-console.log(pAequorThatCanSurvive[4].willLikelySurvive())
+// console.log(pAequorThatCanSurvive[4].willLikelySurvive())
 // console.log(pAequorThatCanSurvive.filter(element => element.willLikelySurvive() === true))
 const pAequorThatCanSurvive2 = createSpecies(3);
 console.log(pAequorThatCanSurvive2);
