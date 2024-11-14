@@ -32,7 +32,7 @@ function pAequorFactory (number, dnaArray) {
               commonDna.push(pAequor.dna[j]);
             }
           }
-        console.log(commonDna);
+        // console.log(commonDna);
         let percentageRounded = (commonDna.length / this.dna.length * 100).toFixed();
         // return percentageRounded;
         return commonDna;
@@ -107,17 +107,18 @@ console.log(pAequorThatCanSurvive);
 // const pAequorThatCanSurvive2 = createSpecies(3);
 // console.log(pAequorThatCanSurvive2);
 
-pAequorThatCanSurvive[3].compareDNA(pAequorThatCanSurvive[4]);
+// pAequorThatCanSurvive[3].compareDNA(pAequorThatCanSurvive[4]);
 
 function twoRelatedSpecies (speciesArray) {
+  let dnaChains = [];
   for (let i = 0; i < speciesArray.length; i++) {
     for (let j = 0; j < speciesArray.length; j++) {
-      speciesArray[i].compareDNA(speciesArray[j]);
+      console.log(speciesArray[i].compareDNA(speciesArray[j]));
     }
-  return true;
+  
   }
 }
-console.log(twoRelatedSpecies(pAequorThatCanSurvive));
+twoRelatedSpecies(pAequorThatCanSurvive);
 
 
 
