@@ -111,6 +111,8 @@ console.log(pAequorThatCanSurvive);
 function twoRelatedSpecies (speciesArray) {
   let dnaChains = [];
   let percentage;
+  let relatedSpecie1;
+  let relatedSpecie2;
   for (let i = 0; i < speciesArray.length; i++) {
     for (let j = 0; j < speciesArray.length; j++) {
       if (i !== j) {
@@ -120,8 +122,12 @@ function twoRelatedSpecies (speciesArray) {
     }
   }
   // console.log(dnaChains);
-  console.log(dnaChains.sort((num1, num2) => num2.percentage - num1.percentage));
+  dnaChains.sort((num1, num2) => num2.percentage - num1.percentage);
+  console.log(dnaChains);
   console.log(speciesArray[0])
+  relatedSpecie1 = dnaChains[0].specie; // this is an index of a specie from the batch
+  console.log(relatedSpecie1);
+
 }
 twoRelatedSpecies(pAequorThatCanSurvive);
 
