@@ -39,10 +39,10 @@
 
           const myPara = document.createElement("p");
           myPara.textContent = `Hometown: ${obj.homeTown} // Formed: ${obj.formed}`;
-          header.appendChild("myPara");
+          header.appendChild(myPara);
         }
 
-        function populateHero (obj) {
+        function populateHeroes (obj) {
           const section = document.querySelector("section");
           const heroes = obj.members;
 
