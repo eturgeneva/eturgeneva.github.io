@@ -38,16 +38,27 @@
     .then(response => response.text())
     .then(text => displayCatInfo(text))
 
-    async function displayCatInfo(catString) {
+    function displayCatInfo(catString) {
       let total = 0;
       let male = 0;
 
       // Add your code here
-      const response = await fetch(requestURL);
-      const catStringText = await response.text();
+    //   const response = await fetch(requestURL);
+    //   const catStringText = await response.text();
 
-      const cats = JSON.parse(catStringText);
+      const cats = JSON.parse(catString);
       console.log(cats);
+
+      for (const cat of cats) {
+         motherInfo = cat.name;
+
+        const kittens = cat.kittens;
+         for (const kitten of kittens) {
+         kittenInfo = kittens.length;
+       }
+
+
+      }
 
       // Don't edit the code below here!
 
