@@ -13,7 +13,7 @@
         box-sizing: border-box;
       }
     </style>
-    <link rel="stylesheet" href="../styles.css" />
+    <link rel="stylesheet" href="./styles.css" />
   </head>
 
   <body>
@@ -38,15 +38,16 @@
     .then(response => response.text())
     .then(text => displayCatInfo(text))
 
-    function displayCatInfo(catString) {
+    async function displayCatInfo(catString) {
       let total = 0;
       let male = 0;
 
       // Add your code here
-      const catString = await fetch(requestURL);
-      const catStringText = await.response.text();
+      const response = await fetch(requestURL);
+      const catStringText = await response.text();
 
       const cats = JSON.parse(catStringText);
+      console.log(cats);
 
       // Don't edit the code below here!
 
