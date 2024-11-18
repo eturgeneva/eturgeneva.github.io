@@ -43,6 +43,10 @@
       let male = 0;
 
       // Add your code here
+      const catString = await fetch(requestURL);
+      const catStringText = await.response.text();
+
+      const cats = JSON.parse(catStringText);
 
       // Don't edit the code below here!
 
