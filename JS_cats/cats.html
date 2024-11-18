@@ -73,7 +73,13 @@
         // console.log(catNames);
         // motherInfo = cats[i].name;
       }
-      motherInfo = catNames.join(', ')
+    //   catNames.pop();
+    //   catNames.pop();
+      const lastCat = catNames.pop();
+      motherInfo = `${catNames.join(', ')} and ${lastCat}`;
+      if (catNames.length === 0) {
+        motherInfo = lastCat;
+      }
       kittenInfo = `Total number of kittens: ${kittenNames.length} (${kittenMales.length} male and ${kittenFemales.length} female), names: ${kittenNames.join(', ')}`;
 
       // Don't edit the code below here!
