@@ -48,17 +48,19 @@
 
       const cats = JSON.parse(catString);
       console.log(cats);
-
-      for (const cat of cats) {
-         motherInfo = cat.name;
-
-        const kittens = cat.kittens;
-         for (const kitten of kittens) {
-         kittenInfo = kittens.length;
-       }
-
-
+      console.log(cats[0]);
+      for (let i = 0; i < cats.length; i++) {
+        console.log(cats[i].name);
+        motherInfo = cats[i].name;
       }
+    //   for (const cat of cats) {
+    //      motherInfo = cat.name;
+
+    //     const kittens = cat.kittens;
+    //      for (const kitten of kittens) {
+    //      kittenInfo = kittens.length;
+    //    }
+    //   }
 
       // Don't edit the code below here!
 
