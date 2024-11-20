@@ -17,6 +17,15 @@ function generatePhrase () {
         string2 = youPart2[Math.floor(Math.random() * youPart2.length)];
         string3 = youPart3[Math.floor(Math.random() * youPart3.length)];
     }
+
+    if (beginning === 'Believe') {
+        string2 = believePart2[Math.floor(Math.random() * believePart2.length)];
+        if (string2 === 'in') {
+            string3 = believePart3[0][Math.floor(Math.random() * believePart3[0].length)]
+        } else {
+            string3 = believePart3[1][Math.floor(Math.random() * believePart3[1].length)]
+        }
+    }
     return `${beginning} ${string2} ${string3}!`
 }
 
