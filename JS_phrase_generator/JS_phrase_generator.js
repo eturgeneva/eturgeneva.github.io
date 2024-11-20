@@ -14,6 +14,3 @@ function generatePhrase () {
 
 // console.log(generatePhrase('elena', 'loves', 'evgeny'));
 console.log(generatePhrase())
-
-// console.log(generatePhrase('elena', 'loves', 'evgeny'));
-console.log(generatePhrase())
