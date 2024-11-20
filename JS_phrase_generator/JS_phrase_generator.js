@@ -1,8 +1,8 @@
 const phrasePart1 = ['You'];
 
-const phrasePart2 = ['are', 'can', 'are doing'];
+const phrasePart2 = ['are', 'are doing'];
 
-const phrasePart3 = ['amazing', 'awesome', 'great'];
+const phrasePart3 = ['amazing', 'awesome', 'great', 'fantastic'];
 
 function generatePhrase () {
     string1 = phrasePart1[Math.floor(Math.random() * phrasePart1.length)];
@@ -11,6 +11,9 @@ function generatePhrase () {
 
     return `${string1} ${string2} ${string3}!`
 }
+
+// console.log(generatePhrase('elena', 'loves', 'evgeny'));
+console.log(generatePhrase())
 
 // console.log(generatePhrase('elena', 'loves', 'evgeny'));
 console.log(generatePhrase())
