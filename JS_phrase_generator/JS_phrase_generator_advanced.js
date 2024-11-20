@@ -11,12 +11,13 @@ const believePart3 = [
 
 function generatePhrase () {
     const beginning = phraseStart[Math.floor(Math.random() * phraseStart.length)];
+    let string2;
+    let string3;
     if (beginning === 'You') {
-        const string2 = youPart2[Math.floor(Math.random() * youPart2.length)];
-        const string3 = youPart3[Math.floor(Math.random() * youPart3.length)];
-
-        return `${beginning} ${string2} ${string3}!`
+        string2 = youPart2[Math.floor(Math.random() * youPart2.length)];
+        string3 = youPart3[Math.floor(Math.random() * youPart3.length)];
     }
+    return `${beginning} ${string2} ${string3}!`
 }
 
 // console.log(generatePhrase('elena', 'loves', 'evgeny'));
