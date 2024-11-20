@@ -5,9 +5,9 @@ const phrasePart2 = ['are', 'are doing'];
 const phrasePart3 = ['amazing', 'awesome', 'great', 'fantastic'];
 
 function generatePhrase () {
-    string1 = phrasePart1[Math.floor(Math.random() * phrasePart1.length)];
-    string2 = phrasePart2[Math.floor(Math.random() * phrasePart2.length)];
-    string3 = phrasePart3[Math.floor(Math.random() * phrasePart3.length)];
+    const string1 = phrasePart1[Math.floor(Math.random() * phrasePart1.length)];
+    const string2 = phrasePart2[Math.floor(Math.random() * phrasePart2.length)];
+    const string3 = phrasePart3[Math.floor(Math.random() * phrasePart3.length)];
 
     return `${string1} ${string2} ${string3}!`
 }
