@@ -9,13 +9,19 @@ html {
 }
 
 body {
-    background-color: rgb(146, 144, 174);
+    background-color: rgb(230, 230, 232);
+    background-image: url('./resources/images/red-tree-zx6ux51kx68gs4uc.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 main {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
     font-family: 'Noto Sans';
+    text-align: center;
+    height: 700px;
 }
 
 h1, button {
@@ -23,27 +29,34 @@ h1, button {
 }
 
 h1 {
-    font-size: 2rem;
+    font-size: 1.5rem;
     font-weight: 500;
 }
 
 p {
-    font-size: 1.3rem;
+    font-size: 1.5rem;
 }
 
 #message-container {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 5rem;
-    width: 70%;
-    background-color: rgb(208, 130, 245);
+    height: 7rem;
+    /* width: 70%; */
+    width: auto;
+    background-color: rgb(255, 169, 84);
     text-align: center;
-    /* padding: 1rem; */
     border-radius: 5px;
+    /* padding: 1.5rem; */
 }
 
 button {
     padding: 1rem;
     font-size: 1rem;
+    border-radius: 5px;
+    border: unset;
+}
+
+button:hover {
+    background-color: rgb(188, 188, 222);
 }
