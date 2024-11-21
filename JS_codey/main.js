@@ -16,3 +16,13 @@ view.addEventListener('click', open);
 close.addEventListener('click', hide);
 
 // Write your code here
+let textChange = function() {
+  view.innerHTML = 'Hello World!';
+}
+
+let textReturn = function() {
+  view.innerHTML = 'View';
+}
+
+view.addEventListener('click', textChange);
+close.addEventListener('click', textReturn);
