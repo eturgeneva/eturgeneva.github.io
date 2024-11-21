@@ -38,6 +38,7 @@ let messageParagraph = document.getElementById('message-of-the-day');
 
 function showMessage() {
     messageParagraph.innerHTML = generatePhrase();
+    messageParagraph.style.padding = '1.5rem';
     button.innerHTML = 'Show another message';
 }
 button.addEventListener('click', showMessage);
