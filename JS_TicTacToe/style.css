@@ -1,0 +1,35 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+html {
+    font-size: 16px;
+}
+
+main {
+    text-align: center;;
+}
+
+div {
+    width: 100%;
+    margin: 0 auto;
+}
+
+#game-section {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+    grid-template-areas:
+        "cell1 cell2 cell3"
+        "cell4 cell5 cell6"
+        "cell7 cell8 cell9";
+    height: 300px;
+    width: 300px;
+    /* border: 1px black solid; */
+}
+
+#game-section * {
+    border: 1px black solid;
+}
