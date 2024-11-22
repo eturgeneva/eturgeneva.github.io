@@ -43,9 +43,13 @@ div {
  
 }
 
+#game-section p {
+    font-size: 3rem;
+}
+
 /* Experimental code to create lines between rows and columns*/
 
-#game-section p {
+/* #game-section p {
     position: relative;
 }
 
@@ -68,5 +72,5 @@ div {
     inline-size: var(--line-thickness);
     block-size: 100vh;
     inset-inline-start: calc(var(--line-offset) * -1);
-}
+} */
 
