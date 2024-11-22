@@ -29,13 +29,21 @@ div {
     height: 300px;
     width: 300px;
     /* border: 1px black solid; */
-    --gap: 2rem;
+
+    /* --gap: 2rem;
     --line-offset: calc(var(--gap)) / 2;
     --line-thickness: 2px;
     --line-color: red;
     gap: var(--gap);
-    overflow: hidden;
+    overflow: hidden; */
 }
+
+
+#game-section * {
+ 
+}
+
+/* Experimental code to create lines between rows and columns*/
 
 #game-section p {
     position: relative;
@@ -62,8 +70,3 @@ div {
     inset-inline-start: calc(var(--line-offset) * -1);
 }
 
-#game-section * {
-    /* display: block; */
-    /* height: 100px; */
-    /* border: 1px black solid; */
-}
