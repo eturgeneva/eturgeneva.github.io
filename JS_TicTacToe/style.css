@@ -20,16 +20,50 @@ div {
 #game-section {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: auto;
+    grid-template-rows: repeat(3, 1fr);
     grid-template-areas:
         "cell1 cell2 cell3"
         "cell4 cell5 cell6"
         "cell7 cell8 cell9";
+    align-items: center;
     height: 300px;
     width: 300px;
     /* border: 1px black solid; */
+    --gap: 2rem;
+    --line-offset: calc(var(--gap)) / 2;
+    --line-thickness: 2px;
+    --line-color: red;
+    gap: var(--gap);
+    overflow: hidden;
+}
+
+#game-section p {
+    position: relative;
+}
+
+#game-section p::before,
+#game-section p::after {
+    content: '';
+    position: absolute;
+    background-color: var(--line-clor);
+    z-index: 1;
+}
+
+#game-section p::after {
+    inline-size: 100vw;
+    block-size: var(--line-thickness);
+    inset-inline-start: 0;
+    inset-block-start: calc(var(--line-offset) * -1);
+}
+
+#game-section::before {
+    inline-size: var(--line-thickness);
+    block-size: 100vh;
+    inset-inline-start: calc(var(--line-offset) * -1);
 }
 
 #game-section * {
-    border: 1px black solid;
+    /* display: block; */
+    /* height: 100px; */
+    /* border: 1px black solid; */
 }
