@@ -75,13 +75,13 @@ function computerChoice () {
     // if (humanArray.length >= 1) {
         let i = Math.floor(Math.random() * cellsArray.length);
         console.log(i);
-        if (cellsArray[i].innerHTML = 'X') {
-        // if (!humanArray.includes(i)) {
+        // if (cellsArray[i].innerHTML = 'X') {
+        while ((cellsArray[i].innerHTML === 'X' || cellsArray[i].innerHTML === 'O') && humanArray.length < 5) {
             i = Math.floor(Math.random() * cellsArray.length);
             console.log(i);
-            cellsArray[i].innerHTML = 'O';
-            cellsArray[i].style.opacity = '1';
         }
+        cellsArray[i].innerHTML = 'O';
+        cellsArray[i].style.opacity = '1';
     // }
 }
 
