@@ -60,7 +60,15 @@ for (let i = 0; i < cellsArray.length; i++) {
         cellsArray[i].style.opacity = '1';
         humanArray.push(i);
         console.log(humanArray);
+        computerChoice();
     });
+}
+
+function computerChoice () {
+    if (humanArray.length >= 1) {
+        cellsArray[Math.floor(Math.random() * cellsArray.length)].innerHTML = 'O';
+        cellsArray[Math.floor(Math.random() * cellsArray.length)].style.opacity = '1';
+    }
 }
 
 // reveals the rest starting from cell4 in one click:
