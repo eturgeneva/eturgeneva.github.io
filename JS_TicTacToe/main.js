@@ -33,6 +33,7 @@ let computerArray = [];
 
 function revealSymbol () {
     document.getElementById('cell1').innerHTML = 'X';
+    document.getElementById('cell1').style.opacity = '1';
 }
 
 document.getElementById('cell1').addEventListener('click', revealSymbol);

@@ -13,7 +13,7 @@ main {
 }
 
 div {
-    width: 100%;
+    /* width: 100%; */
     margin: 0 auto;
 }
 
@@ -39,13 +39,13 @@ div {
     overflow: hidden; */
 }
 
-
 #game-section * {
- 
+    
 }
 
 #game-section p {
     font-size: 3rem;
+    opacity: 0;
 }
 
 /* Experimental code to create lines between rows and columns*/
