@@ -53,16 +53,25 @@ console.log(cellsArray);
 // document.getElementById('cell1').addEventListener('click', revealSymbol1);
 // document.getElementById('cell2').addEventListener('click', revealSymbol2);
 // cellsArray[2].addEventListener('click', revealSymbol3);
-
-for (let i = 0; i < cellsArray.length; i++) {
-    cellsArray[i].addEventListener('click', function() {
-        cellsArray[i].innerHTML = 'X';
-        cellsArray[i].style.opacity = '1';
-        humanArray.push(i);
-        console.log(humanArray);
-        computerChoice();
-    });
+function delay(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
 }
+
+async function humanClick() {
+    for (let i = 0; i < cellsArray.length; i++) {
+        cellsArray[i].addEventListener('click', function() {
+            cellsArray[i].innerHTML = 'X';
+            cellsArray[i].style.opacity = '1';
+            humanArray.push(i);
+            console.log(humanArray);
+            // computerChoice();
+            // setInterval(computerChoice, 1000);
+        });
+        await delay(1000);
+        computerChoice();
+    }
+}
+humanClick();
 
 function computerChoice () {
     // if (humanArray.length >= 1) {
