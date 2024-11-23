@@ -28,6 +28,7 @@ div {
     align-items: center;
     height: 300px;
     width: 300px;
+    background-color: rgb(196, 196, 196);
     /* border: 1px black solid; */
 
     /* --gap: 2rem;

@@ -18,10 +18,14 @@ const winngingIndices = [
 ];
 // computer makes a choice every _even_ something and _if_ there are still unfilled slots
 // computer starts from a corner if possible
-// game stops when all slots are filled
+// game stops when all slots are filled - for example, check if innerHTML === ''
 
 // push choice into these arrays and compare the chunks with winning arrays:
 let humanArray = [];
 let computerArray = [];
 
-document.getElementById('cell1').innerHTML = 0;
+// document.getElementById('cell1').innerHTML = 0;
+
+if (document.getElementById('cell1').innerHTML === '') {
+    document.getElementById('cell2').innerHTML = 0;
+}
