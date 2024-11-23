@@ -40,26 +40,31 @@ console.log(cellsArray);
 // }
 // document.getElementById('cell1').addEventListener('click', revealSymbol);
 
-function revealSymbol1 () {
-    // console.log(cellsArray[0]);
-    cellsArray[0].style.opacity = '1';
-    // document.querySelector('.cell').innerHTML = 'X';
-    // document.querySelector('.cell').style.opacity = '1';
-}
-function revealSymbol2 () {
-    cellsArray[1].style.opacity = '1';
-}
-function revealSymbol3 () {
-    cellsArray[2].style.opacity = '1';
-}
+// function revealSymbol1 () {
+//     cellsArray[0].style.opacity = '1';
+// }
+// function revealSymbol2 () {
+//     cellsArray[1].style.opacity = '1';
+// }
+// function revealSymbol3 () {
+//     cellsArray[2].style.opacity = '1';
+// }
 
-document.getElementById('cell1').addEventListener('click', revealSymbol1);
-document.getElementById('cell2').addEventListener('click', revealSymbol2);
-cellsArray[2].addEventListener('click', revealSymbol3);
+// document.getElementById('cell1').addEventListener('click', revealSymbol1);
+// document.getElementById('cell2').addEventListener('click', revealSymbol2);
+// cellsArray[2].addEventListener('click', revealSymbol3);
 
-function revealTheRest () {
-    for (let i = 3; i < cellsArray.length; i++) {
+for (let i = 0; i < cellsArray.length; i++) {
+    cellsArray[i].addEventListener('click', function() {
+        cellsArray[i].innerHTML = 'X';
         cellsArray[i].style.opacity = '1';
-    }
+    });
 }
-cellsArray[3].addEventListener('click', revealTheRest);
+
+// reveals the rest starting from cell4 in one click:
+// function revealTheRest () {
+//     for (let i = 3; i < cellsArray.length; i++) {
+//         cellsArray[i].style.opacity = '1';
+//     }
+// }
+// cellsArray[3].addEventListener('click', revealTheRest);
