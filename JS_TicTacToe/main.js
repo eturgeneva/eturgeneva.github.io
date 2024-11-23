@@ -71,9 +71,9 @@ function computerChoice () {
         if (cellsArray[i].innerHTML = 'X') {
             i = Math.floor(Math.random() * cellsArray.length);
             console.log(i);
+            cellsArray[i].innerHTML = 'O';
+            cellsArray[i].style.opacity = '1';
         }
-        cellsArray[i].innerHTML = 'O';
-        cellsArray[i].style.opacity = '1';
     // }
 }
 
