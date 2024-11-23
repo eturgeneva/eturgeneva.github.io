@@ -64,7 +64,9 @@ function humanClick() {
             cellsArray[i].style.opacity = '1';
             humanArray.push(i);
             console.log(humanArray);
-            computerChoice();
+            if (humanArray.length < 5) {
+                computerChoice();
+            }
             // setInterval(computerChoice, 1000);
         });
     }
