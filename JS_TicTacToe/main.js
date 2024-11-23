@@ -67,12 +67,24 @@ for (let i = 0; i < cellsArray.length; i++) {
 function computerChoice () {
     if (humanArray.length >= 1) {
         let i = Math.floor(Math.random() * cellsArray.length);
-        if (cellsArray[i].style.opacity = '0') {
+        console.log(i);
+        if (cellsArray[i].style.opacity = '1') {
+            i = Math.floor(Math.random() * cellsArray.length);
             cellsArray[i].innerHTML = 'O';
             cellsArray[i].style.opacity = '1';
         }
     }
 }
+
+// function computerChoice () {
+//     if (humanArray.length >= 1) {
+//         let i = Math.floor(Math.random() * cellsArray.length);
+//         if (cellsArray[i].style.opacity = '0') {
+//             cellsArray[i].innerHTML = 'O';
+//             cellsArray[i].style.opacity = '1';
+//         }
+//     }
+// }
 
 // reveals the rest starting from cell4 in one click:
 // function revealTheRest () {
