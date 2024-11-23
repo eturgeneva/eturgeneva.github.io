@@ -66,8 +66,11 @@ for (let i = 0; i < cellsArray.length; i++) {
 
 function computerChoice () {
     if (humanArray.length >= 1) {
-        cellsArray[Math.floor(Math.random() * cellsArray.length)].innerHTML = 'O';
-        cellsArray[Math.floor(Math.random() * cellsArray.length)].style.opacity = '1';
+        let i = Math.floor(Math.random() * cellsArray.length);
+        if (cellsArray[i].style.opacity = '0') {
+            cellsArray[i].innerHTML = 'O';
+            cellsArray[i].style.opacity = '1';
+        }
     }
 }
 
