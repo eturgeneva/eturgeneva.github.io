@@ -49,6 +49,17 @@ function revealSymbol1 () {
 function revealSymbol2 () {
     cellsArray[1].style.opacity = '1';
 }
+function revealSymbol3 () {
+    cellsArray[2].style.opacity = '1';
+}
 
 document.getElementById('cell1').addEventListener('click', revealSymbol1);
 document.getElementById('cell2').addEventListener('click', revealSymbol2);
+cellsArray[2].addEventListener('click', revealSymbol3);
+
+function revealTheRest () {
+    for (let i = 3; i < cellsArray.length; i++) {
+        cellsArray[i].style.opacity = '1';
+    }
+}
+cellsArray[3].addEventListener('click', revealTheRest);
