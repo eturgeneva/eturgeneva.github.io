@@ -58,6 +58,8 @@ for (let i = 0; i < cellsArray.length; i++) {
     cellsArray[i].addEventListener('click', function() {
         cellsArray[i].innerHTML = 'X';
         cellsArray[i].style.opacity = '1';
+        humanArray.push(i);
+        console.log(humanArray);
     });
 }
 
