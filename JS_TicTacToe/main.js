@@ -34,9 +34,21 @@ let computerArray = [];
 let cellsArray = document.getElementsByClassName('cell');
 console.log(cellsArray);
 
-function revealSymbol () {
-    document.getElementById('cell1').innerHTML = 'X';
-    document.getElementById('cell1').style.opacity = '1';
+// function revealSymbol () {
+//     document.getElementById('cell1').innerHTML = 'X';
+//     document.getElementById('cell1').style.opacity = '1';
+// }
+// document.getElementById('cell1').addEventListener('click', revealSymbol);
+
+function revealSymbol1 () {
+    // console.log(cellsArray[0]);
+    cellsArray[0].style.opacity = '1';
+    // document.querySelector('.cell').innerHTML = 'X';
+    // document.querySelector('.cell').style.opacity = '1';
+}
+function revealSymbol2 () {
+    cellsArray[1].style.opacity = '1';
 }
 
-document.getElementById('cell1').addEventListener('click', revealSymbol);
+document.getElementById('cell1').addEventListener('click', revealSymbol1);
+document.getElementById('cell2').addEventListener('click', revealSymbol2);
