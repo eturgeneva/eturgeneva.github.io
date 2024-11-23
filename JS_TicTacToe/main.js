@@ -65,15 +65,16 @@ for (let i = 0; i < cellsArray.length; i++) {
 }
 
 function computerChoice () {
-    if (humanArray.length >= 1) {
+    // if (humanArray.length >= 1) {
         let i = Math.floor(Math.random() * cellsArray.length);
         console.log(i);
-        if (cellsArray[i].style.opacity = '1') {
+        if (cellsArray[i].innerHTML = 'X') {
             i = Math.floor(Math.random() * cellsArray.length);
-            cellsArray[i].innerHTML = 'O';
-            cellsArray[i].style.opacity = '1';
+            console.log(i);
         }
-    }
+        cellsArray[i].innerHTML = 'O';
+        cellsArray[i].style.opacity = '1';
+    // }
 }
 
 // function computerChoice () {
