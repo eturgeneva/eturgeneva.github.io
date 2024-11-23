@@ -26,6 +26,13 @@ let computerArray = [];
 
 // document.getElementById('cell1').innerHTML = 0;
 
-if (document.getElementById('cell1').innerHTML === '') {
-    document.getElementById('cell2').innerHTML = 0;
+// add if empty:
+// if (document.getElementById('cell1').innerHTML === '') {
+//     document.getElementById('cell2').innerHTML = 0;
+// }
+
+function revealSymbol () {
+    document.getElementById('cell1').innerHTML = 'X';
 }
+
+document.getElementById('cell1').addEventListener('click', revealSymbol);
