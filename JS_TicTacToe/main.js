@@ -31,6 +31,9 @@ let computerArray = [];
 //     document.getElementById('cell2').innerHTML = 0;
 // }
 
+let cellsArray = document.getElementsByClassName('cell');
+console.log(cellsArray);
+
 function revealSymbol () {
     document.getElementById('cell1').innerHTML = 'X';
     document.getElementById('cell1').style.opacity = '1';
