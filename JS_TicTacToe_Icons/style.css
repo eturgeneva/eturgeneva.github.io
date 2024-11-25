@@ -1,0 +1,107 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+html {
+    font-size: 16px;
+}
+
+main {
+    text-align: center;;
+}
+
+div {
+    /* width: 100%; */
+    margin: 0 auto;
+}
+
+#game-section {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-areas:
+        "cell1 cell2 cell3"
+        "cell4 cell5 cell6"
+        "cell7 cell8 cell9";
+    align-items: center;
+    height: 300px;
+    width: 300px;
+    background-color: rgb(196, 196, 196);
+    /* border: 1px black solid; */
+
+    /* --gap: 2rem;
+    --line-offset: calc(var(--gap)) / 2;
+    --line-thickness: 2px;
+    --line-color: red;
+    gap: var(--gap);
+    overflow: hidden; */
+}
+
+#game-section * {
+    
+}
+
+#game-section p {
+    font-size: 3rem;
+    opacity: 0;
+}
+
+.material-symbols-outlined {
+    font-family: 'Material Symbols Outlined';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;  /* Preferred icon size */
+    display: inline-block;
+    line-height: 1;
+    text-transform: none;
+    letter-spacing: normal;
+    word-wrap: normal;
+    white-space: nowrap;
+    direction: ltr;
+    text-shadow: 0 0 5px #ff0000;
+}
+
+span.cross {
+    color: blue;
+    font-size: 30px;
+    font-variation-settings: 'OPSZ' 30;
+}
+
+#test-icons {
+    /* display: flex; */
+}
+
+/* Font Awesome Icons test */
+/* .fa-regular {
+    text-shadow: 0 0 5px #ff0000;
+} */
+
+/* Experimental code to create lines between rows and columns*/
+
+/* #game-section p {
+    position: relative;
+}
+
+#game-section p::before,
+#game-section p::after {
+    content: '';
+    position: absolute;
+    background-color: var(--line-clor);
+    z-index: 1;
+}
+
+#game-section p::after {
+    inline-size: 100vw;
+    block-size: var(--line-thickness);
+    inset-inline-start: 0;
+    inset-block-start: calc(var(--line-offset) * -1);
+}
+
+#game-section::before {
+    inline-size: var(--line-thickness);
+    block-size: 100vh;
+    inset-inline-start: calc(var(--line-offset) * -1);
+} */
+
