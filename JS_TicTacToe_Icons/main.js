@@ -75,22 +75,39 @@ function computerChoice () {
 
 function findWinner() {
 
-    let matches = [];
-    for (let j = 0; j < winningIndices.length; j++) {
-        for (let i = 0; i < winningIndices[j].length; i++) {
-            if (humanArray.includes(winningIndices[j][i])) {
-                matches.push(winningIndices[j][i]);
+    // let matches = humanArray.filter(function() {
+        let matches = [];
+        for (let i = 0; i < winningIndices.length; i++) {
+            for (let j = 0; j < winningIndices[i].length; j++) {
+                if (humanArray.includes(winningIndices[i][j])) {
+                    matches.push(winningIndices[i][j]);
+                }
             }
-        
         }
-        console.log(`Matches: ${matches}`);
-    } 
-    if (humanArray.includes(matches[0]) && humanArray.includes(matches[1]) && humanArray.includes(matches[2])) {
-        console.log('You win!');
-        console.log(`Matches: ${matches}`);
-    } else {
-        console.log('Try again')
-    }
+    // )
+    console.log(`Matches: ${matches}`);
+    // if (humanArray.includes(matches[0]) && humanArray.includes(matches[1]) && humanArray.includes(matches[2])) {
+    //     console.log('You win!');
+    // } else {
+    //     console.log('Try again')
+    // }
+
+    // let matches = [];
+    // for (let j = 0; j < winningIndices.length; j++) {
+    //     for (let i = 0; i < winningIndices[j].length; i++) {
+    //         if (humanArray.includes(winningIndices[j][i])) {
+    //         }
+    //         matches.push(winningIndices[j][i]);
+        
+    //     }
+    //     console.log(`Matches: ${matches}`);
+    // } 
+    // if (humanArray.includes(matches[0]) && humanArray.includes(matches[1]) && humanArray.includes(matches[2])) {
+    //     console.log('You win!');
+    //     console.log(`Matches: ${matches}`);
+    // } else {
+    //     console.log('Try again')
+    // }
 
     // Works but repeats 'you win' 3 times because of the loop:
     
