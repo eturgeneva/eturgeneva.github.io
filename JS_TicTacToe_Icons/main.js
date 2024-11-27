@@ -74,17 +74,36 @@ function computerChoice () {
 }
 
 function findWinner() {
-    
+
+    let matches = [];
     for (let j = 0; j < winningIndices.length; j++) {
         for (let i = 0; i < winningIndices[j].length; i++) {
-            if (humanArray.includes(winningIndices[j][0]) && humanArray.includes(winningIndices[j][1]) && humanArray.includes(winningIndices[j][2])) {
-                console.log('You win!');
-                console.log(`Winning Indices: ${winningIndices[j]}`);
-            } else {
-                console.log('Try again')
+            if (humanArray.includes(winningIndices[j][i])) {
+                matches.push(winningIndices[j][i]);
             }
+        
         }
+        console.log(`Matches: ${matches}`);
     } 
+    if (humanArray.includes(matches[0]) && humanArray.includes(matches[1]) && humanArray.includes(matches[2])) {
+        console.log('You win!');
+        console.log(`Matches: ${matches}`);
+    } else {
+        console.log('Try again')
+    }
+
+    // Works but repeats 'you win' 3 times because of the loop:
+    
+    // for (let j = 0; j < winningIndices.length; j++) {
+    //     for (let i = 0; i < winningIndices[j].length; i++) {
+    //         if (humanArray.includes(winningIndices[j][0]) && humanArray.includes(winningIndices[j][1]) && humanArray.includes(winningIndices[j][2])) {
+    //             console.log('You win!');
+    //             console.log(`Winning Indices: ${winningIndices[j]}`);
+    //         } else {
+    //             console.log('Try again')
+    //         }
+    //     }
+    // } 
 
     // Also works with the 1st horizontal row:
 
