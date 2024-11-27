@@ -46,7 +46,7 @@ div {
 }
 
 #game-section p {
-    font-size: 3rem;
+    /* font-size: 3rem; */
     opacity: 0;
 }
 
@@ -67,8 +67,8 @@ div {
 
 span.cross {
     color: blue;
-    font-size: 30px;
-    font-variation-settings: 'OPSZ' 30;
+    font-size: 34px;
+    font-variation-settings: 'OPSZ' 34;
 }
 
 #test-icons {
