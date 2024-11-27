@@ -40,6 +40,7 @@ let cross = '<span class="material-symbols-outlined cross">close</span>'
 function humanClick() {
     for (let i = 0; i < cellsArray.length; i++) {
         cellsArray[i].addEventListener('click', function() {
+            if (cellsArray[i].innerHTML !== circle && cellsArray[i].innerHTML !== cross) {
             cellsArray[i].innerHTML = cross;
             cellsArray[i].style.opacity = '1';
             humanArray.push(i);
@@ -48,6 +49,8 @@ function humanClick() {
                 computerChoice();
             }
             // setInterval(computerChoice, 1000);
+            }
+
         });
     }
 }
