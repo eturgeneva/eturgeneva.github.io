@@ -71,3 +71,9 @@ function computerChoice () {
         console.log(`Computer Array: ${computerArray}`);
 
 }
+
+// function findWinner() {
+//     if () {
+        
+//     }
+// }

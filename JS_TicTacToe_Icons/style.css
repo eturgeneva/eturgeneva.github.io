@@ -80,6 +80,10 @@ span.cross {
     font-variation-settings: 'OPSZ' 64;
 }
 
+#test-icons {
+    opacity: 0;
+}
+
 /* span.cross {
     color: blue;
     font-size: 34px;
