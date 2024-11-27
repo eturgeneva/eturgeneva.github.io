@@ -45,9 +45,13 @@ div {
     
 }
 
-#game-section p {
-    /* font-size: 3rem; */
-    opacity: 0;
+#game-section div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 100px;
+    border: 1px black solid;
 }
 
 .material-symbols-outlined {
