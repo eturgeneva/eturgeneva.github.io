@@ -4,7 +4,7 @@ let humanChoice;
 
 // get a children array through getElementsByClassName or getElementsByTagName
 // winning combos (children array indices):
-const winngingIndices = [
+const winningIndices = [
                     [0, 1, 2],
                     [3, 4, 5],
                     [6, 7, 8],
@@ -72,8 +72,20 @@ function computerChoice () {
 
 }
 
-// function findWinner() {
-//     if () {
-        
-//     }
-// }
+function findWinner() {
+    // for (let i = 0; i < winningIndices.length; i++) {
+    //     for (let j = 0; j < winningIndices[i].length; j++) {
+    //         console.log(winningIndices[i][j]);
+    //     }
+
+    // }
+    let i = -1;
+    let j;
+    while (i < winningIndices.length - 1) {
+        i++;
+        console.log(winningIndices[i]);
+    }
+}
+
+findWinner();
+// console.log(winningIndices[2]);
