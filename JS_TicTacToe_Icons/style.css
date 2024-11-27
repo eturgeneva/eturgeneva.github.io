@@ -65,15 +65,23 @@ div {
     text-shadow: 0 0 5px #ff0000;
 }
 
+span.circle {
+    font-size: 44px;
+    font-variation-settings: 'OPSZ' 44;
+}
+
 span.cross {
+    color: blue;
+    font-size: 64px;
+    font-variation-settings: 'OPSZ' 64;
+}
+
+/* span.cross {
     color: blue;
     font-size: 34px;
     font-variation-settings: 'OPSZ' 34;
-}
+} */
 
-#test-icons {
-    /* display: flex; */
-}
 
 /* Font Awesome Icons test */
 /* .fa-xmark {
