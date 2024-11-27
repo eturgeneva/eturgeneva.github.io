@@ -50,7 +50,7 @@ function humanClick() {
             }
             // setInterval(computerChoice, 1000);
             }
-            
+
             findWinner();
         });
     }
@@ -74,17 +74,21 @@ function computerChoice () {
 }
 
 function findWinner() {
-    // for (let i = 0; i < winningIndices.length; i++) {
-    //     for (let j = 0; j < winningIndices[i].length; j++) {
-    //         console.log(winningIndices[i][j]);
-    //     }
-
-    // }
-    if (humanArray.includes(0) && humanArray.includes(1) && humanArray.includes(2)) {
-        console.log('You win!');
-    } else {
-        console.log('Try again')
+ 
+    for (let i = 0; i < winningIndices[0].length; i++) {
+        if (humanArray.includes(0) && humanArray.includes(1) && humanArray.includes(2)) {
+        // if (humanArray.includes(i)) {
+            console.log('You win!');
+        } else {
+            console.log('Try again')
+        }
     }
+
+    // if (humanArray.includes(0) && humanArray.includes(1) && humanArray.includes(2)) {
+    //     console.log('You win!');
+    // } else {
+    //     console.log('Try again')
+    // }
 
     // let i = -1;
     // let j = -1;
@@ -98,3 +102,5 @@ function findWinner() {
 
 // findWinner();
 console.log(winningIndices[0]);
+console.log(winningIndices[0][0]);
+console.log(winningIndices[0][1]);
