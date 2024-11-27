@@ -37,6 +37,16 @@ let cellsArray = document.getElementsByClassName('cell');
 let circle = '<span class="material-symbols-outlined circle" id="circle">circle</span>';
 let cross = '<span class="material-symbols-outlined cross">close</span>'
 
+function checkCombo (winningCombo, playerArray) {
+    for (let i = 0; i < winningCombo.length; i++) {
+        if (!playerArray.includes(winningCombo[i])) {
+            return false;
+        } 
+    }
+    return true;
+}
+
+
 function humanClick() {
     for (let i = 0; i < cellsArray.length; i++) {
         cellsArray[i].addEventListener('click', function() {
