@@ -57,13 +57,16 @@ console.log(cellsArray);
 //     return new Promise(resolve => setTimeout(resolve, ms));
 // }
 
-let cross = document.getElementById('cell2');
-let circle = document.getElementById('circle');
+// let cross = document.getElementById('cell2');
+// let circle = document.getElementById('circle');
+
+let circle = '<span class="material-symbols-outlined circle" id="circle">circle</span>';
+let cross = '<span class="material-symbols-outlined cross">close</span>'
 
 function humanClick() {
     for (let i = 0; i < cellsArray.length; i++) {
         cellsArray[i].addEventListener('click', function() {
-            cellsArray[i].innerHTML = 'X';
+            cellsArray[i].innerHTML = cross;
             cellsArray[i].style.opacity = '1';
             humanArray.push(i);
             console.log(humanArray);
@@ -81,11 +84,11 @@ function computerChoice () {
         let i = Math.floor(Math.random() * cellsArray.length);
         console.log(i);
         // if (cellsArray[i].innerHTML = 'X') {
-        while ((cellsArray[i].innerHTML === 'X' || cellsArray[i].innerHTML === 'O') && humanArray.length < 5) {
+        while ((cellsArray[i].innerHTML === cross || cellsArray[i].innerHTML === circle) && humanArray.length < 5) {
             i = Math.floor(Math.random() * cellsArray.length);
             console.log(i);
         }
-        cellsArray[i].innerHTML = 'circle';
+        cellsArray[i].innerHTML = circle;
         cellsArray[i].style.opacity = '1';
     // }
 }

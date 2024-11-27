@@ -26,6 +26,8 @@ div {
         "cell4 cell5 cell6"
         "cell7 cell8 cell9";
     align-items: center;
+    /* justify-items: center; */
+    /* justify-content: center; */
     height: 300px;
     width: 300px;
     background-color: rgb(196, 196, 196);
@@ -74,6 +76,10 @@ span.cross {
 }
 
 /* Font Awesome Icons test */
+/* .fa-xmark {
+    font-size: 24px;
+} */
+
 /* .fa-regular {
     text-shadow: 0 0 5px #ff0000;
 } */
