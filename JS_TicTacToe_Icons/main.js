@@ -25,7 +25,7 @@ let humanArray = [];
 let computerArray = [];
 
 let cellsArray = document.getElementsByClassName('cell');
-console.log(cellsArray);
+// console.log(cellsArray);
 
 // document.getElementById('cell1').addEventListener('click', revealSymbol1);
 // document.getElementById('cell2').addEventListener('click', revealSymbol2);
@@ -44,7 +44,7 @@ function humanClick() {
             cellsArray[i].innerHTML = cross;
             cellsArray[i].style.opacity = '1';
             humanArray.push(i);
-            console.log(humanArray);
+            console.log(`Human Array: ${humanArray}`);
             if (humanArray.length < 5) {
                 computerChoice();
             }
@@ -60,11 +60,11 @@ humanClick();
 function computerChoice () {
   
         let i = Math.floor(Math.random() * cellsArray.length);
-        console.log(i);
+        // console.log(i);
        
         while ((cellsArray[i].innerHTML === cross || cellsArray[i].innerHTML === circle) && humanArray.length < 5) {
             i = Math.floor(Math.random() * cellsArray.length);
-            console.log(i);
+            // console.log(i);
         }
         cellsArray[i].innerHTML = circle;
         cellsArray[i].style.opacity = '1';
@@ -111,6 +111,6 @@ function findWinner() {
 }
 
 // findWinner();
-console.log(winningIndices[0]);
-console.log(winningIndices[0][0]);
-console.log(winningIndices[0][1]);
+// console.log(winningIndices[0]);
+// console.log(winningIndices[0][0]);
+// console.log(winningIndices[0][1]);
