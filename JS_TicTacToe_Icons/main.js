@@ -50,8 +50,8 @@ function humanClick() {
             }
             // setInterval(computerChoice, 1000);
             }
-        
-            findWinner();
+            checkIfHumanWins();
+            checkIfComputerWins();
         });
     }
 }
@@ -60,11 +60,9 @@ humanClick();
 function computerChoice () {
   
         let i = Math.floor(Math.random() * cellsArray.length);
-        // console.log(i);
        
         while ((cellsArray[i].innerHTML === cross || cellsArray[i].innerHTML === circle) && humanArray.length < 5) {
             i = Math.floor(Math.random() * cellsArray.length);
-            // console.log(i);
         }
         cellsArray[i].innerHTML = circle;
         cellsArray[i].style.opacity = '1';
@@ -73,52 +71,24 @@ function computerChoice () {
 
 }
 
-
-function findWinner() {
-    
+function checkIfHumanWins() {
     for (let j = 0; j < winningIndices.length; j++) {
         if (humanArray.includes(winningIndices[j][0]) && humanArray.includes(winningIndices[j][1]) && humanArray.includes(winningIndices[j][2])) {
             console.log('You win!');
             return true;
-            // console.log(`Winning Indices: ${winningIndices[j]}`);
         } else {
             console.log('Try again');
         }
     } 
-
-    // Also works with the 1st horizontal row:
-
-    // for (let j = 0; j < winningIndices.length; j++) {
-    //     for (let i = 0; i < winningIndices[j].length; i++) {
-    //         if (humanArray.includes(0) && humanArray.includes(1) && humanArray.includes(2)) {
-    //             console.log('You win!');
-    //         } else {
-    //             console.log('Try again')
-    //         }
-    //     }
-    // }
- 
-    // Works with the 1st winning combo (first horizontal row):
-
-    // for (let i = 0; i < winningIndices[0].length; i++) {
-    //     if (humanArray.includes(0) && humanArray.includes(1) && humanArray.includes(2)) {
-    //         console.log('You win!');
-    //     } else {
-    //         console.log('Try again')
-    //     }
-    // }
-
-    // for (let i = 0; i < 3; i++) {
-    //     if (humanArray.includes(0) && humanArray.includes(1) && humanArray.includes(2)) {
-    //         console.log('You win!');
-    //     } else {
-    //         console.log('Try again')
-    //     }
-    // }
-
 }
 
-// findWinner();
-// console.log(winningIndices[0]);
-// console.log(winningIndices[0][0]);
-// console.log(winningIndices[0][1]);
+function checkIfComputerWins() {
+    for (let j = 0; j < winningIndices.length; j++) {
+        if (computerArray.includes(winningIndices[j][0]) && computerArray.includes(winningIndices[j][1]) && computerArray.includes(winningIndices[j][2])) {
+            console.log('Computer wins!');
+            return true;
+        } else {
+            console.log('Computer should try again');
+        }
+    } 
+}
