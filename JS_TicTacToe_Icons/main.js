@@ -50,8 +50,12 @@ function humanClick() {
             }
             // setInterval(computerChoice, 1000);
             }
-            checkIfHumanWins();
-            checkIfComputerWins();
+            // checkIfHumanWins();
+            if (checkIfHumanWins()) {
+                console.log('You are awesome!')
+            } else if (checkIfComputerWins()) {
+                console.log('You suck');
+            };
         });
     }
 }
