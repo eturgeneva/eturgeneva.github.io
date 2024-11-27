@@ -74,30 +74,40 @@ function computerChoice () {
 }
 
 function findWinner() {
- 
-    for (let i = 0; i < winningIndices[0].length; i++) {
-        if (humanArray.includes(0) && humanArray.includes(1) && humanArray.includes(2)) {
-        // if (humanArray.includes(i)) {
-            console.log('You win!');
-        } else {
-            console.log('Try again')
+    
+    for (let j = 0; j < winningIndices.length; j++) {
+        for (let i = 0; i < winningIndices[j].length; i++) {
+            if (humanArray.includes(winningIndices[j][0]) && humanArray.includes(winningIndices[j][1]) && humanArray.includes(winningIndices[j][2])) {
+                console.log('You win!');
+                console.log(`Winning Indices: ${winningIndices[j]}`);
+            } else {
+                console.log('Try again')
+            }
         }
-    }
+    } 
 
-    // if (humanArray.includes(0) && humanArray.includes(1) && humanArray.includes(2)) {
-    //     console.log('You win!');
-    // } else {
-    //     console.log('Try again')
+    // Also works with the 1st horizontal row:
+
+    // for (let j = 0; j < winningIndices.length; j++) {
+    //     for (let i = 0; i < winningIndices[j].length; i++) {
+    //         if (humanArray.includes(0) && humanArray.includes(1) && humanArray.includes(2)) {
+    //             console.log('You win!');
+    //         } else {
+    //             console.log('Try again')
+    //         }
+    //     }
+    // }
+ 
+    // Works with the 1st winning combo (first horizontal row):
+
+    // for (let i = 0; i < winningIndices[0].length; i++) {
+    //     if (humanArray.includes(0) && humanArray.includes(1) && humanArray.includes(2)) {
+    //         console.log('You win!');
+    //     } else {
+    //         console.log('Try again')
+    //     }
     // }
 
-    // let i = -1;
-    // let j = -1;
-    // while (i < winningIndices.length - 1) {
-    //     i++;
-    //     j++;
-    //     console.log(winningIndices[i]);
-    //     console.log(j);
-    // }
 }
 
 // findWinner();
