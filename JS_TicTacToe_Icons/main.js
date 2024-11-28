@@ -46,7 +46,8 @@ function humanClick() {
             // checkIfHumanWins();
             if (checkIfHumanWins()) {
                 console.log('You are awesome!')
-                // cellsArray.forEach(element => console.log(element));
+                // Wipes the board:
+                document.getElementById('game-section').innerHTML = ' ';
             } else if (checkIfComputerWins()) {
                 console.log('You suck');
             };
