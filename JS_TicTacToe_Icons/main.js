@@ -20,7 +20,7 @@ let humanArray = [];
 let computerArray = [];
 
 let cellsArray = document.getElementsByClassName('cell');
-// console.log(cellsArray);
+console.log(cellsArray);
 
 // function delay(ms) {
 //     return new Promise(resolve => setTimeout(resolve, ms));
@@ -46,6 +46,7 @@ function humanClick() {
             // checkIfHumanWins();
             if (checkIfHumanWins()) {
                 console.log('You are awesome!')
+                // cellsArray.forEach(element => console.log(element));
             } else if (checkIfComputerWins()) {
                 console.log('You suck');
             };
