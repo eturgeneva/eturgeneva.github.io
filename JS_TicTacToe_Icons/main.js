@@ -31,12 +31,15 @@ let cross = '<span class="material-symbols-outlined cross">close</span>'
 
 function compareArrays (winningArray, playerArray) {
     for (let i = 0; i < winningArray.length; i++) {
-        if (!playerArray.includes(winningCombo[i])) {
+        if (!playerArray.includes(winningArray[i])) {
             return false;
         } 
     }
     return true;
 }
+// Tests of the compareArrays function:
+console.log(compareArrays([0, 3, 6], [1, 0, 6, 5, 4, 3]));
+console.log(compareArrays([0, 3, 6], [1, 6, 5, 4, 3]));
 
 
 function humanClick() {
