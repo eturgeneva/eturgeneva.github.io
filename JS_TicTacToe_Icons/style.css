@@ -22,6 +22,7 @@ div {
 }
 
 #game-section {
+    margin: 3rem auto;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, 1fr);
@@ -58,7 +59,7 @@ div {
     height: 100px;
     border: 1px black solid;
     border-radius: 10px;
-    background-color: rgb(48, 19, 57);
+    background-color: #301339;
 }
 
 .material-symbols-outlined {
@@ -78,16 +79,33 @@ div {
 }
 
 span.circle {
-    font-size: 44px;
-    font-variation-settings: 'OPSZ' 44;
-    text-shadow: 0 0 25px #ea0ea8, 0 0 2rem rgb(255, 230, 150);
+    font-size: 54px;
+    font-variation-settings: 'OPSZ' 54;
+    text-shadow: 0 0 2rem #ea0ea8,
+                 0 0 1rem rgb(252, 142, 254),
+                 0 0 2rem #ea0ea8,
+                 0 0 2rem #ea0ea8;
 }
 
 span.cross {
     /* color: blue; */
-    font-size: 64px;
-    font-variation-settings: 'OPSZ' 64;
-    text-shadow: 0 0 25px #4f58ff, 0 0 2rem rgb(255, 230, 150);
+    font-size: 70px;
+    font-variation-settings: 'OPSZ' 70;
+    text-shadow: 0 0 2rem #120eea,
+                 0 0 1rem rgb(142, 194, 254),
+                 0 0 2rem #0e87ea,
+                 0 0 2rem #0e54ea;
+    /* text-shadow: 0 0 2rem #0e6aea,
+                 0 0 1rem rgb(149, 207, 255),
+                 0 0 2rem #0e24ea,
+                 0 0 2rem #240eea;             */
+}
+
+button {
+    font-size: 1.3rem;
+    padding: 0.5rem 1rem;
+    background-color: #ab17dc;
+    border-radius: 8px;
 }
 
 #test-icons {
