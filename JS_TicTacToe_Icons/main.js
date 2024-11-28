@@ -60,6 +60,10 @@ function humanClick() {
                     document.getElementById('game-section').style.backgroundColor = '#301339';
                     document.getElementById('game-section').style.borderRadius = '10px';
                 }, 1500);
+            } else if (humanArray.length === 5) {
+                document.getElementById('game-section').innerHTML = '<p>It\'s a tie!</p>';
+                document.getElementById('game-section').style.backgroundColor = '#301339';
+                document.getElementById('game-section').style.borderRadius = '10px';
             };
         });
     }
