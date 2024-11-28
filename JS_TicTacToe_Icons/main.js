@@ -35,10 +35,11 @@ function humanClick() {
                 humanArray.push(i);
                 console.log(`Human Array: ${humanArray}`);
                 if (humanArray.length < 5) {
-                    setTimeout(() => {
-                        computerChoice();
-                    }, 1000);
-                    // computerChoice();
+                    // With this computer win is not getting checked:
+                    // setTimeout(() => {
+                    //     computerChoice();
+                    // }, 1000);
+                    computerChoice();
             }
         }
             // checkIfHumanWins();
@@ -47,8 +48,6 @@ function humanClick() {
                 // Wipes the board:
                 setTimeout(() => {
                     document.getElementById('game-section').innerHTML = ' ';
-                    // humanArray = [];
-                    // console.log(humanArray);
                 }, 1500);
                 // document.getElementById('game-section').innerHTML = ' ';
             } else if (checkIfComputerWins()) {
@@ -57,24 +56,20 @@ function humanClick() {
         });
     }
 }
-// humanClick();
+humanClick();
 
 let gameButton = document.getElementById('game-button');
 
-// function buttonListener () {
+// gameButton.addEventListener('click', function() {
 
-// }
+//     if (humanArray.length < 3) {
+//         humanClick();
+//     }
+//     if (humanArray.length >= 3) {
+//         humanArray = [];
+//     }
 
-gameButton.addEventListener('click', function() {
-
-    if (humanArray.length < 3) {
-        humanClick();
-    }
-    if (humanArray.length >= 3) {
-        humanArray = [];
-    }
-
-});
+// });
 
 function computerChoice () {
     
@@ -103,6 +98,7 @@ function compareArrays (winningArray, playerArray) {
 // Tests of the compareArrays function:
 console.log(compareArrays([0, 3, 6], [1, 0, 6, 5, 4, 3]));
 console.log(compareArrays([0, 3, 6], [1, 6, 5, 4, 3]));
+console.log(compareArrays([2, 5, 8], [2, 5, 6, 8]));
 
 function checkIfHumanWins() {
     for (let j = 0; j < winningIndices.length; j++) {
