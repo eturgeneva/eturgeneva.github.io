@@ -126,11 +126,11 @@ function compareArrays (winningArray, playerArray) {
         } 
         // gets the indices to highligh in case of victory:
         // highlightVictory.push(i);
-        if (!highlightVictory.includes(i)) {
-            highlightVictory.push(i);
-        }
+        // if (!highlightVictory.includes(i)) {
+        //     highlightVictory.push(i);
+        // }
     }
-    console.log(`Highlight: ${highlightVictory}`);
+    // console.log(`Highlight: ${highlightVictory}`);
     return true;
 }
 // Tests of the compareArrays function:
