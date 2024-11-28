@@ -47,7 +47,8 @@ function humanClick() {
                 console.log('You are awesome!')
                 // Wipes the board:
                 setTimeout(() => {
-                    document.getElementById('game-section').innerHTML = ' ';
+                    // document.getElementById('game-section').innerHTML = ' ';
+                    document.getElementById('game-section').innerHTML = '<p>You win!</p>';
                     document.getElementById('game-section').style.backgroundColor = '#301339';
                     document.getElementById('game-section').style.borderRadius = '10px';
                 }, 1500);
