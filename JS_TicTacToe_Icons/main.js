@@ -63,6 +63,7 @@ function humanClick() {
                 }, 1500);
             } else if (humanArray.length === 5) {
                 document.getElementById('game-section').innerHTML = '<p>It\'s a tie!</p>';
+                document.querySelector('#game-section p').style.textShadow = '0 0 2rem green, 0 0 1rem yellow, 0 0 2rem green, 0 0 2rem yellow';
                 document.getElementById('game-section').style.backgroundColor = '#301339';
                 document.getElementById('game-section').style.borderRadius = '10px';
             };
