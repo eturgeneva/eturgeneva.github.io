@@ -54,10 +54,12 @@ function humanClick() {
                 }, 1500);
                 // document.getElementById('game-section').innerHTML = ' ';
             } else if (checkIfComputerWins()) {
-                console.log('You suck');
-                document.getElementById('game-section').innerHTML = '<p>Computer wins!</p>';
-                document.getElementById('game-section').style.backgroundColor = '#301339';
-                document.getElementById('game-section').style.borderRadius = '10px';
+                setTimeout(() => {
+                    console.log('You suck');
+                    document.getElementById('game-section').innerHTML = '<p>Computer wins!</p>';
+                    document.getElementById('game-section').style.backgroundColor = '#301339';
+                    document.getElementById('game-section').style.borderRadius = '10px';
+                }, 1500);
             };
         });
     }
