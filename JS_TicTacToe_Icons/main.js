@@ -117,14 +117,20 @@ function computerChoice () {
     
 }
 
-let losingIndices = [];
+let highlightVictory = [];
 
 function compareArrays (winningArray, playerArray) {
     for (let i = 0; i < winningArray.length; i++) {
         if (!playerArray.includes(winningArray[i])) {
             return false;
         } 
+        // gets the indices to highligh in case of victory:
+        // highlightVictory.push(i);
+        if (!highlightVictory.includes(i)) {
+            highlightVictory.push(i);
+        }
     }
+    console.log(`Highlight: ${highlightVictory}`);
     return true;
 }
 // Tests of the compareArrays function:
