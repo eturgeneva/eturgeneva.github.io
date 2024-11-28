@@ -55,7 +55,14 @@ function humanClick() {
         });
     }
 }
-humanClick();
+// humanClick();
+
+let gameButton = document.getElementById('game-button');
+gameButton.addEventListener('click', function() {
+    if (humanArray.length === 0) {
+        humanClick();
+    }
+});
 
 function computerChoice () {
     
