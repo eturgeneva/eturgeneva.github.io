@@ -29,8 +29,8 @@ let cellsArray = document.getElementsByClassName('cell');
 let circle = '<span class="material-symbols-outlined circle" id="circle">circle</span>';
 let cross = '<span class="material-symbols-outlined cross">close</span>'
 
-function checkCombo (winningCombo, playerArray) {
-    for (let i = 0; i < winningCombo.length; i++) {
+function compareArrays (winningArray, playerArray) {
+    for (let i = 0; i < winningArray.length; i++) {
         if (!playerArray.includes(winningCombo[i])) {
             return false;
         } 
