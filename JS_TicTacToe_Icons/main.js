@@ -89,7 +89,16 @@ function checkIfHumanWins() {
     }
 }
 
-// Working version:
+function checkIfComputerWins() {
+    for (let j = 0; j < winningIndices.length; j++) {
+        if (compareArrays (winningIndices[j], computerArray)) {
+            console.log('Computer wins!');
+            return true;
+        }
+    } 
+}
+
+// Previous working Human version:
 // function checkIfHumanWins() {
 //     for (let j = 0; j < winningIndices.length; j++) {
 //         if (humanArray.includes(winningIndices[j][0]) && humanArray.includes(winningIndices[j][1]) && humanArray.includes(winningIndices[j][2])) {
@@ -101,13 +110,14 @@ function checkIfHumanWins() {
 //     } 
 // }
 
-function checkIfComputerWins() {
-    for (let j = 0; j < winningIndices.length; j++) {
-        if (computerArray.includes(winningIndices[j][0]) && computerArray.includes(winningIndices[j][1]) && computerArray.includes(winningIndices[j][2])) {
-            console.log('Computer wins!');
-            return true;
-        } else {
-            console.log('Computer should try again');
-        }
-    } 
-}
+// Previous working Computer version:
+// function checkIfComputerWins() {
+//     for (let j = 0; j < winningIndices.length; j++) {
+//         if (computerArray.includes(winningIndices[j][0]) && computerArray.includes(winningIndices[j][1]) && computerArray.includes(winningIndices[j][2])) {
+//             console.log('Computer wins!');
+//             return true;
+//         } else {
+//             console.log('Computer should try again');
+//         }
+//     } 
+// }
