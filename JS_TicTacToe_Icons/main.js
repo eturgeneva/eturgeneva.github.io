@@ -2,7 +2,6 @@ let a;
 let b;
 let humanChoice;
 
-// get a children array through getElementsByClassName or getElementsByTagName
 // winning combos (children array indices):
 const winningIndices = [
                     [0, 1, 2],
@@ -16,10 +15,6 @@ const winningIndices = [
                     [0, 4, 8],
                     [2, 4, 6]
 ];
-// computer makes a choice every _even_ something and _if_ there are still unfilled slots
-// computer starts from a corner if possible
-// game stops when all slots are filled - for example, check if innerHTML === ''
-
 // push choice into these arrays and compare the chunks with winning arrays:
 let humanArray = [];
 let computerArray = [];
@@ -27,9 +22,6 @@ let computerArray = [];
 let cellsArray = document.getElementsByClassName('cell');
 // console.log(cellsArray);
 
-// document.getElementById('cell1').addEventListener('click', revealSymbol1);
-// document.getElementById('cell2').addEventListener('click', revealSymbol2);
-// cellsArray[2].addEventListener('click', revealSymbol3);
 // function delay(ms) {
 //     return new Promise(resolve => setTimeout(resolve, ms));
 // }
