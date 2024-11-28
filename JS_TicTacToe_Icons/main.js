@@ -57,6 +57,7 @@ function humanClick() {
                 setTimeout(() => {
                     console.log('You suck');
                     document.getElementById('game-section').innerHTML = '<p>Computer wins!</p>';
+                    document.querySelector('#game-section p').style.textShadow = '0 0 2rem #ea0ea8, 0 0 1rem rgb(252, 142, 254), 0 0 2rem #ea0ea8, 0 0 2rem #ea0ea8';
                     document.getElementById('game-section').style.backgroundColor = '#301339';
                     document.getElementById('game-section').style.borderRadius = '10px';
                 }, 1500);
