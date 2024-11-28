@@ -82,14 +82,24 @@ function computerChoice () {
 
 function checkIfHumanWins() {
     for (let j = 0; j < winningIndices.length; j++) {
-        if (humanArray.includes(winningIndices[j][0]) && humanArray.includes(winningIndices[j][1]) && humanArray.includes(winningIndices[j][2])) {
+        if (compareArrays (winningIndices[j], humanArray)) {
             console.log('You win!');
             return true;
-        } else {
-            console.log('Try again');
         }
-    } 
+    }
 }
+
+// Working version:
+// function checkIfHumanWins() {
+//     for (let j = 0; j < winningIndices.length; j++) {
+//         if (humanArray.includes(winningIndices[j][0]) && humanArray.includes(winningIndices[j][1]) && humanArray.includes(winningIndices[j][2])) {
+//             console.log('You win!');
+//             return true;
+//         } else {
+//             console.log('Try again');
+//         }
+//     } 
+// }
 
 function checkIfComputerWins() {
     for (let j = 0; j < winningIndices.length; j++) {
