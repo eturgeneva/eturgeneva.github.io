@@ -76,6 +76,9 @@ function restartGame() {
     // document.getElementById('game-section').innerHTML = '<p>Restart</p>';
     document.getElementById('game-section').innerHTML = '<div class="cell" id="cell1"></div><div class="cell" id="cell2"></div><div class="cell" id="cell3"></div><div class="cell" id="cell4"></div><div class="cell" id="cell5"></div><div class="cell" id="cell6"></div><div class="cell" id="cell7"></div><div class="cell" id="cell8"></div><div class="cell" id="cell9"></div>';
     document.getElementById('game-section').style.backgroundColor = 'unset';
+    computerArray = [];
+    humanArray = [];
+    humanClick();
     // gameButton.style.color = 'red';
     // console.log('I love you');
 
