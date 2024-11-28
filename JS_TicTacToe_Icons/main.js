@@ -47,6 +47,8 @@ function humanClick() {
                 // Wipes the board:
                 setTimeout(() => {
                     document.getElementById('game-section').innerHTML = ' ';
+                    // humanArray = [];
+                    // console.log(humanArray);
                 }, 1500);
                 // document.getElementById('game-section').innerHTML = ' ';
             } else if (checkIfComputerWins()) {
@@ -58,10 +60,20 @@ function humanClick() {
 // humanClick();
 
 let gameButton = document.getElementById('game-button');
+
+// function buttonListener () {
+
+// }
+
 gameButton.addEventListener('click', function() {
-    if (humanArray.length === 0) {
+
+    if (humanArray.length < 3) {
         humanClick();
     }
+    if (humanArray.length >= 3) {
+        humanArray = [];
+    }
+
 });
 
 function computerChoice () {
