@@ -29,32 +29,20 @@ let cellsArray = document.getElementsByClassName('cell');
 let circle = '<span class="material-symbols-outlined circle" id="circle">circle</span>';
 let cross = '<span class="material-symbols-outlined cross">close</span>'
 
-function compareArrays (winningArray, playerArray) {
-    for (let i = 0; i < winningArray.length; i++) {
-        if (!playerArray.includes(winningArray[i])) {
-            return false;
-        } 
-    }
-    return true;
-}
-// Tests of the compareArrays function:
-console.log(compareArrays([0, 3, 6], [1, 0, 6, 5, 4, 3]));
-console.log(compareArrays([0, 3, 6], [1, 6, 5, 4, 3]));
-
 
 function humanClick() {
     for (let i = 0; i < cellsArray.length; i++) {
         cellsArray[i].addEventListener('click', function() {
             if (cellsArray[i].innerHTML !== circle && cellsArray[i].innerHTML !== cross) {
-            cellsArray[i].innerHTML = cross;
-            cellsArray[i].style.opacity = '1';
-            humanArray.push(i);
-            console.log(`Human Array: ${humanArray}`);
-            if (humanArray.length < 5) {
-                computerChoice();
+                cellsArray[i].innerHTML = cross;
+                cellsArray[i].style.opacity = '1';
+                humanArray.push(i);
+                console.log(`Human Array: ${humanArray}`);
+                if (humanArray.length < 5) {
+                    computerChoice();
             }
             // setInterval(computerChoice, 1000);
-            }
+        }
             // checkIfHumanWins();
             if (checkIfHumanWins()) {
                 console.log('You are awesome!')
@@ -67,18 +55,32 @@ function humanClick() {
 humanClick();
 
 function computerChoice () {
-  
-        let i = Math.floor(Math.random() * cellsArray.length);
-       
-        while ((cellsArray[i].innerHTML === cross || cellsArray[i].innerHTML === circle) && humanArray.length < 5) {
-            i = Math.floor(Math.random() * cellsArray.length);
-        }
-        cellsArray[i].innerHTML = circle;
-        cellsArray[i].style.opacity = '1';
-        computerArray.push(i);
-        console.log(`Computer Array: ${computerArray}`);
-
+    
+    let i = Math.floor(Math.random() * cellsArray.length);
+    
+    while ((cellsArray[i].innerHTML === cross || cellsArray[i].innerHTML === circle) && humanArray.length < 5) {
+        i = Math.floor(Math.random() * cellsArray.length);
+    }
+    cellsArray[i].innerHTML = circle;
+    cellsArray[i].style.opacity = '1';
+    computerArray.push(i);
+    console.log(`Computer Array: ${computerArray}`);
+    
 }
+
+let losingIndices = [];
+
+function compareArrays (winningArray, playerArray) {
+    for (let i = 0; i < winningArray.length; i++) {
+        if (!playerArray.includes(winningArray[i])) {
+            return false;
+        } 
+    }
+    return true;
+}
+// Tests of the compareArrays function:
+console.log(compareArrays([0, 3, 6], [1, 0, 6, 5, 4, 3]));
+console.log(compareArrays([0, 3, 6], [1, 6, 5, 4, 3]));
 
 function checkIfHumanWins() {
     for (let j = 0; j < winningIndices.length; j++) {
