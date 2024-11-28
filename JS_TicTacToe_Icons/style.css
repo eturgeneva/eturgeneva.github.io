@@ -25,12 +25,13 @@ div {
         "cell1 cell2 cell3"
         "cell4 cell5 cell6"
         "cell7 cell8 cell9";
+    gap: 10px;
     align-items: center;
     /* justify-items: center; */
     /* justify-content: center; */
-    height: 300px;
-    width: 300px;
-    background-color: rgb(196, 196, 196);
+    height: 320px;
+    width: 320px;
+    /* background-color: rgb(196, 196, 196); */
     /* border: 1px black solid; */
 
     /* --gap: 2rem;
@@ -52,6 +53,7 @@ div {
     width: 100px;
     height: 100px;
     border: 1px black solid;
+    background-color: rgb(196, 196, 196);
 }
 
 .material-symbols-outlined {
