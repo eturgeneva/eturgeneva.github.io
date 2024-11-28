@@ -22,10 +22,6 @@ let computerArray = [];
 let cellsArray = document.getElementsByClassName('cell');
 console.log(cellsArray);
 
-// function delay(ms) {
-//     return new Promise(resolve => setTimeout(resolve, ms));
-// }
-
 let circle = '<span class="material-symbols-outlined circle" id="circle">circle</span>';
 let cross = '<span class="material-symbols-outlined cross">close</span>'
 
@@ -39,15 +35,20 @@ function humanClick() {
                 humanArray.push(i);
                 console.log(`Human Array: ${humanArray}`);
                 if (humanArray.length < 5) {
-                    computerChoice();
+                    setTimeout(() => {
+                        computerChoice();
+                    }, 1000);
+                    // computerChoice();
             }
-            // setInterval(computerChoice, 1000);
         }
             // checkIfHumanWins();
             if (checkIfHumanWins()) {
                 console.log('You are awesome!')
                 // Wipes the board:
-                document.getElementById('game-section').innerHTML = ' ';
+                setTimeout(() => {
+                    document.getElementById('game-section').innerHTML = ' ';
+                }, 1500);
+                // document.getElementById('game-section').innerHTML = ' ';
             } else if (checkIfComputerWins()) {
                 console.log('You suck');
             };
