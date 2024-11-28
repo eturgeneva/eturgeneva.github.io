@@ -8,6 +8,10 @@ html {
     font-size: 16px;
 }
 
+body {
+    background-color: rgb(68, 26, 126);
+}
+
 main {
     text-align: center;;
 }
@@ -53,7 +57,8 @@ div {
     width: 100px;
     height: 100px;
     border: 1px black solid;
-    background-color: rgb(196, 196, 196);
+    border-radius: 10px;
+    background-color: rgb(48, 19, 57);
 }
 
 .material-symbols-outlined {
@@ -68,18 +73,21 @@ div {
     word-wrap: normal;
     white-space: nowrap;
     direction: ltr;
-    text-shadow: 0 0 5px #ff0000;
+    /* text-shadow: 0 0 15px #ff0000; */
+    color: white;
 }
 
 span.circle {
     font-size: 44px;
     font-variation-settings: 'OPSZ' 44;
+    text-shadow: 0 0 25px #ea0ea8, 0 0 2rem rgb(255, 230, 150);
 }
 
 span.cross {
-    color: blue;
+    /* color: blue; */
     font-size: 64px;
     font-variation-settings: 'OPSZ' 64;
+    text-shadow: 0 0 25px #4f58ff, 0 0 2rem rgb(255, 230, 150);
 }
 
 #test-icons {

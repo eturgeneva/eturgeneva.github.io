@@ -48,6 +48,8 @@ function humanClick() {
                 // Wipes the board:
                 setTimeout(() => {
                     document.getElementById('game-section').innerHTML = ' ';
+                    document.getElementById('game-section').style.backgroundColor = 'darkblue';
+                    document.getElementById('game-section').style.borderRadius = '10px';
                 }, 1500);
                 // document.getElementById('game-section').innerHTML = ' ';
             } else if (checkIfComputerWins()) {
