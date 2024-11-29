@@ -43,10 +43,11 @@ function humanClick() {
             }
         }
             // checkIfHumanWins();
-            const x = checkIfHumanWins();
-            if (x !== undefined) {
+            const humanWinIndex = checkIfHumanWins();
+            if (humanWinIndex !== undefined) {
                 console.log('You are awesome!')
-                console.log(winningIndices[x]);
+                let humanWinCombo = winningIndices[humanWinIndex];
+                console.log(humanWinCombo);
                 // Wipes the board:
                 setTimeout(() => {
                     // document.getElementById('game-section').innerHTML = ' ';
