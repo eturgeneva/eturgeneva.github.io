@@ -43,8 +43,10 @@ function humanClick() {
             }
         }
             // checkIfHumanWins();
-            if (checkIfHumanWins()) {
+            const x = checkIfHumanWins();
+            if (x !== undefined) {
                 console.log('You are awesome!')
+                console.log(winningIndices[x]);
                 // Wipes the board:
                 setTimeout(() => {
                     // document.getElementById('game-section').innerHTML = ' ';
@@ -136,7 +138,8 @@ function checkIfHumanWins() {
     for (let j = 0; j < winningIndices.length; j++) {
         if (compareArrays (winningIndices[j], humanArray)) {
             console.log('You win!');
-            return true;
+            // return true;
+            return j;
         }
     }
 }
