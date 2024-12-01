@@ -19,8 +19,6 @@ function formArray1 () {
     return array1;
 }
 
-console.log(formArray1());
-
 function formArray2 () {
     let array1 = [];
     for (let i = 0; i < splitTest.length; i++) {
@@ -29,10 +27,8 @@ function formArray2 () {
     return array1;
 }
 
-console.log(formArray2());
-
-// const testArray1 = [3, 4, 2, 1, 3, 3];
-// const testArray2 = [4, 3, 5, 3, 9, 3];
+// const test1 = [3, 4, 2, 1, 3, 3];
+// const test2 = [4, 3, 5, 3, 9, 3];
 const testArray1 = formArray1();
 const testArray2 = formArray2();
 
@@ -41,10 +37,6 @@ function sortArray (arr) {
     sortedArray = arr.sort((num1, num2) => num1 - num2);
     return sortedArray;
 }
-
-// Test:
-// console.log(sortArray(testArray1));
-// console.log(sortArray(testArray2));
 
 function pairArrays (arr1, arr2) {
     let differenceArray = [];
@@ -55,9 +47,6 @@ function pairArrays (arr1, arr2) {
     return differenceArray;
 }
 
-// Test:
-// console.log(pairArrays(testArray1, testArray2));
-
 function sumArray (arr) {
     let sumNums;
     sumNums = arr.reduce((acc, curVal) => {
@@ -66,9 +55,23 @@ function sumArray (arr) {
     return sumNums;
 }
 
-// Test:
-// console.log(sumArray(pairArrays(testArray1, testArray2)));
-
 sortArray(testArray1);
 sortArray(testArray2);
 console.log(sumArray(pairArrays(testArray1, testArray2)));
+
+const test1 = [3, 4, 2, 1, 3, 3];
+const test2 = [4, 3, 5, 3, 9, 3];
+
+function repeatTimes (arr1, arr2) {
+    let repeats = [];
+    for (let i = 0; i < arr1.length; i++) {
+        for (let j = 0; j < arr2.length; j++) {
+            if (arr1[i] === arr2[j]) {
+                repeats.push(i + 1);
+            }
+        }
+    }
+    return repeats;
+}
+
+console.log(repeatTimes(test1, test2));
