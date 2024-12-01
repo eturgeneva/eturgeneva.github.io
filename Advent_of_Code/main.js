@@ -1,6 +1,40 @@
-const testArray1 = [3, 4, 2, 1, 3, 3];
-const testArray2 = [4, 3, 5, 3, 9, 3];
+const fs = require('node:fs');
+const { text } = require('stream/consumers');
+const data = fs.readFileSync('./Advent_of_Code/input.txt', 'utf-8');
+const textArray = data.split('\r\n');
+// const textArray = data.split(/[0-9]{5,5}/);
+// console.log(textArray);
 
+let splitTest = [];
+for (let i = 0; i < textArray.length; i++) {
+    splitTest.push(textArray[i].split(/ +/));
+}
+console.log(splitTest);
+
+function formArray1 () {
+    let array1 = [];
+    for (let i = 0; i < splitTest.length; i++) {
+        array1.push(parseInt(splitTest[i][0]));
+    }
+    return array1;
+}
+
+console.log(formArray1());
+
+function formArray2 () {
+    let array1 = [];
+    for (let i = 0; i < splitTest.length; i++) {
+        array1.push(parseInt(splitTest[i][1]));
+    }
+    return array1;
+}
+
+console.log(formArray2());
+
+// const testArray1 = [3, 4, 2, 1, 3, 3];
+// const testArray2 = [4, 3, 5, 3, 9, 3];
+const testArray1 = formArray1();
+const testArray2 = formArray2();
 
 function sortArray (arr) {
     let sortedArray;
@@ -9,9 +43,8 @@ function sortArray (arr) {
 }
 
 // Test:
-console.log(sortArray(testArray1));
-console.log(sortArray(testArray2));
-
+// console.log(sortArray(testArray1));
+// console.log(sortArray(testArray2));
 
 function pairArrays (arr1, arr2) {
     let differenceArray = [];
@@ -23,7 +56,7 @@ function pairArrays (arr1, arr2) {
 }
 
 // Test:
-console.log(pairArrays(testArray1, testArray2));
+// console.log(pairArrays(testArray1, testArray2));
 
 function sumArray (arr) {
     let sumNums;
@@ -34,4 +67,8 @@ function sumArray (arr) {
 }
 
 // Test:
+// console.log(sumArray(pairArrays(testArray1, testArray2)));
+
+sortArray(testArray1);
+sortArray(testArray2);
 console.log(sumArray(pairArrays(testArray1, testArray2)));
