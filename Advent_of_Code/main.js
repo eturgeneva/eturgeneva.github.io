@@ -67,7 +67,6 @@ function repeatTimes (arr1, arr2) {
     for (let i = 0; i < arr1.length; i++) {
         for (let j = 0; j < arr2.length; j++) {
             if (arr1[i] === arr2[j]) {
-                // repeats.push(i + 1);
                 repeats.push(arr1[i]);
             }
         }
@@ -76,25 +75,7 @@ function repeatTimes (arr1, arr2) {
     return repeats;
 }
 
-function similarityScore (arr) {
-    let multiplier = [];
-    let i = 0;
-    let j = 1;
-    while (j < arr.length) {
-        if (arr[i] === arr[j]) {
-            i++;
-            // arr[i] = arr[j];
-            // multiplier.push(j);
-            multiplier.push(arr[i] * j);
-            j++;
-        } else {
-            j++;
-        }
-    }
-    // return i + 1;
-    return multiplier;
-}
-
-console.log(repeatTimes(test1, test2));
-let repeatArray = repeatTimes(test1, test2);
-console.log(similarityScore(repeatArray));
+// console.log(repeatTimes(test1, test2));
+let repeatArray = repeatTimes(testArray1, testArray2);
+console.log(repeatArray);
+console.log(sumArray(repeatArray));
