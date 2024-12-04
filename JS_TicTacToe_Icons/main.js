@@ -29,18 +29,20 @@ let cross = '<span class="material-symbols-outlined cross">close</span>'
 function humanClick() {
     for (let i = 0; i < cellsArray.length; i++) {
         cellsArray[i].addEventListener('click', function() {
-            if (cellsArray[i].innerHTML !== circle && cellsArray[i].innerHTML !== cross) {
+            // const humanWinIndex = checkIfHumanWins();
+            if (cellsArray[i].innerHTML !== circle && cellsArray[i].innerHTML !== cross && checkIfHumanWins() === undefined && !checkIfComputerWins()) {
                 cellsArray[i].innerHTML = cross;
                 cellsArray[i].style.opacity = '1';
                 humanArray.push(i);
                 console.log(`Human Array: ${humanArray}`);
-                if (humanArray.length < 5) {
+                // if (checkIfHumanWins() === undefined) {
+                // if (humanArray.length < 5) {
                     // With this computer win is not getting checked:
                     // setTimeout(() => {
                     //     computerChoice();
                     // }, 1000);
                     computerChoice();
-            }
+            // }
         }
             // checkIfHumanWins();
             const humanWinIndex = checkIfHumanWins();
@@ -66,7 +68,8 @@ function humanClick() {
                     document.getElementById('game-section').style.backgroundColor = '#301339';
                     document.getElementById('game-section').style.borderRadius = '10px';
                 }, 1500);
-            } else if (humanArray.length === 5) {
+            // } else if (humanArray.length === 5) {
+            } else if (humanWinIndex === undefined && humanArray.length >= 5 && !checkIfComputerWins()) {
                 document.getElementById('game-section').innerHTML = '<p>It\'s a tie!</p>';
                 document.querySelector('#game-section p').style.textShadow = '0 0 2rem green, 0 0 1rem yellow, 0 0 2rem green, 0 0 2rem yellow';
                 document.getElementById('game-section').style.backgroundColor = '#301339';
@@ -115,10 +118,12 @@ function computerChoice () {
     while ((cellsArray[i].innerHTML === cross || cellsArray[i].innerHTML === circle) && humanArray.length < 5) {
         i = Math.floor(Math.random() * cellsArray.length);
     }
-    cellsArray[i].innerHTML = circle;
-    cellsArray[i].style.opacity = '1';
-    computerArray.push(i);
-    console.log(`Computer Array: ${computerArray}`);
+    if (checkIfHumanWins() === undefined && computerArray.length < 4) {
+        cellsArray[i].innerHTML = circle;
+        cellsArray[i].style.opacity = '1';
+        computerArray.push(i);
+        console.log(`Computer Array: ${computerArray}`);
+    }
     
 }
 
