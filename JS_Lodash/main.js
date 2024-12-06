@@ -90,17 +90,43 @@ const _ = {
         if (n === undefined) {
           n = 1;
         }
-        let droppedArray = array.slice(0 + n, array.length)
+        let droppedArray = array.slice(n, array.length)
         return droppedArray;
-      }
+    },
+
+    dropWhile (array, predicate) {
+        let invertedPredicate = function (element, index) {
+            return !predicate(element, index, array);
+          };
+        
+          let dropNumber = array.findIndex(invertedPredicate);
+          let droppedArray = this.drop (array, dropNumber);
+          return droppedArray;
+        //   let firstFalsyIndex;
+        //   for (let i = 0; i < array.length; i++) {
+        //     if (!predicate(array[i], i, array)) {
+        //       firstFalsyIndex = i;
+        //       break;
+        //     }
+        //   }
+        //   return this.drop (array, firstFalsyIndex);
+        }
     
 
 };
 
-const arr1 = [1, 2, 3, 4, 5]
+const arr1 = [1, 2, 3, 4, 5, 1, 0, 5]
 
-console.log(_.drop(arr1, 3))
-console.log(_.drop(arr1))
+console.log(_.dropWhile(arr1, function (element) {
+    return element < 3;
+}));
+
+console.log(_.dropWhile(arr1, function (element, index, array) {
+    return index < array.length / 2;
+}));
+
+// console.log(_.drop(arr1, 3))
+// console.log(_.drop(arr1))
 // _.drop(arr1, 3) // must print [4, 5]
 
 //Tests:
