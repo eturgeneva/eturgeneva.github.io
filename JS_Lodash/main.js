@@ -48,12 +48,44 @@ const _ = {
           let endPaddingLength = length - string.length - startPaddingLength;
           let paddedString = `${' '.repeat(startPaddingLength)}${string}${' '.repeat(endPaddingLength)}`;
           return paddedString;
+    },
+
+    has (object, key) {
+        let hasValue = object[key] !== undefined;
+        return hasValue;
+
+        // let hasValue = object[key];
+        // if (hasValue !== undefined) {
+        //     return true;
+        // } else {
+        //     return false;
+        // }
+
+        // return hasValue !== undefined;
+
+    },
+
+    invert (object) {
+        let invertedObject = {};
+        for (let key in object) {
+            let originalValue = object[key];
+            // console.log(originalValue);
+            invertedObject[originalValue] = key;
+            // console.log(invertedObject);
         }
+        return invertedObject;
+
+    }
+
+};
+    const evgeny = {
+    name: 'Evgeny',
+    job: 'developer'
+    }
+
+    console.log(_.invert(evgeny));
 
 
-  };
-
-  
   // console.log(_.clamp(5, 2, 7));
   // console.log(_.clamp(10, -10, 7));
   
@@ -63,5 +95,9 @@ const _ = {
   
   //   console.log(_.words('elena, loves evgeny!'));
   
-  console.log(_.pad('elena', 10));
-  _.pad('elena', 10);
+  //   console.log(_.pad('elena', 10));
+  //   _.pad('elena', 10);
+
+
+//   console.log(_.has({name: 'Evgeny', job: 'developer'}, 'name'))
+//   console.log(_.has(evgeny, 'name'))
