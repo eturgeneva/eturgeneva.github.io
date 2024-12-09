@@ -113,31 +113,29 @@ const _ = {
     },
 
     chunk (array, size) {
-        let arrayChunk = [];
+        // let arrayChunk = [];
         let newArray = [];
-        let j = 0;
-        for (let i = 0; i < array.length; i++) {
-        //   arrayChunk = array.slice(0, size);
-        j += size;
-
-        //   arrayChunk = array.slice(i, size);
-        //   arrayChunk = array.slice(i, i + size);
-          arrayChunk = array.slice(i, j);
-          console.log(i, size);
-          console.log(arrayChunk);
-          newArray.push(arrayChunk);
+        if (size === undefined) {
+            size = 1;
         }
-        // return newArray;
-        console.log(newArray);
+        for (let i = 0; i < array.length; i+=size) {
+            let arrayChunk = array.slice(i, i + size);
+            newArray.push(arrayChunk);
+        //   console.log(arrayChunk);
+        }
+        return newArray;
+        // console.log(newArray);
     }
     
-
 };
 
 const arr1 = [1, 2, 3, 4, 5, 1, 0, 5]
 
-// console.log(_.chunk(arr1, 2));
-_.chunk(arr1, 3);
+console.log(_.chunk(arr1, 2));
+console.log(_.chunk(arr1, 3));
+console.log(_.chunk(arr1));
+// _.chunk(arr1, 3);
+// _.chunk(arr1);
 
 
 // console.log(_.drop(arr1, 3))
