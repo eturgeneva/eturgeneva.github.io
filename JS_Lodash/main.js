@@ -110,20 +110,35 @@ const _ = {
         //     }
         //   }
         //   return this.drop (array, firstFalsyIndex);
+    },
+
+    chunk (array, size) {
+        let arrayChunk = [];
+        let newArray = [];
+        let j = 0;
+        for (let i = 0; i < array.length; i++) {
+        //   arrayChunk = array.slice(0, size);
+        j += size;
+
+        //   arrayChunk = array.slice(i, size);
+        //   arrayChunk = array.slice(i, i + size);
+          arrayChunk = array.slice(i, j);
+          console.log(i, size);
+          console.log(arrayChunk);
+          newArray.push(arrayChunk);
         }
+        // return newArray;
+        console.log(newArray);
+    }
     
 
 };
 
 const arr1 = [1, 2, 3, 4, 5, 1, 0, 5]
 
-console.log(_.dropWhile(arr1, function (element) {
-    return element < 3;
-}));
+// console.log(_.chunk(arr1, 2));
+_.chunk(arr1, 3);
 
-console.log(_.dropWhile(arr1, function (element, index, array) {
-    return index < array.length / 2;
-}));
 
 // console.log(_.drop(arr1, 3))
 // console.log(_.drop(arr1))
@@ -149,18 +164,26 @@ console.log(_.dropWhile(arr1, function (element, index, array) {
 // Object methods tests:
 
 // const evgeny = {
-//     name: 'Evgeny',
-//     job: 'developer',
-//     flaws: 0
-// }
+    //     name: 'Evgeny',
+    //     job: 'developer',
+    //     flaws: 0
+    // }
 // console.log(_.invert(evgeny));
-
+    
 // console.log(_.findKey(evgeny, function(elem) {
-//     return elem === 'developer';
-// }  ));
-
+        //     return elem === 'developer';
+        // }  ));
+        
 // console.log(_.findKey(evgeny, function(elem) {
-//     return elem === 0;
-// }  ));
-
+            //     return elem === 0;
+            // }  ));
+            
 // Array tests:
+            
+// console.log(_.dropWhile(arr1, function (element) {
+//     return element < 3;
+// }));
+
+// console.log(_.dropWhile(arr1, function (element, index, array) {
+//     return index < array.length / 2;
+// }));
