@@ -52,6 +52,13 @@
     margin-left: 15%;
   }
 
+  #vocabulary-card {
+    background-color: rgb(98, 98, 142);
+    width: 50%;
+    height: 20rem;
+    margin: 2rem 10rem;
+  }
+
   .section {
     width: 80%;
     padding: 2rem;
