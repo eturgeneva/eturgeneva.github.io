@@ -48,3 +48,13 @@ textArray.forEach(splitElement);
 console.log(formattedArray)
 console.log(formattedArray[0])
 console.log(formattedArray[0][0])
+
+function convertToObject(arr) {
+    let objectsArray = [];
+    for (let i = 0; i < arr.length; i++) {
+        // objectsArray.push(arr[i][0], arr[i][0]);
+        objectsArray.push({"word" : arr[i][0], "translation" : arr[i][1]});
+    }
+    return objectsArray;
+}
+console.log(convertToObject(formattedArray));
