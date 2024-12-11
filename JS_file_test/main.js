@@ -57,4 +57,17 @@ function convertToObject(arr) {
     }
     return objectsArray;
 }
-console.log(convertToObject(formattedArray));
+// console.log(convertToObject(formattedArray));
+// const newObject = convertToObject(formattedArray);
+// console.log(newObject);
+
+// const fs = require('fs');
+// let dataB = convertToObject(formattedArray);
+// fs.writeFile('output.txt', dataB, (err) => {
+//     if (err) throw err;
+// })
+
+let dataB = convertToObject(formattedArray);
+fs.writeFile('output.txt', JSON.stringify(dataB), (err) => {
+    if (err) throw err;
+})
