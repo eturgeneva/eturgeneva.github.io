@@ -9,3 +9,17 @@ const fs = require('node:fs');
 const data = fs.readFileSync('./driving.tsv', 'utf-8');
 const textArray = data.split('\r\n');
 console.log(textArray);
+
+// function splitElem (elem) {
+//     let newArray = [];
+//     newArray.push(elem.split('\t'));
+
+//     return newArray;
+// }
+
+// console.log(textArray.forEach(splitElem));
+
+let phrase = 'abbauen\tсокращать, демонтировать, распадаться';
+console.log(phrase);
+let split = phrase.split('\t');
+console.log(split);
