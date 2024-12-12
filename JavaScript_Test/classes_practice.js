@@ -58,10 +58,29 @@ class Movie extends Media {
     }
 }
 
+class CD extends Media {
+    constructor (artist, title, songs) {
+      super(title);
+      this._artist = artist;
+      this._songs = songs;
+    }
+    get artist() {
+      return this._artist;
+    }
+    get songs() {
+      return this._songs;
+    }
+}
+// Maybe add a message if ratings are empty
+
+// CD class tests:
+const cd1 = new CD ('Evgeny', 'Songs About Love', ['I miss you', 'Love at first sight', 'I love you'])
+console.log(cd1, cd1.songs, cd1.artist);
+
 // Movie class tests:
-const movie1 = new Movie('Kot', 'Film about cat', 120);
-console.log(movie1);
-console.log(movie1.title, movie1.director, movie1.runTime, movie1.ratings);
+// const movie1 = new Movie('Kot', 'Film about cat', 120);
+// console.log(movie1);
+// console.log(movie1.title, movie1.director, movie1.runTime, movie1.ratings);
 
 // Book class tests:
 
