@@ -15,10 +15,13 @@ class Media {
     }
 
     getAverageRating() {
-      let averageRating = this._ratings.reduce((acc, currVal) => {
-        return acc + currVal;
-      }) / this._ratings.length;
-      return averageRating;
+        if (this._ratings.length === 0) {
+            return `There is currently no rating`;
+          }
+        let averageRating = this._ratings.reduce((acc, currVal) => {
+            return acc + currVal;
+        }) / this._ratings.length;
+        return averageRating;
     }
     
     toggleCheckOutStatus() {
@@ -76,6 +79,7 @@ class CD extends Media {
 // CD class tests:
 const cd1 = new CD ('Evgeny', 'Songs About Love', ['I miss you', 'Love at first sight', 'I love you'])
 console.log(cd1, cd1.songs, cd1.artist);
+console.log(cd1.getAverageRating())
 
 // Movie class tests:
 // const movie1 = new Movie('Kot', 'Film about cat', 120);
