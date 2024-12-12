@@ -76,15 +76,18 @@ class CD extends Media {
     shuffle() {
         for (let i = this._songs.length - 1; i > 0; i--) {
           let randNum = Math.floor(Math.random() * (i + 1));
-        //   console.log(i, randNum);
+          console.log(`random number: ${randNum}`);
           let temp = this._songs[i];
+          console.log(this._songs)
           this._songs[i] = this._songs[randNum];
+          console.log(this._songs, temp)
           this._songs[randNum] = temp;
-        //   console.log(this._songs);
+          console.log(this._songs)
         }
         return this._songs;
     }
 }
+
 
 // CD class tests:
 const cd1 = new CD ('Evgeny', 'Songs About Love', ['I miss you', 'Love at first sight', 'I love you', 'Cat Song'])
@@ -130,3 +133,10 @@ console.log(cd1);
 // console.log(mediaItem1.title);
 // console.log(mediaItem1.isCheckedOut);
 // console.log(mediaItem1.ratings);
+let a = 10;
+let b = 20;
+let c = a;
+a = b;
+console.log(a, b);
+b = c;
+console.log(a, b);
