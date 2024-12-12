@@ -135,8 +135,9 @@ console.log(cd1);
 // console.log(mediaItem1.ratings);
 let a = 10;
 let b = 20;
-let c = a;
-a = b;
-console.log(a, b);
-b = c;
+// let c = a;
+// a = b;
+// console.log(a, b);
+// b = c;
+[a, b] = [b, a] // Destructuring
 console.log(a, b);
