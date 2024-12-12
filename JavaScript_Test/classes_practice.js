@@ -24,25 +24,72 @@ class Media {
     toggleCheckOutStatus() {
       this._isCheckedOut = !this._isCheckedOut;
     }
-    
+
     addRating(rating) {
       this._ratings.push(rating);
     }
-  }
+}
 
-const mediaItem1 = new Media("Evgeny's Biography");
-console.log(mediaItem1);
-// Methods tests:
-mediaItem1.addRating(5);
-mediaItem1.addRating(3);
-mediaItem1.addRating(10);
+class Book extends Media {
+    constructor (author, title, pages) {
+      super(title);
+      this._author = author;
+      this._pages = pages;
+    }
+    get author() {
+      return this._author;
+    }
+    get pages() {
+      return this._pages
+    }
+}
 
-mediaItem1.toggleCheckOutStatus();
+class Movie extends Media {
+    constructor (director, title, runTime) {
+      super(title);
+      this._director = director;
+      this._runTime = runTime;
+    }
+    get director() {
+      return this._director;
+    }
+    get runTime() {
+      return this._runTime;
+    }
+}
 
-console.log(mediaItem1);
+// Movie class tests:
+const movie1 = new Movie('Kot', 'Film about cat', 120);
+console.log(movie1);
+console.log(movie1.title, movie1.director, movie1.runTime, movie1.ratings);
 
-console.log(mediaItem1.getAverageRating());
-// Getters tests:
-console.log(mediaItem1.title);
-console.log(mediaItem1.isCheckedOut);
-console.log(mediaItem1.ratings);
+// Book class tests:
+
+// const book1 = new Book('Elena','My new book', 250);
+// console.log(book1);
+// // book1.addRating(10);
+// book1.toggleCheckOutStatus();
+// console.log(book1);
+// // console.log(book1.getAverageRating());
+// console.log(book1.author, book1.pages, book1.title, book1.ratings);
+
+// Media class tests:
+
+// const mediaItem1 = new Media("Evgeny's Biography");
+// console.log(mediaItem1);
+
+// Media methods tests:
+
+// mediaItem1.addRating(5);
+// mediaItem1.addRating(3);
+// mediaItem1.addRating(10);
+// mediaItem1.toggleCheckOutStatus();
+
+// console.log(mediaItem1);
+// console.log(mediaItem1.getAverageRating());
+
+// Media getters tests:
+
+// console.log(mediaItem1.title);
+// console.log(mediaItem1.isCheckedOut);
+// console.log(mediaItem1.ratings);
