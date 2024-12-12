@@ -73,13 +73,28 @@ class CD extends Media {
     get songs() {
       return this._songs;
     }
+    shuffle() {
+        let shuffledArray = [];
+        for (let i = this._songs.length - 1; i > 0; i--) {
+          // let randNum = Math.floor(Math.random() * this._songs.length);
+          let randNum = Math.floor(Math.random() * (i + 1));
+          // console.log(i, randNum);
+          let temp = this._songs[i];
+          this._songs[i] = this._songs[randNum];
+          this._songs[randNum] = temp;
+          // console.log(temp)
+          shuffledArray.push(temp);
+        }
+        return shuffledArray;
+    }
 }
-// Maybe add a message if ratings are empty
 
 // CD class tests:
-const cd1 = new CD ('Evgeny', 'Songs About Love', ['I miss you', 'Love at first sight', 'I love you'])
-console.log(cd1, cd1.songs, cd1.artist);
+const cd1 = new CD ('Evgeny', 'Songs About Love', ['I miss you', 'Love at first sight', 'I love you', 'Cat Song'])
+// console.log(cd1, cd1.songs, cd1.artist);
 console.log(cd1.getAverageRating())
+cd1.shuffle();
+console.log(cd1.shuffle());
 
 // Movie class tests:
 // const movie1 = new Movie('Kot', 'Film about cat', 120);
