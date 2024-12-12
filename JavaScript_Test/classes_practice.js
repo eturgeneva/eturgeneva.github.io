@@ -1,3 +1,15 @@
+class Catalog {
+    constructor() {
+      this._media = []
+    }
+    addMedia(media) {
+      this._media.push(media);
+    }
+    findByTitle(title) {
+      return this._media.filter(elem => elem.title === title)
+    }
+}
+
 class Media {
     constructor(title) {
       this._title = title;
@@ -76,13 +88,13 @@ class CD extends Media {
     shuffle() {
         for (let i = this._songs.length - 1; i > 0; i--) {
           let randNum = Math.floor(Math.random() * (i + 1));
-          console.log(`random number: ${randNum}`);
+        //   console.log(`random number: ${randNum}`);
           let temp = this._songs[i];
-          console.log(this._songs)
+        //   console.log(this._songs)
           this._songs[i] = this._songs[randNum];
-          console.log(this._songs, temp)
+        //   console.log(this._songs, temp)
           this._songs[randNum] = temp;
-          console.log(this._songs)
+        //   console.log(this._songs)
         }
         return this._songs;
     }
@@ -91,6 +103,8 @@ class CD extends Media {
 
 // CD class tests:
 const cd1 = new CD ('Evgeny', 'Songs About Love', ['I miss you', 'Love at first sight', 'I love you', 'Cat Song'])
+const catalog = new Catalog();
+catalog.addMedia(cd1);
 // console.log(cd1, cd1.songs, cd1.artist);
 console.log(cd1.getAverageRating())
 console.log(cd1);
@@ -99,7 +113,11 @@ cd1.shuffle();
 console.log(cd1);
 
 // Movie class tests:
-// const movie1 = new Movie('Kot', 'Film about cat', 120);
+const movie1 = new Movie('Kot', 'Film about cat', 120);
+catalog.addMedia(movie1);
+console.log(catalog);
+console.log(catalog.findByTitle('Film about cat'))
+console.log(catalog.findByTitle('Songs About Love'))
 // console.log(movie1);
 // console.log(movie1.title, movie1.director, movie1.runTime, movie1.ratings);
 
