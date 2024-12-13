@@ -14,7 +14,7 @@ class School {
       return this._numberOfStudents;
     }
     set numberOfStudents(num) {
-      if (!isNaN(num)) {
+      if (typeof num === 'number') {
         this._numberOfStundents = num;
       } else {
         console.log('The value has to be a number')
@@ -24,7 +24,7 @@ class School {
   
     }
     static pickSubstituteTeacher() {
-      
+  
     }
   
   }
