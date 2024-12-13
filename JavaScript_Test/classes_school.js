@@ -21,6 +21,7 @@ class School {
       }
     }
     quickFacts() {
+      console.log(`${this._name} educates ${this._numberOfStudents} students at the ${this._level} school level.`)
     }
     static pickSubstituteTeacher() {
     }
@@ -53,14 +54,19 @@ class School {
   const highTest = new High('Bears High', 'high', 340, ['Vasya', 'Petya', 'Bibi']);
   console.log(highTest);
   console.log(highTest.sportsTeams);
+  highTest.numberOfStudents = 120;
+  console.log(highTest.numberOfStudents);
+  highTest.quickFacts();
   
   const middleTest = new Middle('Cats Middle School', 'middle', 10);
   console.log(middleTest);
+  middleTest.quickFacts();
   
   const primaryTest = new Primary('Elenas Primary School', 'primary', 250, 'school bus')
   console.log(primaryTest);
   console.log(primaryTest.numberOfStudents)
   console.log(primaryTest.pickupPolicy)
+  primaryTest.quickFacts();
   
   const schoolTest = new School ('Evgenys School', 'ultimate', 500)
   console.log(schoolTest);
@@ -69,3 +75,7 @@ class School {
   schoolTest.numberOfStudents = '7';
   console.log(schoolTest);
   schoolTest.numberOfStudents = 'five';
+  schoolTest.quickFacts();
+  
+  
+  
