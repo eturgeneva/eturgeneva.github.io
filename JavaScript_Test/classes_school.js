@@ -41,8 +41,8 @@ class School {
   }
   
   class Middle extends School {
-    constructor(name, level, numberOfStudents) {
-      super(name, level, numberOfStudents);
+    constructor(name, numberOfStudents) {
+      super(name, 'middle', numberOfStudents);
     }
   }
   class High extends School {
@@ -63,7 +63,7 @@ class School {
   console.log(highTest.numberOfStudents);
   highTest.quickFacts();
   
-  const middleTest = new Middle('Cats Middle School', 'middle', 10);
+  const middleTest = new Middle('Cats Middle School', 10);
   console.log(middleTest);
   middleTest.quickFacts();
   
