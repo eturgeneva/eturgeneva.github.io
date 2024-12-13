@@ -35,6 +35,15 @@ class School {
       return this._pickupPolicy;
     }
   }
+  
+  class Middle extends School {
+    constructor(name, level, numberOfStudents) {
+      super(name, level, numberOfStudents);
+    }
+  }
+  const middleTest = new Middle('Cats Middle School', 'middle', 10);
+  console.log(middleTest);
+  
   const primaryTest = new Primary('Elenas Primary School', 'primary', 250, 'school bus')
   console.log(primaryTest);
   console.log(primaryTest.numberOfStudents)
