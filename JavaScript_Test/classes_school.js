@@ -23,7 +23,10 @@ class School {
     quickFacts() {
       console.log(`${this._name} educates ${this._numberOfStudents} students at the ${this._level} school level.`)
     }
-    static pickSubstituteTeacher() {
+    static pickSubstituteTeacher(subsituteTeachers) {
+      let randomSubstitute = Math.floor(Math.random() * subsituteTeachers.length);
+      console.log(randomSubstitute);
+      return subsituteTeachers[randomSubstitute];
     }
   }
   
@@ -51,6 +54,8 @@ class School {
       return this._sportsTeams;
     }
   }
+  console.log(School.pickSubstituteTeacher(['Evgeny', 'Elena', 'Cat']));
+  
   const highTest = new High('Bears High', 'high', 340, ['Vasya', 'Petya', 'Bibi']);
   console.log(highTest);
   console.log(highTest.sportsTeams);
