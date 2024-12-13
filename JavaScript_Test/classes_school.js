@@ -46,8 +46,8 @@ class School {
     }
   }
   class High extends School {
-    constructor(name, level, numberOfStudents, sportsTeams) {
-      super(name, level, numberOfStudents);
+    constructor(name, numberOfStudents, sportsTeams) {
+      super(name, 'high', numberOfStudents);
       this._sportsTeams = sportsTeams;
     }
     get sportsTeams() {
@@ -56,7 +56,7 @@ class School {
   }
   console.log(School.pickSubstituteTeacher(['Evgeny', 'Elena', 'Cat']));
   
-  const highTest = new High('Bears High', 'high', 340, ['Vasya', 'Petya', 'Bibi']);
+  const highTest = new High('Bears High', 340, ['Vasya', 'Petya', 'Bibi']);
   console.log(highTest);
   console.log(highTest.sportsTeams);
   highTest.numberOfStudents = 120;
