@@ -41,6 +41,19 @@ class School {
       super(name, level, numberOfStudents);
     }
   }
+  class High extends School {
+    constructor(name, level, numberOfStudents, sportsTeams) {
+      super(name, level, numberOfStudents);
+      this._sportsTeams = sportsTeams;
+    }
+    get sportsTeams() {
+      return this._sportsTeams;
+    }
+  }
+  const highTest = new High('Bears High', 'high', 340, ['Vasya', 'Petya', 'Bibi']);
+  console.log(highTest);
+  console.log(highTest.sportsTeams);
+  
   const middleTest = new Middle('Cats Middle School', 'middle', 10);
   console.log(middleTest);
   
