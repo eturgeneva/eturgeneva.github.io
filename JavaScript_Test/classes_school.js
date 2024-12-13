@@ -25,14 +25,14 @@ class School {
     }
     static pickSubstituteTeacher(subsituteTeachers) {
       let randomSubstitute = Math.floor(Math.random() * subsituteTeachers.length);
-      console.log(randomSubstitute);
+      // console.log(randomSubstitute);
       return subsituteTeachers[randomSubstitute];
     }
   }
   
   class Primary extends School {
-    constructor(name, level, numberOfStudents, pickupPolicy) {
-      super(name, level, numberOfStudents);
+    constructor(name, numberOfStudents, pickupPolicy) {
+      super(name, 'primary', numberOfStudents);
       this._pickupPolicy = pickupPolicy;
     }
     get pickupPolicy() {
@@ -67,7 +67,7 @@ class School {
   console.log(middleTest);
   middleTest.quickFacts();
   
-  const primaryTest = new Primary('Elenas Primary School', 'primary', 250, 'school bus')
+  const primaryTest = new Primary('Elenas Primary School', 250, 'school bus')
   console.log(primaryTest);
   console.log(primaryTest.numberOfStudents)
   console.log(primaryTest.pickupPolicy)
