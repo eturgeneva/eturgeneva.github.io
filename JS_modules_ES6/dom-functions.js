@@ -16,3 +16,10 @@ const changeToFunkyColor = (domElement) => {
 }
 
 export { toggleHiddenElement, changeToFunkyColor };
+
+// Export default:
+const resources = { 
+  toggleHiddenElement, 
+  changeToFunkyColor
+}
+export default resources;
