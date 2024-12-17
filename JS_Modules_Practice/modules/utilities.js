@@ -1,5 +1,6 @@
 function formatNumber (number) {
-    let numberAsString = number.toString();
+    // let numberAsString = number.toString();
+    let numberAsString = String(Math.floor(number));
     // let slices = [];
     let step = 3;
     for (let i = numberAsString.length - step; i > 0; i -= step) {
