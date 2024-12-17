@@ -19,3 +19,5 @@ function formatNumber (number) {
 console.log(formatNumber(355));
 console.log(formatNumber(355278540));
 console.log(formatNumber(35527854088812));
+
+export { formatNumber };
