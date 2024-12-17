@@ -22,4 +22,4 @@ const resources = {
   toggleHiddenElement, 
   changeToFunkyColor
 }
-export default resources;
+// export default resources;
