@@ -1,5 +1,6 @@
-const shopForBeans = require('./library.js');
-const cookBeanSouffle = require('./library.js');
+// const shopForBeans = require('./library.js');
+// const cookBeanSouffle = require('./library.js');
+let {cookBeanSouffle, shopForBeans} = require('./library.js');
 
 async function getBeans() {
   console.log(`1. Heading to the store to buy beans...`);

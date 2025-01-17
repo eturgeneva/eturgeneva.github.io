@@ -39,6 +39,6 @@ let randomSuccess = () => {
   });
  };
  
-module.exports = cookBeanSouffle, shopForBeans;
+// module.exports = cookBeanSouffle, shopForBeans;
+module.exports = {cookBeanSouffle, shopForBeans};
     
-// module.exports = shopForBeans;
