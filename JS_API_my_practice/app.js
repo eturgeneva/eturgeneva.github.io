@@ -31,6 +31,14 @@ fetch(url).then(response => {
     console.log(jsObject.coord);
 
     // document.getElementById('field').innerHTML = `<p>${jsObject.coord.lon}</p>`
-    populate(`lon: ${jsObject.coord.lon} lat: ${jsObject.coord.lat}`)
+
+    // populate(`lon: ${jsObject.coord.lon} lat: ${jsObject.coord.lat}`)
+    // populate(`${jsObject.main.temp}`)
+    // let content;
+    for (let temp in jsObject.main) {
+        // console.log(jsObject.main[temp])
+        console.log(`${temp}: ${jsObject.main[temp]}`)
+        // populate(`${temp}: ${jsObject.main[temp]}`)
+    }
 })
 // populate('Test2');
