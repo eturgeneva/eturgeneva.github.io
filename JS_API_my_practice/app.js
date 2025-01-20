@@ -16,17 +16,17 @@ fetch(url).then(response => {
     throw new Error('Request failed');
 }, networkError => console.log(networkError.message)
 )
-.then(jsonResponse => {
+.then(jsObject => {
     // const jsonInfo = JSON.parse(jsonResponse);
     // return jsonInfo;
     // console.log(jsonInfo)
 
     // works:
-    console.log(jsonResponse)
+    console.log(jsObject)
 
-    const jsString = JSON.stringify(jsonResponse);
-    console.log(jsString)
-    const jsObject = JSON.parse(jsString);
+    // const jsString = JSON.stringify(jsonResponse);
+    // console.log(jsString)
+    // const jsObject = JSON.parse(jsString);
     console.log(jsObject);
     console.log(jsObject.coord);
 
