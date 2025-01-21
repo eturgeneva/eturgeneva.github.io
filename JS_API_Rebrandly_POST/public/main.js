@@ -1,4 +1,4 @@
-// information to reach API
+// Information to reach API
 const apiKey = 'myAPIKey';
 const url = 'https://api.rebrandly.com/v1/links';
 
@@ -8,26 +8,28 @@ const shortenButton = document.querySelector('#shorten');
 const responseField = document.querySelector('#responseField');
 
 // Asynchronous functions
-const shortenUrl = async () => {
-	const urlToShorten = inputField.value;
+const shortenUrl = () => {
+  const urlToShorten = inputField.value;
   const data = JSON.stringify({destination: urlToShorten});
-  try {
-    const response = await fetch(url, {
-        method: 'POST',
-        body: data,
-        headers: {
-          'Content-type': 'application/json',
-          'apikey': apiKey
-        }
-      }
-    );
-		if(response.ok){
-      const jsonResponse = await response.json();
-      renderResponse(jsonResponse);
+  
+	fetch(url, {
+    method: 'POST',
+    headers: {
+      'Content-type': 'application/json',
+      'apikey': apiKey
+    },
+    body: data
+  }).then(response => {
+    if (response.ok) {
+      return response.json();
     }
-  } catch (error) {
-    console.log(error);
+    throw new Error ('Request failed!')
+  }, networkError => {
+    console.log(networkError.message);
   }
+  ).then(jsonResponse => {
+    renderResponse(jsonResponse);
+  })
 }
 
 // Clear page and call Asynchronous functions
