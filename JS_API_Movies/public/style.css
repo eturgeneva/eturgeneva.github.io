@@ -21,6 +21,7 @@ body {
 #movieInfo {
     width:  65%;
     margin:  32px auto;
+    background-color: green;
 }
 
 #movieInfo:after {
@@ -41,7 +42,7 @@ img#moviePoster {
     margin:  auto;
 }
 
-#movieText {
+#movieText, #releaseDate {
     font-family: 'Questrial';
     color: #FEFBEA;
     line-height: 1.25;
@@ -60,6 +61,12 @@ img#moviePoster {
     background-color: #B97828;
     color: #fdc238;
     cursor:  pointer;
+}
+
+#releaseDate {
+  color: white;
+  float: left;
+  margin: 15px;
 }
 
 label {

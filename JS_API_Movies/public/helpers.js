@@ -26,8 +26,10 @@ const showBtns = () => {
 const clearCurrentMovie = () => {
     const moviePosterDiv = document.getElementById('moviePoster');
     const movieTextDiv = document.getElementById('movieText');
+    const movieReleaseDateDiv = document.getElementById('releaseDate');
     moviePosterDiv.innerHTML = '';
     movieTextDiv.innerHTML = '';
+    movieReleaseDateDiv.innerHTML = '';
 }
 
 // After liking a movie, clears the current movie from the screen and gets another random movie
@@ -70,6 +72,14 @@ const createMovieOverview = (overview) => {
   
     return overviewParagraph;
 };
+// Create HTML for movie release date:
+const createMovieReleaseDate = (date) => {
+  const releaseDate = document.createElement('p');
+  releaseDate.setAttribute('id', 'releaseDate');
+  releaseDate.innerHTML = date;
+
+  return releaseDate;
+}
 
 // Returns a random movie from the first page of movies
 const getRandomMovie = (movies) => {
@@ -82,6 +92,7 @@ const getRandomMovie = (movies) => {
 const displayMovie = (movieInfo) => {
     const moviePosterDiv = document.getElementById('moviePoster');
     const movieTextDiv = document.getElementById('movieText');
+    const movieReleaseDateDiv = document.getElementById('releaseDate');
     const likeBtn = document.getElementById('likeBtn');
     const dislikeBtn = document.getElementById('dislikeBtn');
   
@@ -89,11 +100,13 @@ const displayMovie = (movieInfo) => {
     const moviePoster = createMoviePoster(movieInfo.poster_path);
     const titleHeader = createMovieTitle(movieInfo.title);
     const overviewText = createMovieOverview(movieInfo.overview);
+    const releaseDate = createMovieReleaseDate(movieInfo.release_date);
   
     // Append title, poster, and overview to page
     moviePosterDiv.appendChild(moviePoster);
     movieTextDiv.appendChild(titleHeader);
     movieTextDiv.appendChild(overviewText);
+    movieReleaseDateDiv.appendChild(releaseDate);
   
     showBtns();
     likeBtn.onclick = likeMovie;
