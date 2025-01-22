@@ -25,6 +25,7 @@ const getGenres = async () => {
 const getMovies = async () => {
   const selectedGenre = getSelectedGenre();
   const discoverMovieEndpoint = 'discover/movie';
+  // bc tmdb shows only pages 1 to 500:
   const randomPage = Math.floor(Math.random() * 500);
   const requestParams = `api_key=${tmdbKey}&with_genres=${selectedGenre}&page=${randomPage}`;
   const urlToFetch = `${tmdbBaseUrl}/${discoverMovieEndpoint}?${requestParams}`;
