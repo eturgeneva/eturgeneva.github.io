@@ -34,6 +34,14 @@ const clearCurrentMovie = () => {
 
 // After liking a movie, clears the current movie from the screen and gets another random movie
 const likeMovie = () => {
+    const likedMovie = document.getElementById('movieTitle');
+
+    const likedMoviesList = document.getElementById('likedMoviesList');
+    likedMoviesList.innerHTML = `<li>${likedMovie.innerHTML}</li>`
+    // const likedMovie = document.createElement('li');
+    // likedMoviesList.appendChild(likedMovie);
+
+
     clearCurrentMovie();
     showRandomMovie();
 };
