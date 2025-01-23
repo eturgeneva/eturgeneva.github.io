@@ -86,7 +86,7 @@ select {
 }
 
 #likeBtn, #dislikeBtn {
-    padding: 15px 25px;
+    padding: 35px 35px;
     font-size: 25px;
     border-radius: 12px;
     border-style: none;
@@ -101,4 +101,11 @@ select {
 #dislikeBtn {
     background-color: #c74a4a;
     color: #910000;
+}
+
+#likedAndDislikedSection {
+    display: flex;
+    margin: 0 auto;
+    justify-content: space-between;
+    width: 70%;
 }
