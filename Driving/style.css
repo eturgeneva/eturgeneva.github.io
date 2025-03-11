@@ -76,6 +76,10 @@
     max-width: 60%;
   }
 
+  .test-img {
+    width: 280px;
+  }
+
   h2 {
     font-weight: 600;
     color: white;
@@ -96,7 +100,7 @@
     background-color: rgba(156, 117, 67, 0.5);
   }
 
-  .speed-limits span {
+  .speed-limits span, #ueberholen span {
     font-weight: 800;
     background-color: rgba(98, 156, 67, 0.5);
   }
