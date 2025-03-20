@@ -101,7 +101,7 @@
     background-color: rgba(156, 117, 67, 0.5);
   }
 
-  .speed-limits span, #ueberholen span {
+  .speed-limits span, #ueberholen span, strong {
     font-weight: 800;
     background-color: rgba(98, 156, 67, 0.5);
   }
