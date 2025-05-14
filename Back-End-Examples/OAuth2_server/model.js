@@ -1,5 +1,6 @@
 let db = require('./db.js');
 
+// Methods that will be used by oauth2-server to interact with my database:
 const getClient = (clientId, clientSecret) => {
   let confidentialClients = db.confidentialClients.filter((client) => {
     return client.clientId === clientId && client.clientSecret === clientSecret

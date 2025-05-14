@@ -28,6 +28,7 @@ const authenticateRequest = (req, res, next) => {
     })
 }
 
+// Obtains an access tokens and returns it to the user:
 const obtainToken = (req, res) => {
   let request = new OAuth2Server.Request(req);
   let response = new OAuth2Server.Response(res);
@@ -50,6 +51,7 @@ app.get('/login', (req, res)=>{
     res.sendFile(path.join(__dirname, 'public/login.html'));
 })
 
+// Authenticates every time we want to get access to a protected resource:
 app.get('/secret', authenticateRequest, (req, res)=>{
     res.send('Welcome to the secret area.');
 })
