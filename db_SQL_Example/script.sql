@@ -76,8 +76,8 @@ WHERE table_name = 'review';
 -- Step 8 Many-to-many between category & dish
 -- A cross-reference table
 CREATE TABLE categories_dishes (
-  category_id char(2),
-  dish_id integer,
+  category_id char(2) REFERENCES category(id),
+  dish_id integer REFERENCES dish(id),
   PRIMARY KEY(dish_id, category_id),
   price money
 );
@@ -305,19 +305,81 @@ JOIN review
   ON restaurant.id = review.restaurant_id
 GROUP BY 1;
 
+-- Step 12 Display a dish name, its price and category sorted by the dish name
+SELECT dish.name AS dish_name,
+  category.name AS category,
+  categories_dishes.price
+FROM dish
+JOIN categories_dishes
+  ON dish.id = categories_dishes.dish_id
+JOIN category
+  ON categories_dishes.category_id = category.id
+ORDER BY dish.name ASC;
 
+-- Step 13 Same as 12, but sorted by category name
+SELECT category.name AS category,
+  dish.name AS dish_name,
+  categories_dishes.price
+FROM dish
+JOIN categories_dishes
+  ON dish.id = categories_dishes.dish_id
+JOIN category
+  ON categories_dishes.category_id = category.id
+ORDER BY category.name ASC;
 
+-- Step 14 Display all the spicy dishes, their prices and category
+SELECT dish.name AS spicy_dish_name,
+  category.name AS category,
+  categories_dishes.price
+FROM dish
+JOIN categories_dishes
+  ON dish.id = categories_dishes.dish_id
+JOIN category
+  ON categories_dishes.category_id = category.id
+WHERE hot_and_spicy;
 
+-- Step 15
+SELECT dish_id,
+  COUNT(dish_id) AS dish_count
+FROM categories_dishes
+GROUP BY 1;
 
+-- Step 16 Display only the dish(es) from the categories_dishes table which appears more than once. 
+SELECT dish_id,
+  COUNT(dish_id) AS dish_count
+FROM categories_dishes
+GROUP BY 1
+HAVING COUNT(dish_id) > 1;
 
+-- Step 17 Write a better query which tells us exactly the name(s) of the dish that appears more than once in the categories_dishes table
+SELECT dish_id,
+  dish.name AS dish_name,
+  COUNT(dish_id) AS dish_count
+FROM categories_dishes
+JOIN dish
+  ON categories_dishes.dish_id = dish.id
+GROUP BY 1, 2
+HAVING COUNT(dish_id) > 1;
 
+-- Step 18 Write a query that displays the best rating as best_rating and the description too
+SELECT restaurant.name,
+  review.description,
+  MAX(review.rating) AS best_rating
+FROM restaurant
+JOIN review
+  ON restaurant.id = review.restaurant_id
+GROUP BY 1, 2
+ORDER BY MAX(review.rating) DESC
+LIMIT 1;
 
-
-
-
-
-
-
+SELECT restaurant.name,
+  review.description,
+  MAX(review.rating) AS best_rating
+FROM restaurant
+JOIN review
+  ON restaurant.id = review.restaurant_id
+WHERE review.rating = ( SELECT MAX(review.rating) from review)
+GROUP BY 1, 2;
 
 
 
